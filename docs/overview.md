@@ -26,6 +26,7 @@ Key platform differentiators include:
 
 By centralizing communication operations, Equify enables organizations to improve delivery reliability, strengthen operational governance, simplify provider management, and maintain end-to-end visibility across the entire messaging lifecycle.
 
+## How Equify Works
 
 Equify provides a comprehensive set of capabilities for managing enterprise messaging operations.
 
