@@ -1,0 +1,25 @@
+site_name: Equify Product Guide
+site_description: Enterprise Communication Orchestration Platform Documentation
+site_author: Product Documentation Team
+
+theme:
+  name: material
+
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Architecture: architecture.md

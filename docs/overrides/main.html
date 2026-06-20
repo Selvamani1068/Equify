@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="custom-breadcrumbs">
+    {% if page and page.ancestors %}
+      <nav class="breadcrumbs">
+        {% for ancestor in page.ancestors %}
+          <a href="{{ ancestor.url | url }}">{{ ancestor.title }}</a>
+          <span>/</span>
+        {% endfor %}
+        <span class="current">{{ page.title }}</span>
+      </nav>
+    {% endif %}
+  </div>
+
+  {{ super() }}
+{% endblock %}

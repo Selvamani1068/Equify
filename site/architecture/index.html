@@ -1,0 +1,1151 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Enterprise Communication Orchestration Platform Documentation">
+      
+      
+        <meta name="author" content="Product Documentation Team">
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Architecture - Equify Product Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Equify Product Guide" class="md-header__button md-logo" aria-label="Equify Product Guide" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Equify Product Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Equify Product Guide" class="md-nav__button md-logo" aria-label="Equify Product Guide" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Equify Product Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architectural Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High-Level Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingestion-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-processing-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Processing Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orchestration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orchestration Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-intelligence-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Intelligence Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-and-operations-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Operations Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-platform-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Platform Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Platform Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-api-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message API Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-connector-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DB Connector Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kafka Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middleware Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispatcher-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dispatcher Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlr-processing-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLR Processing Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-and-maintenance-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations and Maintenance Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architectural Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scalability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provider-independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provider Independence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extensibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Level Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="High-Level Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingestion-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingestion Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-processing-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Event Processing Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orchestration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orchestration Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-intelligence-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery Intelligence Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-and-operations-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics and Operations Layer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-platform-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Platform Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Platform Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-api-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message API Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-connector-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DB Connector Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kafka Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#middleware-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Middleware Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispatcher-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dispatcher Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retry-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlr-processing-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DLR Processing Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-and-maintenance-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations and Maintenance Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="architecture-overview">Architecture Overview</h1>
+<p>Equify is built on a distributed, event-driven microservices architecture designed to support high-volume, mission-critical SMS communication across enterprise environments.</p>
+<p>The platform serves as a communication orchestration layer between enterprise applications, business data sources, and telecom service providers. Rather than allowing business systems to integrate directly with individual messaging providers, Equify centralizes communication processing, routing, delivery tracking, operational monitoring, and analytics within a single platform.</p>
+<p>This architectural approach enables organizations to scale communication workloads, improve delivery reliability, simplify provider management, and maintain complete visibility throughout the messaging lifecycle.</p>
+<p>At its core, Equify decouples message producers from message delivery providers through an event-streaming framework, allowing communication requests to be processed asynchronously, routed intelligently, and monitored continuously.</p>
+<hr />
+<h2 id="architectural-principles">Architectural Principles</h2>
+<p>The Equify platform is designed around the following architectural principles:</p>
+<h3 id="scalability">Scalability</h3>
+<p>The platform supports horizontal scaling of processing services, enabling organizations to handle increasing message volumes without affecting application performance.</p>
+<h3 id="reliability">Reliability</h3>
+<p>Critical communication workloads are protected through distributed processing, message persistence, retry mechanisms, and provider failover strategies.</p>
+<h3 id="provider-independence">Provider Independence</h3>
+<p>Business applications interact only with Equify. Provider-specific integrations, APIs, and routing logic are abstracted from consuming systems, reducing vendor dependency and simplifying operational management.</p>
+<h3 id="observability">Observability</h3>
+<p>The platform continuously captures communication events, delivery outcomes, operational metrics, and system health information to provide end-to-end visibility into messaging operations.</p>
+<h3 id="extensibility">Extensibility</h3>
+<p>New providers, routing policies, communication workflows, and operational capabilities can be introduced without impacting existing integrations.</p>
+<hr />
+<h2 id="high-level-architecture">High-Level Architecture</h2>
+<p>The Equify architecture consists of six logical layers that collectively manage the complete communication lifecycle.</p>
+<h3 id="ingestion-layer">Ingestion Layer</h3>
+<p>The ingestion layer serves as the entry point into the platform.</p>
+<p>This layer receives communication requests from:</p>
+<ul>
+<li>Enterprise business applications</li>
+<li>Internal operational systems</li>
+<li>External applications</li>
+<li>Source databases</li>
+</ul>
+<p>Requests can be submitted through secure APIs or database-driven integration mechanisms. Incoming requests are validated and transformed into standardized message events before entering the processing framework.</p>
+<h3 id="event-processing-layer">Event Processing Layer</h3>
+<p>The event processing layer forms the foundation of the platform's communication workflow.</p>
+<p>Apache Kafka acts as the central event-streaming backbone, enabling asynchronous communication between platform services.</p>
+<p>This layer provides:</p>
+<ul>
+<li>Message decoupling</li>
+<li>Event persistence</li>
+<li>High-throughput processing</li>
+<li>Fault tolerance</li>
+<li>Workload distribution</li>
+</ul>
+<p>By separating message producers from downstream services, the platform can continue processing communication requests even during periods of high traffic or temporary service interruptions.</p>
+<h3 id="orchestration-layer">Orchestration Layer</h3>
+<p>The orchestration layer manages the business logic associated with communication processing.</p>
+<p>Core responsibilities include:</p>
+<ul>
+<li>Request validation</li>
+<li>Message enrichment</li>
+<li>Communication policy enforcement</li>
+<li>Provider selection</li>
+<li>Routing determination</li>
+<li>Workflow orchestration</li>
+</ul>
+<p>This layer ensures that every communication request follows predefined operational and business rules before being delivered.</p>
+<h3 id="delivery-layer">Delivery Layer</h3>
+<p>The delivery layer is responsible for transmitting messages to external telecom providers.</p>
+<p>The Dispatcher Service converts standardized communication requests into provider-specific formats and invokes the corresponding provider APIs.</p>
+<p>Because provider-specific integrations are isolated within this layer, organizations can add, remove, or modify providers without impacting upstream business applications.</p>
+<h3 id="delivery-intelligence-layer">Delivery Intelligence Layer</h3>
+<p>The delivery intelligence layer continuously monitors communication outcomes after messages have been dispatched.</p>
+<p>This layer processes delivery reports (DLRs) received from providers and correlates them with original communication requests.</p>
+<p>Key functions include:</p>
+<ul>
+<li>Delivery-status tracking</li>
+<li>Message lifecycle management</li>
+<li>Failure detection</li>
+<li>Delivery reconciliation</li>
+<li>Operational auditing</li>
+</ul>
+<p>This capability provides complete visibility into message delivery performance across all communication providers.</p>
+<h3 id="analytics-and-operations-layer">Analytics and Operations Layer</h3>
+<p>The analytics and operations layer transforms communication events into actionable operational insights.</p>
+<p>The platform aggregates communication metrics, provider statistics, system events, and delivery outcomes to support:</p>
+<ul>
+<li>Operational dashboards</li>
+<li>Executive reporting</li>
+<li>Performance monitoring</li>
+<li>Trend analysis</li>
+<li>Capacity planning</li>
+<li>Service optimization</li>
+</ul>
+<p>This layer enables stakeholders to evaluate communication effectiveness and identify opportunities for operational improvement.</p>
+<hr />
+<h2 id="core-platform-components">Core Platform Components</h2>
+<p>The following services form the foundation of the Equify architecture.</p>
+<h3 id="message-api-service">Message API Service</h3>
+<p>Provides secure API endpoints for enterprise applications to submit communication requests into the platform.</p>
+<h3 id="db-connector-service">DB Connector Service</h3>
+<p>Captures communication requests from enterprise databases and converts them into platform events for downstream processing.</p>
+<h3 id="kafka-cluster">Kafka Cluster</h3>
+<p>Acts as the event-streaming backbone of the platform, enabling scalable and reliable communication between distributed services.</p>
+<h3 id="middleware-service">Middleware Service</h3>
+<p>Validates, transforms, enriches, and prepares communication requests for orchestration and delivery.</p>
+<h3 id="dispatcher-service">Dispatcher Service</h3>
+<p>Executes provider-specific communication delivery by invoking external messaging provider APIs.</p>
+<h3 id="retry-service">Retry Service</h3>
+<p>Automatically reprocesses failed communication requests and applies alternate routing strategies based on configured policies.</p>
+<h3 id="dlr-processing-service">DLR Processing Service</h3>
+<p>Receives and processes delivery reports from messaging providers and updates message lifecycle information.</p>
+<h3 id="analytics-engine">Analytics Engine</h3>
+<p>Aggregates communication data and operational metrics to generate dashboards, reports, and business insights.</p>
+<h3 id="operations-and-maintenance-service">Operations and Maintenance Service</h3>
+<p>Provides centralized administration, provider management, routing configuration, operational governance, and platform monitoring capabilities.</p>
+<h3 id="data-services">Data Services</h3>
+<p>The platform uses Redis and MySQL to support high-performance data access, operational state management, configuration storage, reporting, and message-tracking functions.</p>
+<hr />
+<h2 id="message-lifecycle">Message Lifecycle</h2>
+<p>The following sequence illustrates how a communication request is processed within Equify:</p>
+<ol>
+<li>An enterprise application or source database submits a communication request.</li>
+<li>The request enters the platform through the Message API Service or DB Connector Service.</li>
+<li>The communication event is published to Kafka for distributed processing.</li>
+<li>Middleware services validate and enrich the request.</li>
+<li>Routing logic determines the optimal messaging provider.</li>
+<li>The Dispatcher Service delivers the message through the selected provider.</li>
+<li>Delivery acknowledgments and delivery reports are received from providers.</li>
+<li>The DLR Processing Service updates message status information.</li>
+<li>Operational events and communication metrics are captured by the Analytics Engine.</li>
+<li>Dashboards, reports, and monitoring systems present communication insights to business and operational users.</li>
+</ol>
+<p>This architecture enables Equify to deliver reliable, scalable, and observable enterprise messaging operations while maintaining a clear separation between business systems and provider infrastructure.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
