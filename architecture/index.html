@@ -424,17 +424,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-capabilities-provide-visibility-into-configuration-changes-and-administrative-activities-across-the-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Audit capabilities provide visibility into configuration changes and administrative activities across the platform.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#message-processing-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -572,17 +561,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-capabilities-provide-visibility-into-configuration-changes-and-administrative-activities-across-the-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Audit capabilities provide visibility into configuration changes and administrative activities across the platform.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#message-processing-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -646,7 +624,8 @@
 <h3 id="administration-layer">Administration Layer</h3>
 <p>The Administration Layer provides centralized configuration and governance capabilities.</p>
 <p>Administrators can manage provider configurations, routing policies, retry settings, user access, communication rules, and platform-wide settings through a unified interface.</p>
-<h2 id="audit-capabilities-provide-visibility-into-configuration-changes-and-administrative-activities-across-the-platform">Audit capabilities provide visibility into configuration changes and administrative activities across the platform.</h2>
+<p>Audit capabilities provide visibility into configuration changes and administrative activities across the platform.</p>
+<hr />
 <h2 id="message-processing-flow">Message Processing Flow</h2>
 <p>A message enters Equify through one of two integration methods:</p>
 <p>API Integration through the Message API Service
@@ -654,17 +633,19 @@ Database Integration through the DB Connector Service</p>
 <p>For database-driven integrations, Equify can retrieve records directly from client databases or process change events through Debezium-based Change Data Capture (CDC).</p>
 <p>After receiving a message request, Equify publishes the message to a Kafka-based processing pipeline. Kafka acts as the platform's event-streaming backbone and enables reliable message processing across multiple platform services.</p>
 <p>The message lifecycle consists of the following stages:</p>
-<p>A business application or database submits an SMS request.
-The Message Processing Engine validates the incoming request.
-The message is published to Kafka topics for downstream processing.
-The Middleware Service applies routing and processing policies.
-The Dispatcher Service transforms the message into the format required by the selected provider.
-The message is transmitted to the telecom service provider through secure HTTPS interfaces.
-The Retry Service monitors provider responses and automatically reroutes failed requests according to configured retry policies.
-Delivery reports (DLRs) are received through the DLR API.
-The DLR Processor correlates delivery responses with the original message and updates message status information.
-Delivery status information is written to the configured output database.
-Operational metrics, logs, and audit events are collected and processed for reporting and monitoring purposes.</p>
+<ol>
+<li>A business application or database submits an SMS request.</li>
+<li>The Message Processing Engine validates the incoming request.</li>
+<li>The message is published to Kafka topics for downstream processing.</li>
+<li>The Middleware Service applies routing and processing policies.</li>
+<li>The Dispatcher Service transforms the message into the format required by the selected provider.</li>
+<li>The message is transmitted to the telecom service provider through secure HTTPS interfaces.</li>
+<li>The Retry Service monitors provider responses and automatically reroutes failed requests according to configured retry policies.</li>
+<li>Delivery reports (DLRs) are received through the DLR API.</li>
+<li>The DLR Processor correlates delivery responses with the original message and updates message status information.</li>
+<li>Delivery status information is written to the configured output database.</li>
+<li>Operational metrics, logs, and audit events are collected and processed for reporting and monitoring purposes.</li>
+</ol>
 
 
 
