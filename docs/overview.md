@@ -28,45 +28,17 @@ By centralizing communication operations, Equify enables organizations to improv
 
 ## Key Capabilities
 
-Equify provides a comprehensive set of capabilities for managing enterprise messaging operations.
+Equify provides the following capabilities to support large-scale communication operations:
 
-### Dashboard and Monitoring
-
-Provides a centralized operational view of messaging activity and platform performance. Users can monitor message volumes, delivery rates, failure rates, throughput, latency trends, and communication activity across departments and service providers.
-
-The dashboard also provides visibility into platform health and operational status, helping administrators identify and respond to issues quickly.
-
-### Communication Processing
-
-Processes SMS requests received from enterprise applications and connected data sources. Equify validates incoming requests, applies configured business rules, and prepares messages for delivery.
-
-### Multi-Provider Communication Management
-
-Supports communication delivery through multiple telecom service providers using a unified management framework. Organizations can manage provider configurations, connectivity settings, delivery parameters, and communication policies from a single interface.
-
-### Intelligent Routing
-
-Routes messages based on configurable business and operational rules. Routing decisions can be based on message attributes, communication type, department, templates, provider allocation strategies, or predefined routing policies.
-
-### Delivery Tracking
-
-Tracks messages throughout the communication lifecycle and provides visibility into message status from submission through final delivery.
-
-### Retry and Failover Management
-
-Improves delivery reliability by automatically retrying failed requests and redirecting traffic to alternate providers when required.
-
-### Analytics and Reporting
-
-Provides operational reporting, communication analytics, message tracking, and performance insights. Organizations can evaluate delivery performance, analyze communication trends, review provider effectiveness, and generate reports to support operational decision-making.
-
-### Audit and Governance
-
-Maintains visibility into platform activities, configuration changes, and administrative actions. Audit capabilities help organizations support compliance, operational governance, and change tracking requirements.
-
-### Centralized Administration
-
-Provides a single location for managing platform configuration, communication settings, provider integrations, routing policies, access controls, and operational preferences.
+- **Dashboard and Monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
+- **Communication Processing** – Receive and process SMS requests from enterprise applications and connected data sources.
+- **Multi-Provider Management** – Integrate and manage multiple telecom service providers through a unified interface.
+- **Routing Management** – Configure routing policies based on message type, department, template, header values, or traffic distribution requirements.
+- **Delivery Tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
+- **Retry and Failover** – Improve delivery reliability through automated retry and alternate provider routing.
+- **Analytics and Reporting** – Analyze communication performance through operational reports and dashboards.
+- **Audit and Governance** – Maintain visibility into configuration changes and administrative activities.
+- **Centralized Administration** – Manage platform settings, provider configurations, routing rules, and user access from a single location.
 
 ## How Equify Works
 
@@ -74,7 +46,7 @@ Equify manages the complete lifecycle of SMS communication through a centralized
 
 1. Enterprise applications or source databases submit communication requests.
 2. Equify validates and processes incoming message requests.
-3. Messages are published to the platform's event-processing framework.
+3. Equify applies processing and routing policies to incoming requests.
 4. Routing rules determine the appropriate communication provider.
 5. Messages are transformed into provider-specific formats and dispatched for delivery.
 6. Delivery acknowledgments and delivery reports are collected from providers.
