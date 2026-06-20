@@ -1,4 +1,4 @@
-# About Equify
+## About Equify
 
 Equify is a communication orchestration platform that enables organizations to manage, process, route, monitor, and analyze large-scale SMS communications through a centralized platform.
 

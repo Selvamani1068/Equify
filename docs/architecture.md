@@ -1,4 +1,4 @@
-# Architecture Overview
+## Architecture Overview
 
 Equify follows a distributed, event-driven architecture designed to support high-volume SMS communication processing across multiple telecom service providers.
 
