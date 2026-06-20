@@ -57,6 +57,7 @@ The Administration Layer provides centralized configuration and governance capab
 Administrators can manage provider configurations, routing policies, retry settings, user access, communication rules, and platform-wide settings through a unified interface.
 
 Audit capabilities provide visibility into configuration changes and administrative activities across the platform.
+
 ---
 
 ## Message Processing Flow
@@ -72,14 +73,14 @@ After receiving a message request, Equify publishes the message to a Kafka-based
 
 The message lifecycle consists of the following stages:
 
-A business application or database submits an SMS request.
-The Message Processing Engine validates the incoming request.
-The message is published to Kafka topics for downstream processing.
-The Middleware Service applies routing and processing policies.
-The Dispatcher Service transforms the message into the format required by the selected provider.
-The message is transmitted to the telecom service provider through secure HTTPS interfaces.
-The Retry Service monitors provider responses and automatically reroutes failed requests according to configured retry policies.
-Delivery reports (DLRs) are received through the DLR API.
-The DLR Processor correlates delivery responses with the original message and updates message status information.
-Delivery status information is written to the configured output database.
-Operational metrics, logs, and audit events are collected and processed for reporting and monitoring purposes.
+1. A business application or database submits an SMS request.
+2. The Message Processing Engine validates the incoming request.
+3. The message is published to Kafka topics for downstream processing.
+4. The Middleware Service applies routing and processing policies.
+5. The Dispatcher Service transforms the message into the format required by the selected provider.
+6. The message is transmitted to the telecom service provider through secure HTTPS interfaces.
+7. The Retry Service monitors provider responses and automatically reroutes failed requests according to configured retry policies.
+8. Delivery reports (DLRs) are received through the DLR API.
+9. The DLR Processor correlates delivery responses with the original message and updates message status information.
+10. Delivery status information is written to the configured output database.
+11. Operational metrics, logs, and audit events are collected and processed for reporting and monitoring purposes.
