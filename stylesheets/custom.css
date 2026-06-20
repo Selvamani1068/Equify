@@ -1,0 +1,237 @@
+.md-main {
+    margin-top: 0 !important;
+}
+
+.md-sidebar {
+    padding-top: 0 !important;
+}
+
+.md-sidebar--primary .md-nav__title {
+    display: none !important;
+}
+
+/* Right TOC - keep original text */
+.md-sidebar--secondary .md-nav__title {
+    font-size: inherit;
+}
+
+/* LEFT SIDEBAR */
+.md-sidebar--primary,
+.md-sidebar--primary .md-sidebar__scrollwrap,
+.md-sidebar--primary .md-sidebar__inner,
+.md-sidebar--primary .md-nav {
+    background: #f5f7fa !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* RIGHT SIDEBAR */
+.md-sidebar--secondary,
+.md-sidebar--secondary .md-sidebar__scrollwrap,
+.md-sidebar--secondary .md-sidebar__inner,
+.md-sidebar--secondary .md-nav {
+    background: #fafbfc !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* LEFT PANEL TITLE */
+.md-sidebar--primary .md-nav__title {
+    background: #e5eff4 !important;
+    color: #4e84e9 !important;
+
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border: 1px solid #99b9ec;
+    border-radius: 10px;
+
+    margin: 8px;
+    padding: 12px 16px;
+
+    box-shadow: none !important;
+}
+
+/* RIGHT PANEL TITLE */
+.md-sidebar--secondary .md-nav__title {
+    background: #f8f9fb !important;
+    color: #4b5563 !important;
+
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border: 1px solid #e9edf2;
+    border-radius: 10px;
+
+    margin: 8px;
+    padding: 12px 16px;
+
+    box-shadow: none !important;
+}
+
+/* Left navigation area */
+.md-sidebar--primary {
+    background-color: #f7f9fc;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Right TOC area */
+.md-sidebar--secondary {
+    background-color: #fafbfc;
+    border-left: 1px solid #e5e7eb;
+}
+
+/* Left navigation menu items */
+.md-sidebar--primary .md-nav__link {
+    font-size: 0.90rem !important;
+    font-weight: 470;
+}
+
+/* Navigation section titles */
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    font-size: 0.95rem !important;
+    font-weight: 600;
+}
+
+/* =====================================================
+   TABLE OF CONTENTS - ENTERPRISE HIERARCHY
+   ===================================================== */
+
+/* TOC Title */
+.md-sidebar--secondary .md-nav__title {
+    color: #4b5563 !important;
+    font-weight: 530;
+    font-size: 0.80rem;
+}
+
+/* Main Headings (H2) */
+.md-sidebar--secondary .md-nav__link {
+    color: #6b7280 !important;
+    font-weight: 480;
+    font-size: 0.74rem;
+    line-height: 1.5;
+}
+
+/* Sub-headings (H3) */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
+    color: #9ca3af !important;
+    font-weight: 400;
+    font-size: 0.70rem;
+}
+
+/* Sub-sub-headings (H4) */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    color: #b6bec9 !important;
+    font-weight: 400;
+    font-size: 0.66rem;
+}
+
+/* Active TOC item */
+.md-sidebar--secondary .md-nav__link--active {
+    color: #4e84e9 !important;
+    font-weight: 600 !important;
+}
+
+/* Hover effect */
+.md-sidebar--secondary .md-nav__link:hover {
+    color: #4e84e9 !important;
+}
+
+/* =====================================================
+   LEFT NAVIGATION - ENTERPRISE HIERARCHY
+   ===================================================== */
+
+/* Navigation Title */
+.md-sidebar--primary .md-nav__title {
+    color: #4b5563 !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Main Navigation Items */
+.md-sidebar--primary .md-nav__link {
+    color: #374151 !important;
+    font-weight: 500;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+/* Level 2 Navigation */
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link {
+    color: #6b7280 !important;
+    font-weight: 450;
+    font-size: 0.80rem;
+}
+
+/* Level 3 Navigation */
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    color: #9ca3af !important;
+    font-weight: 400;
+    font-size: 0.78rem;
+}
+
+/* Active Page */
+.md-sidebar--primary .md-nav__link--active {
+    color: #4e84e9 !important;
+    font-weight: 600 !important;
+}
+
+/* Hover */
+.md-sidebar--primary .md-nav__link:hover {
+    color: #4e84e9 !important;
+}
+
+/* Reduce gap between logo and title */
+.md-header__button.md-logo {
+    margin-right: 0.5rem !important;
+}
+
+/* Remove extra left padding from title */
+.md-header__title {
+    margin-left: 0 !important;
+}
+
+.md-header__title {
+    font-size: 1rem !important;   /* increase title size */
+    font-weight: 580 !important;     /* make it more prominent */
+
+    margin-left: -0.3rem !important;
+}
+
+/* ================================
+   CUSTOM BREADCRUMBS (SAFE)
+   ================================ */
+
+.custom-breadcrumbs {
+    font-size: 0.75rem;
+    margin: 0.8rem 1.2rem;
+    color: #6b7280;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.breadcrumbs a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: #4e84e9;
+}
+
+.breadcrumbs span {
+    color: #c0c4cc;
+}
+
+.breadcrumbs .current {
+    font-weight: 600;
+    color: #4b5563;
+}
