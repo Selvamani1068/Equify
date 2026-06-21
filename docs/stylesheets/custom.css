@@ -235,3 +235,14 @@
     font-weight: 600;
     color: #4b5563;
 }
+
+/* Add vertical divider between table columns */
+.md-typeset table th,
+.md-typeset table td {
+    border-right: 1px solid #d1d5db;
+}
+
+.md-typeset table th:last-child,
+.md-typeset table td:last-child {
+    border-right: none;
+}

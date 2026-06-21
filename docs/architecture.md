@@ -1,86 +1,255 @@
 ## Architecture Overview
 
-Equify follows a distributed, event-driven architecture designed to support high-volume SMS communication processing across multiple telecom service providers.
+Equify is a communication orchestration platform that provides a centralized framework for managing business communications across enterprise applications, data sources, and messaging providers. It enables organizations to route, deliver, monitor, and analyze communication traffic through a single platform rather than managing multiple provider integrations independently.
 
-The platform acts as an intermediary layer between enterprise systems and external messaging networks. It separates message generation from message delivery, allowing organizations to manage communication policies, provider integrations, routing rules, delivery tracking, and operational reporting through a centralized platform.
+The platform acts as an intermediary layer between business systems and messaging providers. Communication requests are received from business applications and source systems, processed according to configured routing policies, delivered through the appropriate messaging provider, and tracked throughout the delivery process. Operational metrics, delivery outcomes, and audit information are made available through centralized monitoring and reporting capabilities.
 
-The architecture is designed to provide:
+This architecture provides:
 
-- Scalability for high-volume messaging workloads
-- Provider-independent communication management
-- Configurable routing and delivery control
-- Reliable message processing and delivery tracking
-- Operational visibility and monitoring
-- Centralized administration and governance
+- Centralized communication management
+- Multi-provider and multi-channel connectivity
+- Configurable routing strategies
+- Automated retry and failover processing
+- Delivery lifecycle tracking
+- Real-time operational monitoring
+- Infrastructure health monitoring
+- Centralized governance and auditability
+- Support for large-scale communication workloads
+
+At a high level, the Equify architecture consists of three logical domains:
+
+| Domain | Purpose |
+|------------|-------------|
+| Client System | Generates communication requests and receives delivery status updates |
+| Equify Platform | Processes, routes, monitors, and tracks communications |
+| Service Providers | Deliver messages to end recipients |
+
+## Architectural Domains
+
+### Client System
+
+The Client System represents the business applications and databases that generate communication requests.
+
+Equify supports two integration models:
+
+- API-based integration through the Message API Service
+- Database-based integration through the DB Connector Service
+
+For database-driven implementations, Equify can monitor client databases through scheduled polling or Debezium-based Change Data Capture (CDC), enabling real-time message ingestion without requiring application changes.
+
+The client environment may include:
+
+- Identity Provider (IDP) for user authentication
+- Input databases that generate message requests
+- Output databases that receive final delivery status information
+
+### Equify Platform
+
+The Equify Platform is responsible for communication orchestration and contains three major processing engines:
+
+- Message Processing Engine
+- Delivery Status Processing Engine
+- Analytics Engine
+
+Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
+
+### Service Providers
+
+Service Providers are external messaging providers responsible for delivering communications to end recipients.
+
+Equify can communicate with multiple providers simultaneously and determines the appropriate provider based on configured routing policies and operational requirements.
+
+Depending on the configured communication channel, providers may support SMS, WhatsApp, or other messaging services integrated with Equify.
+
+This architecture allows organizations to distribute traffic, implement failover strategies, and reduce dependency on a single provider.
+
 ---
 
-## Architectural Components
+## Message Processing Engine
 
-The Equify platform consists of several logical layers that work together to process and manage SMS communications.
+The Message Processing Engine is responsible for receiving, validating, routing, and dispatching messages.
+
+The engine includes a set of services responsible for message ingestion, validation, routing, and delivery.
 
 ### Integration Layer
 
-The Integration Layer serves as the entry point for communication requests.
+The Integration Layer serves as the entry point into the platform.
 
-Equify supports both application-driven and database-driven integration models. Enterprise applications can submit SMS requests through APIs, while organizations that rely on database-based workflows can integrate directly through database connectors.
+Communication requests can enter Equify through either business applications or database-driven workflows.
 
-### Message Processing Layer
+### Message API Service
 
-The Message Processing Layer validates incoming requests and prepares them for delivery.
+The Message API Service provides a secure HTTPS interface that allows enterprise applications to submit message requests to Equify.
 
-During this stage, Equify applies communication policies, evaluates routing requirements, and prepares messages for downstream processing. This layer ensures that all requests are processed consistently regardless of the originating system or delivery provider.
+Incoming requests are validated and transformed into a standardized internal format before entering the processing pipeline.
 
-### Routing and Delivery Layer
+### DB Connector Service
 
-The Routing and Delivery Layer is responsible for provider selection and message dispatch.
+The DB Connector Service supports database-driven communication workflows.
 
-Based on configured routing policies, Equify determines the most appropriate provider for each message. Routing decisions can be influenced by message attributes, departments, templates, headers, service types, or traffic distribution requirements.
+This service retrieves records directly from client databases or consumes database change events published through Debezium CDC, converting them into structured message requests for processing.
 
-After a provider is selected, Equify transforms the request into the format required by the destination provider and initiates message delivery.
+### Kafka Cluster
 
-### Delivery Tracking Layer
+Kafka provides the messaging infrastructure used by Equify to exchange events between platform services.
 
-The Delivery Tracking Layer manages message status updates throughout the communication lifecycle.
+After validation, all message requests are published to Kafka topics where they become available to downstream services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.
 
-Delivery acknowledgments and delivery reports received from telecom providers are processed and correlated with the original message request. This enables organizations to track message progress from submission through final delivery.
+### Redis Cache
 
-### Analytics and Monitoring Layer
+Redis is used as the platform's in-memory data store for runtime processing.
 
-The Analytics and Monitoring Layer provides operational visibility across the platform.
+Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.
 
-This layer collects communication metrics, delivery statistics, provider performance data, and system health information. The collected data is used to generate dashboards, reports, and operational insights that support monitoring and decision-making activities.
+### Middleware Service
 
-### Administration Layer
+The Middleware Service performs business-rule validation and routing evaluation.
 
-The Administration Layer provides centralized configuration and governance capabilities.
+Based on configured routing strategies, the service determines which provider should receive the message and publishes the request to the appropriate provider-specific processing channel.
 
-Administrators can manage provider configurations, routing policies, retry settings, user access, communication rules, and platform-wide settings through a unified interface.
+### Delivery Management Layer
 
-Audit capabilities provide visibility into configuration changes and administrative activities across the platform.
+The Delivery Management Layer is responsible for selecting providers and dispatching messages.
+
+### Dispatcher Service
+
+The Dispatcher Service consumes routed messages and transforms them into provider-specific request formats.
+
+The service invokes the provider's HTTPS APIs and submits the message for delivery.
+
+### Retry Service
+
+The Retry Service manages delivery failures.
+
+When a provider returns a retryable error, the service automatically routes the message to an alternate provider based on configured retry policies and fallback routing rules.
+
+### Routing Architecture
+
+Routing determines how communication traffic is distributed across configured messaging providers.
+
+The platform supports multiple routing strategies that determine how traffic is distributed across service providers.
+
+Supported routing strategies include:
+
+- Round Robin Routing
+- Percentage-Based Routing
+- Department-Based Routing
+- Header-Based Routing
+- Circle-Based Routing (Geographic Routing)
+
+Routing behavior is determined by the routing strategy configured by platform administrators.
+
+Organizations can select the routing approach that best aligns with operational, business, and regulatory requirements.
 
 ---
 
-## Message Processing Flow
+## Delivery Report Processing Layer
 
-A message enters Equify through one of two integration methods:
+The Delivery Report Processing Layer manages message status updates received from service providers.
 
-API Integration through the Message API Service
-Database Integration through the DB Connector Service
+### Delivery Status Processing Engine
 
-For database-driven integrations, Equify can retrieve records directly from client databases or process change events through Debezium-based Change Data Capture (CDC).
+The Delivery Status Processing Engine manages delivery acknowledgements and status updates received from messaging providers.
 
-After receiving a message request, Equify publishes the message to a Kafka-based processing pipeline. Kafka acts as the platform's event-streaming backbone and enables reliable message processing across multiple platform services.
+For SMS channels, status information is typically received through Delivery Reports (DLRs). Other supported channels may provide equivalent delivery status events through channel-specific mechanisms.
 
-The message lifecycle consists of the following stages:
+### DLR API Service
 
-1. A business application or database submits an SMS request.
-2. The Message Processing Engine validates the incoming request.
-3. The message is published to Kafka topics for downstream processing.
-4. The Middleware Service applies routing and processing policies.
-5. The Dispatcher Service transforms the message into the format required by the selected provider.
-6. The message is transmitted to the telecom service provider through secure HTTPS interfaces.
-7. The Retry Service monitors provider responses and automatically reroutes failed requests according to configured retry policies.
-8. Delivery reports (DLRs) are received through the DLR API.
-9. The DLR Processor correlates delivery responses with the original message and updates message status information.
-10. Delivery status information is written to the configured output database.
-11. Operational metrics, logs, and audit events are collected and processed for reporting and monitoring purposes.
+Messaging providers send delivery reports back to Equify through dedicated API endpoints.
+
+These reports contain status information that indicates whether messages were delivered successfully, failed, expired, or encountered processing issues.
+
+Received DLR payloads are validated and published to Kafka for processing.
+
+### DLR Processor Service
+
+The DLR Processor consumes delivery report events from Kafka.
+
+The service:
+
+- Retrieves the corresponding message identifier from Redis.
+- Correlates the provider response with the original message.
+- Consolidates delivery information.
+- Updates the configured output destination.
+
+Depending on configuration, delivery status information can be:
+
+- Updated in the client input database
+- Inserted into an output database
+- Written to CSV files for downstream processing
+
+---
+
+## Analytics and Operations Layer
+
+The Analytics and Operations Layer provides visibility into communication activity, platform performance, and infrastructure health.
+
+It transforms messaging events, delivery information, audit logs, and operational metrics into dashboards, reports, alerts, and monitoring insights that support day-to-day operations and platform administration.
+
+### ClickHouse Analytics Store
+
+All audit logs and operational metrics are published to Kafka and ingested into ClickHouse for long-term analytics processing.
+
+The platform stores:
+
+- Messaging activity
+- Delivery statistics
+- Retry information
+- Audit logs
+- System health metrics
+- Application performance metrics
+
+### System Metrics Collection
+
+Background monitoring scripts execute periodically across all servers and collect metrics related to:
+
+- CPU utilization
+- Memory utilization
+- Network health
+- Kafka status
+- Redis status
+- Database status
+- Application availability
+
+The collected data is published to Kafka and processed by ClickHouse for reporting purposes.
+
+### Analytics Processing
+
+Communication activity and operational events are processed through a dedicated analytics engine.
+
+The analytics layer aggregates information from across the platform and prepares it for dashboards, reports, and log analysis.
+
+### Dashboard and Reporting Services
+
+In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.
+
+Reporting capabilities help organizations analyze:
+
+- Message volumes
+- Delivery trends
+- Provider performance
+- Failure patterns
+- Operational activity
+- Audit information
+- Infrastructure utilization
+- Service availability and platform health
+
+These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.
+
+---
+
+## End-to-End Communication Flow
+
+The following sequence summarizes the complete communication lifecycle:
+
+1. A business application or database generates a message request.
+2. Equify receives the request through the Message API Service or DB Connector Service.
+3. The request is validated and published to Kafka.
+4. Routing policies determine the target provider.
+5. The Dispatcher Service submits the message to the selected provider.
+6. Retry processing handles temporary failures when required.
+7. Messaging providers return delivery status updates and acknowledgements.
+8. The Delivery Status Processing Engine correlates and processes delivery status information.
+9. Final delivery results are written to the configured output destination.
+10. Audit events and operational metrics are processed by the Analytics Engine.
+11. Dashboards, reports, and logs provide operational visibility into the complete messaging lifecycle.
