@@ -95,12 +95,6 @@ Kafka provides the messaging infrastructure used by Equify to exchange events be
 
 After validation, all message requests are published to Kafka topics where they become available to downstream services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.
 
-### Redis Cache
-
-Redis is used as the platform's in-memory data store for runtime processing.
-
-Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.
-
 ### Middleware Service
 
 The Middleware Service performs business-rule validation and routing evaluation.
@@ -198,6 +192,12 @@ The platform stores:
 - Audit logs
 - System health metrics
 - Application performance metrics
+
+### Redis Cache
+
+Redis is used as the platform's in-memory data store for runtime processing.
+
+Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.
 
 ### System Metrics Collection
 
