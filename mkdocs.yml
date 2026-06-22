@@ -22,4 +22,7 @@ extra_css:
 nav:
   - Home: index.md
   - Overview: overview.md
-  - Architecture: architecture.md
+
+  - SMS:
+      - Architecture: SMS/sms_architecture.md
+

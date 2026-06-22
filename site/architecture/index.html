@@ -447,6 +447,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#operations-and-maintenance-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations and Maintenance Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#kafka-cluster" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -518,22 +529,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#delivery-report-processing-layer" class="md-nav__link">
+  <a href="#dlr-processing-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delivery Report Processing Layer
+        DLR Processing Layer
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Delivery Report Processing Layer">
+    <nav class="md-nav" aria-label="DLR Processing Layer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#delivery-status-processing-engine" class="md-nav__link">
+  <a href="#dlr-processing-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delivery Status Processing Engine
+        DLR Processing Engine
       
     </span>
   </a>
@@ -800,6 +811,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#operations-and-maintenance-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operations and Maintenance Service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#kafka-cluster" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -871,22 +893,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#delivery-report-processing-layer" class="md-nav__link">
+  <a href="#dlr-processing-layer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delivery Report Processing Layer
+        DLR Processing Layer
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Delivery Report Processing Layer">
+    <nav class="md-nav" aria-label="DLR Processing Layer">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#delivery-status-processing-engine" class="md-nav__link">
+  <a href="#dlr-processing-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delivery Status Processing Engine
+        DLR Processing Engine
       
     </span>
   </a>
@@ -1028,7 +1050,7 @@
 <p>This architecture provides:</p>
 <ul>
 <li>Centralized communication management</li>
-<li>Multi-provider and multi-channel connectivity</li>
+<li>Support for multiple messaging providers</li>
 <li>Configurable routing strategies</li>
 <li>Automated retry and failover processing</li>
 <li>Delivery lifecycle tracking</li>
@@ -1082,14 +1104,13 @@
 <p>The Equify Platform is responsible for communication orchestration and contains three major processing engines:</p>
 <ul>
 <li>Message Processing Engine</li>
-<li>Delivery Status Processing Engine</li>
+<li>DLR Processing Engine</li>
 <li>Analytics Engine</li>
 </ul>
 <p>Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.</p>
 <h3 id="service-providers">Service Providers</h3>
 <p>Service Providers are external messaging providers responsible for delivering communications to end recipients.</p>
 <p>Equify can communicate with multiple providers simultaneously and determines the appropriate provider based on configured routing policies and operational requirements.</p>
-<p>Depending on the configured communication channel, providers may support SMS, WhatsApp, or other messaging services integrated with Equify.</p>
 <p>This architecture allows organizations to distribute traffic, implement failover strategies, and reduce dependency on a single provider.</p>
 <hr />
 <h2 id="message-processing-engine">Message Processing Engine</h2>
@@ -1104,9 +1125,12 @@
 <h3 id="db-connector-service">DB Connector Service</h3>
 <p>The DB Connector Service supports database-driven communication workflows.</p>
 <p>This service retrieves records directly from client databases or consumes database change events published through Debezium CDC, converting them into structured message requests for processing.</p>
+<h3 id="operations-and-maintenance-service">Operations and Maintenance Service</h3>
+<p>The Operations and Maintenance Service provides administrative capabilities for managing the platform configuration.</p>
+<p>Administrators use this service to manage provider configurations, routing strategies, retry policies, and integration settings. The service also supplies configuration data required by runtime services and supports dashboard and analytics functions.</p>
+<p>Configuration data is persisted in MySQL and synchronized to Redis to support low-latency access by processing services.</p>
 <h3 id="kafka-cluster">Kafka Cluster</h3>
-<p>Kafka provides the messaging infrastructure used by Equify to exchange events between platform services.</p>
-<p>After validation, all message requests are published to Kafka topics where they become available to downstream services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.</p>
+<p>Kafka is used to exchange message requests, delivery events, audit records, and operational metrics between platform services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.</p>
 <h3 id="middleware-service">Middleware Service</h3>
 <p>The Middleware Service performs business-rule validation and routing evaluation.</p>
 <p>Based on configured routing strategies, the service determines which provider should receive the message and publishes the request to the appropriate provider-specific processing channel.</p>
@@ -1132,11 +1156,10 @@
 <p>Routing behavior is determined by the routing strategy configured by platform administrators.</p>
 <p>Organizations can select the routing approach that best aligns with operational, business, and regulatory requirements.</p>
 <hr />
-<h2 id="delivery-report-processing-layer">Delivery Report Processing Layer</h2>
-<p>The Delivery Report Processing Layer manages message status updates received from service providers.</p>
-<h3 id="delivery-status-processing-engine">Delivery Status Processing Engine</h3>
-<p>The Delivery Status Processing Engine manages delivery acknowledgements and status updates received from messaging providers.</p>
-<p>For SMS channels, status information is typically received through Delivery Reports (DLRs). Other supported channels may provide equivalent delivery status events through channel-specific mechanisms.</p>
+<h2 id="dlr-processing-layer">DLR Processing Layer</h2>
+<p>The DLR Processing Layer manages message status updates received from service providers.</p>
+<h3 id="dlr-processing-engine">DLR Processing Engine</h3>
+<p>The DLR Processing Engine manages delivery acknowledgements and delivery reports received from messaging providers and updates message status throughout the delivery lifecycle.</p>
 <h3 id="dlr-api-service">DLR API Service</h3>
 <p>Messaging providers send delivery reports back to Equify through dedicated API endpoints.</p>
 <p>These reports contain status information that indicates whether messages were delivered successfully, failed, expired, or encountered processing issues.</p>
@@ -1161,7 +1184,7 @@
 <p>The Analytics and Operations Layer provides visibility into communication activity, platform performance, and infrastructure health.</p>
 <p>It transforms messaging events, delivery information, audit logs, and operational metrics into dashboards, reports, alerts, and monitoring insights that support day-to-day operations and platform administration.</p>
 <h3 id="clickhouse-analytics-store">ClickHouse Analytics Store</h3>
-<p>All audit logs and operational metrics are published to Kafka and ingested into ClickHouse for long-term analytics processing.</p>
+<p>Messaging events, delivery information, audit logs, and operational metrics are processed through the analytics pipeline and stored in ClickHouse for reporting and analysis.</p>
 <p>The platform stores:</p>
 <ul>
 <li>Messaging activity</li>
@@ -1187,8 +1210,7 @@
 </ul>
 <p>The collected data is published to Kafka and processed by ClickHouse for reporting purposes.</p>
 <h3 id="analytics-processing">Analytics Processing</h3>
-<p>Communication activity and operational events are processed through a dedicated analytics engine.</p>
-<p>The analytics layer aggregates information from across the platform and prepares it for dashboards, reports, and log analysis.</p>
+<p>Communication events, delivery information, audit records, and system metrics are processed through the analytics engine and prepared for reporting and operational analysis.</p>
 <h3 id="dashboard-and-reporting-services">Dashboard and Reporting Services</h3>
 <p>In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.</p>
 <p>Reporting capabilities help organizations analyze:</p>
@@ -1213,8 +1235,8 @@
 <li>Routing policies determine the target provider.</li>
 <li>The Dispatcher Service submits the message to the selected provider.</li>
 <li>Retry processing handles temporary failures when required.</li>
-<li>Messaging providers return delivery status updates and acknowledgements.</li>
-<li>The Delivery Status Processing Engine correlates and processes delivery status information.</li>
+<li>Messaging providers return delivery reports and acknowledgements.</li>
+<li>The DLR Processing Engine correlates delivery reports with the original message and updates delivery status information.</li>
 <li>Final delivery results are written to the configured output destination.</li>
 <li>Audit events and operational metrics are processed by the Analytics Engine.</li>
 <li>Dashboards, reports, and logs provide operational visibility into the complete messaging lifecycle.</li>

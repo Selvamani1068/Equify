@@ -1,27 +1,13 @@
 ## Architecture Overview
 
-Equify is a communication orchestration platform that provides a centralized framework for managing business communications across enterprise applications, data sources, and messaging providers. It enables organizations to route, deliver, monitor, and analyze communication traffic through a single platform rather than managing multiple provider integrations independently.
-
-The platform acts as an intermediary layer between business systems and messaging providers. Communication requests are received from business applications and source systems, processed according to configured routing policies, delivered through the appropriate messaging provider, and tracked throughout the delivery process. Operational metrics, delivery outcomes, and audit information are made available through centralized monitoring and reporting capabilities.
-
-This architecture provides:
-
-- Centralized communication management
-- Support for multiple messaging providers
-- Configurable routing strategies
-- Automated retry and failover processing
-- Delivery lifecycle tracking
-- Real-time operational monitoring
-- Infrastructure health monitoring
-- Centralized governance and auditability
-- Support for large-scale communication workloads
+This chapter describes the technical architecture of the Equify SMS platform and explains how its core components interact to process, route, deliver, and track SMS communications.
 
 At a high level, the Equify architecture consists of three logical domains:
 
-| Domain | Purpose |
+| Domain | Description |
 |------------|-------------|
 | Client System | Generates communication requests and receives delivery status updates |
-| Equify Platform | Processes, routes, monitors, and tracks communications |
+| Equify Platform | Receives, processes, routes, delivers, and tracks SMS communications |
 | Service Providers | Deliver messages to end recipients |
 
 ## Equify Platform Architecture
@@ -129,7 +115,7 @@ When a provider returns a retryable error, the service automatically routes the 
 
 ### Routing Architecture
 
-Routing determines how communication traffic is distributed across configured messaging providers.
+Routing controls how SMS traffic is distributed across the messaging providers configured in the platform.
 
 The platform supports multiple routing strategies that determine how traffic is distributed across service providers.
 
@@ -157,7 +143,7 @@ The DLR Processing Engine manages delivery acknowledgements and delivery reports
 
 ### DLR API Service
 
-Messaging providers send delivery reports back to Equify through dedicated API endpoints.
+Messaging providers send delivery reports back to Equify through dedicated HTTPS API endpoints.
 
 These reports contain status information that indicates whether messages were delivered successfully, failed, expired, or encountered processing issues.
 
