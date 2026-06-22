@@ -447,17 +447,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#redis-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Redis Cache
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#middleware-service" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -584,6 +573,17 @@
     <span class="md-ellipsis">
       
         ClickHouse Analytics Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis Cache
       
     </span>
   </a>
@@ -789,17 +789,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#redis-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Redis Cache
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#middleware-service" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -926,6 +915,17 @@
     <span class="md-ellipsis">
       
         ClickHouse Analytics Store
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redis Cache
       
     </span>
   </a>
@@ -1082,9 +1082,6 @@
 <h3 id="kafka-cluster">Kafka Cluster</h3>
 <p>Kafka provides the messaging infrastructure used by Equify to exchange events between platform services.</p>
 <p>After validation, all message requests are published to Kafka topics where they become available to downstream services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.</p>
-<h3 id="redis-cache">Redis Cache</h3>
-<p>Redis is used as the platform's in-memory data store for runtime processing.</p>
-<p>Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.</p>
 <h3 id="middleware-service">Middleware Service</h3>
 <p>The Middleware Service performs business-rule validation and routing evaluation.</p>
 <p>Based on configured routing strategies, the service determines which provider should receive the message and publishes the request to the appropriate provider-specific processing channel.</p>
@@ -1149,6 +1146,9 @@
 <li>System health metrics</li>
 <li>Application performance metrics</li>
 </ul>
+<h3 id="redis-cache">Redis Cache</h3>
+<p>Redis is used as the platform's in-memory data store for runtime processing.</p>
+<p>Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.</p>
 <h3 id="system-metrics-collection">System Metrics Collection</h3>
 <p>Background monitoring scripts execute periodically across all servers and collect metrics related to:</p>
 <ul>

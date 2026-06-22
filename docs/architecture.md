@@ -24,6 +24,12 @@ At a high level, the Equify architecture consists of three logical domains:
 | Equify Platform | Processes, routes, monitors, and tracks communications |
 | Service Providers | Deliver messages to end recipients |
 
+## Equify Platform Architecture
+
+![Equify Platform Architecture](assets/images/architecture.png)
+
+*Figure 1. High-level architecture of the Equify platform.*
+
 ## Architectural Domains
 
 ### Client System
