@@ -7,7 +7,7 @@ The platform acts as an intermediary layer between business systems and messagin
 This architecture provides:
 
 - Centralized communication management
-- Multi-provider and multi-channel connectivity
+- Support for multiple messaging providers
 - Configurable routing strategies
 - Automated retry and failover processing
 - Delivery lifecycle tracking
@@ -54,7 +54,7 @@ The client environment may include:
 The Equify Platform is responsible for communication orchestration and contains three major processing engines:
 
 - Message Processing Engine
-- Delivery Status Processing Engine
+- DLR Processing Engine
 - Analytics Engine
 
 Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
@@ -64,8 +64,6 @@ Together, these engines manage message delivery, delivery report processing, mon
 Service Providers are external messaging providers responsible for delivering communications to end recipients.
 
 Equify can communicate with multiple providers simultaneously and determines the appropriate provider based on configured routing policies and operational requirements.
-
-Depending on the configured communication channel, providers may support SMS, WhatsApp, or other messaging services integrated with Equify.
 
 This architecture allows organizations to distribute traffic, implement failover strategies, and reduce dependency on a single provider.
 
@@ -95,11 +93,17 @@ The DB Connector Service supports database-driven communication workflows.
 
 This service retrieves records directly from client databases or consumes database change events published through Debezium CDC, converting them into structured message requests for processing.
 
+### Operations and Maintenance Service
+
+The Operations and Maintenance Service provides administrative capabilities for managing the platform configuration.
+
+Administrators use this service to manage provider configurations, routing strategies, retry policies, and integration settings. The service also supplies configuration data required by runtime services and supports dashboard and analytics functions.
+
+Configuration data is persisted in MySQL and synchronized to Redis to support low-latency access by processing services.
+
 ### Kafka Cluster
 
-Kafka provides the messaging infrastructure used by Equify to exchange events between platform services.
-
-After validation, all message requests are published to Kafka topics where they become available to downstream services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.
+Kafka is used to exchange message requests, delivery events, audit records, and operational metrics between platform services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.
 
 ### Middleware Service
 
@@ -143,15 +147,13 @@ Organizations can select the routing approach that best aligns with operational,
 
 ---
 
-## Delivery Report Processing Layer
+## DLR Processing Layer
 
-The Delivery Report Processing Layer manages message status updates received from service providers.
+The DLR Processing Layer manages message status updates received from service providers.
 
-### Delivery Status Processing Engine
+### DLR Processing Engine
 
-The Delivery Status Processing Engine manages delivery acknowledgements and status updates received from messaging providers.
-
-For SMS channels, status information is typically received through Delivery Reports (DLRs). Other supported channels may provide equivalent delivery status events through channel-specific mechanisms.
+The DLR Processing Engine manages delivery acknowledgements and delivery reports received from messaging providers and updates message status throughout the delivery lifecycle.
 
 ### DLR API Service
 
@@ -188,7 +190,7 @@ It transforms messaging events, delivery information, audit logs, and operationa
 
 ### ClickHouse Analytics Store
 
-All audit logs and operational metrics are published to Kafka and ingested into ClickHouse for long-term analytics processing.
+Messaging events, delivery information, audit logs, and operational metrics are processed through the analytics pipeline and stored in ClickHouse for reporting and analysis.
 
 The platform stores:
 
@@ -221,9 +223,7 @@ The collected data is published to Kafka and processed by ClickHouse for reporti
 
 ### Analytics Processing
 
-Communication activity and operational events are processed through a dedicated analytics engine.
-
-The analytics layer aggregates information from across the platform and prepares it for dashboards, reports, and log analysis.
+Communication events, delivery information, audit records, and system metrics are processed through the analytics engine and prepared for reporting and operational analysis.
 
 ### Dashboard and Reporting Services
 
@@ -254,8 +254,8 @@ The following sequence summarizes the complete communication lifecycle:
 4. Routing policies determine the target provider.
 5. The Dispatcher Service submits the message to the selected provider.
 6. Retry processing handles temporary failures when required.
-7. Messaging providers return delivery status updates and acknowledgements.
-8. The Delivery Status Processing Engine correlates and processes delivery status information.
+7. Messaging providers return delivery reports and acknowledgements.
+8. The DLR Processing Engine correlates delivery reports with the original message and updates delivery status information.
 9. Final delivery results are written to the configured output destination.
 10. Audit events and operational metrics are processed by the Analytics Engine.
 11. Dashboards, reports, and logs provide operational visibility into the complete messaging lifecycle.
