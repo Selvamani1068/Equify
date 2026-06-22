@@ -17,18 +17,6 @@ Additional channels can be integrated as business requirements evolve.
 
 ---
 
-## Key Capabilities
-
-- Multi-provider communication management
-- Intelligent routing and traffic distribution
-- Automated retry and failover processing
-- Delivery status tracking
-- Real-time monitoring and analytics
-- Audit logging and governance
-- Centralized administration
-
----
-
 ## Documentation Guide
 
 | Section | Description |
