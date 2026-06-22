@@ -1,5 +1,3 @@
-## Architecture Overview
-
 This chapter describes the technical architecture of the Equify SMS platform and explains how its core components interact to process, route, deliver, and track SMS communications.
 
 At a high level, the Equify architecture consists of three logical domains:
