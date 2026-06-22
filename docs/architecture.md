@@ -26,7 +26,7 @@ At a high level, the Equify architecture consists of three logical domains:
 
 ## Equify Platform Architecture
 
-![Equify Platform Architecture](assets/images/architecture.png)
+![Equify Platform Architecture](assets/images/architecture.svg)
 
 *Figure 1. High-level architecture of the Equify platform.*
 
