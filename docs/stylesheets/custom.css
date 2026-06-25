@@ -246,3 +246,48 @@
 .md-typeset table td:last-child {
     border-right: none;
 }
+
+/* =====================================================
+   TABLES
+   ===================================================== */
+
+.md-typeset table:not([class]) {
+    width: 100%;
+    font-size: 0.85rem;
+    border-collapse: collapse;
+}
+
+/* Header */
+.md-typeset table:not([class]) th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+}
+
+/* Cells */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    padding: 8px 14px !important;
+    line-height: 1.4 !important;
+    vertical-align: top;
+    border-right: 1px solid #d1d5db;
+}
+
+/* Remove last border */
+.md-typeset table:not([class]) th:last-child,
+.md-typeset table:not([class]) td:last-child {
+    border-right: none;
+}
+
+/* First column */
+.md-typeset table:not([class]) th:first-child,
+.md-typeset table:not([class]) td:first-child {
+    width: 220px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* Remove paragraph spacing inside cells */
+.md-typeset table:not([class]) p {
+    margin: 0 !important;
+}
