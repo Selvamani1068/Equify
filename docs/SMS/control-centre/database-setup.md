@@ -25,7 +25,7 @@ Make sure you have the following information:
     | **Connection Name** | A unique name for the database connection. |
     | **Database Type** | Select the database role: **Input Database** or **Output Database**. |
     | **Database Name** | Select the registered database. |
-    | **Driver** | Displays the database driver associated with the selected database. |
+    | **Driver** | Displays the database driver associated with the selected database. This field is populated automatically. |
 
     !!! note
 
