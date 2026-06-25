@@ -1,8 +1,7 @@
 # Equify Product Guide
 
-Enterprise communication orchestration platform for managing, routing, tracking, and monitoring business communications across multiple messaging providers and channels.
+Welcome to the official Equify user documentation.
 
----
 
 ## What is Equify?
 
@@ -23,9 +22,13 @@ Additional channels can be integrated as business requirements evolve.
 |----------|-------------|
 | Overview | Introduction to Equify, business value, and core capabilities |
 | Architecture | Platform architecture, processing engines, and message flow |
-| SMS Management | Create and manage SMS communication workflows |
-| Routing Configuration | Configure provider routing strategies |
-| Monitoring and Analytics | Monitor messaging activity and platform health |
+| [Getting Started](sms/getting-started/introduction.md) | Core concepts and first steps inside the application |
+| [Dashboard](sms/dashboard/index.md) | Real-time visibility into traffic, delivery, and infrastructure health |
+| [Control Centre](sms/control-centre/index.md) | Database connections, service provider onboarding, and error handling |
+| [Routing Setup](sms/routing-setup/index.md) | The seven traffic-routing strategies and how to combine them |
+| [Analytics](sms/analytics/index.md) | Downloadable reports and a full per-message audit log |
+| [Administration](sms/administration/index.md) | Platform-wide change history and governance |
+| [Reference](sms/reference/glossary.md) | Glossary of terms and frequently asked questions |
 
 ---
 

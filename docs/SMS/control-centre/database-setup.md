@@ -93,3 +93,11 @@ Make sure you have the following information:
 14. Verify that the new database configuration appears in the configured database list.
 
     The database connection is now available for use by the Equify.
+
+---
+
+## Related Articles
+
+- [View DB Configuration](../../SMS/control-centre/view-db-configuration.md)
+- [Update DB Configuration](../../SMS/control-centre/update-db-configuration.md)
+- [Routing Setup](../routing-setup/index.md)
