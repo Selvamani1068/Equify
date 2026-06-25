@@ -2,6 +2,17 @@ site_name: Equify Product Guide
 site_description: Enterprise Communication Orchestration Platform Documentation
 site_author: Product Documentation Team
 
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
 theme:
   name: material
 
@@ -22,7 +33,40 @@ extra_css:
 nav:
   - Home: index.md
   - Overview: overview.md
-
+  - Installation: installation.md
+  - Getting Started: getting_started.md
   - SMS:
       - Architecture: SMS/sms_architecture.md
+      - Dashboard: SMS/dashboard/dashboard_index.md
+      - Control Centre:
+          - Control Centre Overview: SMS/control-centre/index.md
+          - DB Configuration: SMS/control-centre/database-setup.md
+          - DB Management:
+                - Update DB Configuration: SMS/control-centre/update-db-configuration.md
+                - View DB Configuration: SMS/control-centre/view-db-configuration.md
+          - Service Provider Registration: SMS/control-centre/service-provider-registration.md
+          - SP Management:
+                - Update Service Provider Details: SMS/control-centre/service-provider-management.md
+                - View Service Provider Details: SMS/control-centre/view-sp-details.md
+          - Error Control Center: SMS/control-centre/error-retry-management.md
+      - Routing Setup:
+          - Routing Setup Overview: SMS/routing-setup/index.md
+          - Configure Routing Strategy:
+                 - Round Robin: SMS/routing-setup/round-robin.md
+                 - Percentage Allocation: SMS/routing-setup/percentage-allocation.md
+                 - Functional Routing: SMS/routing-setup/functional-routing.md
+                 - Header Routing: SMS/routing-setup/header-routing.md
+                 - Template Routing: SMS/routing-setup/template-routing.md
+                 - Service Type Routing: SMS/routing-setup/service-type-routing.md
+                 - Geographic Routing: SMS/routing-setup/geographic-routing.md
+          - Create Routing Combinations: SMS/routing-setup/routing-combinations.md
+          - Edit Routing Combinations: SMS/routing-setup/edit_routing_combination.md
+      - Analytics:
+          - Analytics Overview: SMS/analytics/index.md
+          - Report & Log: SMS/analytics/report-and-log.md
+      - Administration:
+          - Administration Overview: SMS/administration/index.md
+          - System Audit: SMS/administration/system-audit.md
+  - Glossary: SMS/reference/glossary.md
+  - Frequently Asked Questions: SMS/reference/faq.md
 
