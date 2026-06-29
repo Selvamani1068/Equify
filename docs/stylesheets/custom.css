@@ -469,11 +469,13 @@ body,
     width: auto !important;
     max-width: 170px !important;
 
-    transform: translateY(28px) !important;
+    position: relative;
+    top: 27px;
 }
 
 .md-header__title {
-    transform: translateY(28px);
+    position: relative;
+    top: 27px;
 }
 
 .md-header__title {
@@ -488,7 +490,8 @@ body,
 }
 
 .md-search {
-    transform: translateY(25px);
+    position: relative;
+    top: 27px;
 }
 
 /* Center the top navigation tabs */
@@ -520,16 +523,6 @@ body,
     color: var(--equify-red) !important;
 }
 
-/* Active left navigation item */
-.md-sidebar--primary .md-nav__link--active {
-    color: var(--equify-red) !important;
-}
-
-/* Left navigation hover */
-.md-sidebar--primary .md-nav__link:hover {
-    color: var(--equify-red) !important;
-}
-
 /* Active TOC item */
 .md-sidebar--secondary .md-nav__link--active {
     color: var(--equify-red) !important;
@@ -537,6 +530,11 @@ body,
 
 /* TOC active indicator line */
 .md-sidebar--secondary .md-nav__link--active::before {
+    background: var(--equify-red) !important;
+}
+
+/* Parent active TOC item */
+.md-sidebar--secondary .md-nav__item--active > .md-nav__link {
     background: var(--equify-red) !important;
 }
 
@@ -549,4 +547,86 @@ body,
 
 .md-typeset a:hover {
     color: #cc0019;
+}
+
+/* Active page */
+.md-sidebar--primary .md-nav__link--active {
+    color: #374151 !important;       /* keep text dark */
+    font-weight: 600 !important;
+
+    background: #fff1f2 !important;  /* pale red */
+    border-radius: 6px;
+    padding-left: 12px !important;
+
+    position: relative;
+}
+
+/* Red indicator bar */
+.md-sidebar--primary .md-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: #ff0020;
+    border-radius: 2px;
+}
+
+/* Hover effect */
+.md-sidebar--primary .md-nav__link:hover {
+    background: #fff5f5;
+    border-radius: 6px;
+    color: inherit !important;
+}
+
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+    color: #374151 !important;
+    background: #fff1f2 !important;
+    border-radius: 6px;
+    position: relative;
+}
+
+.md-sidebar--primary .md-nav__item--active > .md-nav__link::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: #ff0020;
+    border-radius: 2px;
+}
+
+/* Active TOC item - all levels */
+.md-sidebar--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav__item .md-nav__link--active {
+    color: #ff1f3d !important;
+    font-weight: 600 !important;
+}
+
+/* Active nested TOC items */
+.md-sidebar--secondary .md-nav__list .md-nav__link--active {
+    color: #ff1f3d !important;
+}
+
+/* Active H3/H4 items */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link--active,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active {
+    color: #ff1f3d !important;
+    font-weight: 600 !important;
+}
+
+/* Pull logo/title/search upward */
+.md-header__inner {
+    margin-top: -15px !important;
+}
+
+/* Pull navigation row upward by removing bottom space */
+.md-tabs__list {
+    margin-bottom: -15px !important;
+}
+
+.md-tabs {
+    overflow: hidden !important;
 }
