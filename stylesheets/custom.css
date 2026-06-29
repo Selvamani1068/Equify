@@ -35,7 +35,7 @@
 /* LEFT PANEL TITLE */
 .md-sidebar--primary .md-nav__title {
     background: #e5eff4 !important;
-    color: #4e84e9 !important;
+    color: #ff0020 !important;
 
     font-weight: 600;
     font-size: 0.85rem;
@@ -204,13 +204,13 @@
 
 /* Active Page */
 .md-sidebar--primary .md-nav__link--active {
-    color: #4e84e9 !important;
+    color: #ff0020 !important;
     font-weight: 600 !important;
 }
 
 /* Hover */
 .md-sidebar--primary .md-nav__link:hover {
-    color: #4e84e9 !important;
+    color: #ff0020 !important;
 }
 
 /* Reduce gap between logo and title */
@@ -419,7 +419,7 @@ body,
     right: 8px;
     bottom: -1px;
     height: 3px;
-    background: #3b82f6;
+    background: #ff0020 !important;
     border-radius: 2px;
 }
 
@@ -495,4 +495,58 @@ body,
 .md-tabs__list {
     justify-content: center !important;
     transform: translateY(-28px);
+}
+
+/* ===================================
+   EQUFIY BRAND RED
+   =================================== */
+
+:root {
+    --equify-red: #ff0020;
+}
+
+/* Active top menu underline */
+.md-tabs__item--active::after {
+    background: var(--equify-red) !important;
+}
+
+/* Active top menu text */
+.md-tabs__link--active {
+    color: var(--equify-red) !important;
+}
+
+/* Menu hover */
+.md-tabs__link:hover {
+    color: var(--equify-red) !important;
+}
+
+/* Active left navigation item */
+.md-sidebar--primary .md-nav__link--active {
+    color: var(--equify-red) !important;
+}
+
+/* Left navigation hover */
+.md-sidebar--primary .md-nav__link:hover {
+    color: var(--equify-red) !important;
+}
+
+/* Active TOC item */
+.md-sidebar--secondary .md-nav__link--active {
+    color: var(--equify-red) !important;
+}
+
+/* TOC active indicator line */
+.md-sidebar--secondary .md-nav__link--active::before {
+    background: var(--equify-red) !important;
+}
+
+/* TOC hover */
+.md-sidebar--secondary .md-nav__link:hover {
+    color: var(--equify-red) !important;
+}
+
+
+
+.md-typeset a:hover {
+    color: #cc0019;
 }
