@@ -469,11 +469,11 @@ body,
     width: auto !important;
     max-width: 170px !important;
 
-    transform: translateY(10px) !important;
+    transform: translateY(28px) !important;
 }
 
 .md-header__title {
-    transform: translateY(11px);
+    transform: translateY(28px);
 }
 
 .md-header__title {
@@ -487,3 +487,12 @@ body,
     left: -17px;   /* move towards logo */
 }
 
+.md-search {
+    transform: translateY(25px);
+}
+
+/* Center the top navigation tabs */
+.md-tabs__list {
+    justify-content: center !important;
+    transform: translateY(-28px);
+}
