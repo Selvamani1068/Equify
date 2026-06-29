@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body,
+.md-typeset,
+.md-nav,
+.md-sidebar {
+    font-family: "Inter", sans-serif !important;
+}
 .md-main {
     margin-top: 0 !important;
 }
@@ -497,7 +506,7 @@ body,
 /* Center the top navigation tabs */
 .md-tabs__list {
     justify-content: center !important;
-    transform: translateY(-28px);
+    transform: translateY(-27px);
 }
 
 /* ===================================
@@ -630,3 +639,4 @@ body,
 .md-tabs {
     overflow: hidden !important;
 }
+
