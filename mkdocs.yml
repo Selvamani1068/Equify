@@ -1,4 +1,4 @@
-site_name: Equify Product Guide
+site_name: Docs
 site_description: Enterprise Communication Orchestration Platform Documentation
 site_author: Product Documentation Team
 
@@ -16,8 +16,8 @@ markdown_extensions:
 theme:
   name: material
 
-  logo: assets/images/logo.png
-  favicon: assets/images/logo.png
+  logo: assets/images/full_logo1.png
+  favicon: assets/images/full_logo1.png
 
   palette:
     - scheme: default
