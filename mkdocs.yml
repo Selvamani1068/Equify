@@ -15,14 +15,27 @@ markdown_extensions:
 
 theme:
   name: material
+  custom_dir: overrides
 
   logo: assets/images/logo.png
   favicon: assets/images/logo.png
 
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: white
+      accent: Indigo
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - navigation.top
+
+  font:
+    text: Inter
+    code: JetBrains Mono
 
 plugins:
   - search
@@ -32,10 +45,13 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Overview: overview.md
-  - Installation: installation.md
-  - Getting Started: getting_started.md
+  - Product Guide:
+    - Introduction: Product_Guide/overview1.md
+    - System Requirements: Product_Guide/system_requirements.md
+    - Installation: Product_Guide/installation.md
+    - Getting Started: Product_Guide/getting_started.md
   - SMS:
+      - Overview: overview.md
       - Architecture: SMS/sms_architecture.md
       - Dashboard: SMS/dashboard/dashboard_index.md
       - Control Centre:
@@ -67,6 +83,7 @@ nav:
       - Administration:
           - Administration Overview: SMS/administration/index.md
           - System Audit: SMS/administration/system-audit.md
-  - Glossary: SMS/reference/glossary.md
+  - WhatsApp:
+      - Overview: whatsapp/index.md
   - Frequently Asked Questions: SMS/reference/faq.md
 

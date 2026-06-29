@@ -10,10 +10,7 @@
     display: none !important;
 }
 
-/* Right TOC - keep original text */
-.md-sidebar--secondary .md-nav__title {
-    font-size: inherit;
-}
+
 
 /* LEFT SIDEBAR */
 .md-sidebar--primary,
@@ -54,23 +51,37 @@
     box-shadow: none !important;
 }
 
-/* RIGHT PANEL TITLE */
 .md-sidebar--secondary .md-nav__title {
-    background: #f8f9fb !important;
-    color: #4b5563 !important;
-
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-    border: 1px solid #e9edf2;
-    border-radius: 10px;
-
-    margin: 8px;
-    padding: 12px 16px;
-
+    background: transparent !important;
+    border: none !important;
     box-shadow: none !important;
+
+    color: transparent !important;
+    font-size: 0 !important;
+
+    margin: 0 0 0.8rem 0 !important;
+    padding: 0 !important;
+}
+
+/* Custom title */
+.md-sidebar--secondary .md-nav__title::after {
+    content: "On this page";
+
+    color: #111827;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Replace title text */
+.md-sidebar--secondary .md-nav__title::after {
+    content: "On this page";
+
+    color: #374151;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 /* Left navigation area */
@@ -98,47 +109,64 @@
 }
 
 /* =====================================================
-   TABLE OF CONTENTS - ENTERPRISE HIERARCHY
+   RIGHT TOC - TWILIO STYLE
    ===================================================== */
 
-/* TOC Title */
-.md-sidebar--secondary .md-nav__title {
-    color: #4b5563 !important;
-    font-weight: 530;
-    font-size: 0.80rem;
+/* TOC container */
+.md-sidebar--secondary .md-nav {
+    position: relative;
+    padding-left: 0.75rem;
 }
 
-/* Main Headings (H2) */
+/* Vertical guide line */
+.md-sidebar--secondary .md-nav__list {
+    border-left: 1px solid #d1d5db;
+    padding-left: 1rem;
+    margin-left: 0.2rem;
+}
+
+/* TOC items */
 .md-sidebar--secondary .md-nav__link {
     color: #6b7280 !important;
-    font-weight: 480;
-    font-size: 0.74rem;
-    line-height: 1.5;
+    font-size: 0.84rem;
+    line-height: 1.7;
+    font-weight: 450;
+    position: relative;
 }
 
-/* Sub-headings (H3) */
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
-    color: #9ca3af !important;
-    font-weight: 400;
-    font-size: 0.70rem;
+/* Hover */
+.md-sidebar--secondary .md-nav__link:hover {
+    color: #2563eb !important;
 }
 
-/* Sub-sub-headings (H4) */
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
-    color: #b6bec9 !important;
-    font-weight: 400;
-    font-size: 0.66rem;
-}
-
-/* Active TOC item */
+/* Active item */
 .md-sidebar--secondary .md-nav__link--active {
-    color: #4e84e9 !important;
+    color: #2563eb !important;
     font-weight: 600 !important;
 }
 
-/* Hover effect */
-.md-sidebar--secondary .md-nav__link:hover {
-    color: #4e84e9 !important;
+/* Blue indicator bar */
+.md-sidebar--secondary .md-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #2563eb;
+    border-radius: 2px;
+}
+
+/* H3 items */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
+    color: #9ca3af !important;
+    font-size: 0.80rem;
+}
+
+/* H4 items */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    color: #b6bec9 !important;
+    font-size: 0.76rem;
 }
 
 /* =====================================================
@@ -290,4 +318,224 @@
 /* Remove paragraph spacing inside cells */
 .md-typeset table:not([class]) p {
     margin: 0 !important;
+}
+
+body,
+.md-typeset {
+    font-family: Inter, sans-serif;
+}
+
+.md-grid {
+    max-width: 1670px;
+}
+
+/* =====================================================
+   ENTERPRISE DARK HEADER
+   ===================================================== */
+
+/* Main Header */
+.md-header {
+    background: #111827 !important;
+    border-bottom: 1px solid #1f2937 !important;
+    box-shadow: none !important;
+}
+
+/* Logo */
+.md-header__button.md-logo img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Product title */
+.md-header__title {
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+}
+
+/* Search */
+.md-search {
+    max-width: 420px;
+}
+
+.md-search__input {
+    background: #1f2937 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+}
+
+.md-search__input::placeholder {
+    color: #9ca3af !important;
+}
+
+.md-search__icon {
+    color: #9ca3af !important;
+}
+
+/* =====================================================
+   TOP NAVIGATION
+   ===================================================== */
+
+.md-tabs {
+    background: #111827 !important;
+    border-bottom: 1px solid #1f2937 !important;
+    min-height: 44px !important;
+}
+
+/* Lower tabs slightly */
+.md-tabs__list {
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+}
+
+/* Menu Items */
+.md-tabs__link {
+    color: #d1d5db !important;
+    font-size: 0.88rem;
+    font-weight: 500;
+    opacity: 1 !important;
+}
+
+/* Hover */
+.md-tabs__link:hover {
+    color: #ffffff !important;
+}
+
+/* Active tab */
+.md-tabs__link--active {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Underline */
+.md-tabs__item {
+    position: relative;
+}
+
+.md-tabs__item--active::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: -1px;
+    height: 3px;
+    background: #3b82f6;
+    border-radius: 2px;
+}
+
+/* ====================================
+   REDUCE GAP BETWEEN HEADER & TABS
+   ==================================== */
+
+/* Remove bottom padding from header */
+.md-header {
+    padding-bottom: 0 !important;
+}
+
+/* Remove top margin from tabs */
+.md-tabs {
+    margin-top: 0 !important;
+    min-height: 36px !important;
+}
+
+/* Reduce tab row height */
+.md-tabs__list {
+    padding-top: 2px !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Reduce tab link height */
+.md-tabs__link {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+/* HEADER */
+.equify-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 72px;
+
+    padding: 0 24px;
+
+    background: #111827;
+
+    border-bottom: 1px solid #1f2937;
+}
+
+/* LOGO */
+.equify-logo a {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+.equify-logo img {
+    height: 32px;
+    margin-right: 12px;
+}
+
+.equify-logo span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* CENTER NAV */
+.equify-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.equify-nav a {
+    color: #d1d5db;
+
+    text-decoration: none;
+
+    font-size: .95rem;
+
+    font-weight: 500;
+}
+
+.equify-nav a:hover {
+    color: white;
+}
+
+/* RIGHT SIDE */
+.equify-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+/* SEARCH */
+.equify-right .md-search {
+    width: 320px;
+}
+
+/* LOGIN */
+.login-link {
+    color: #d1d5db;
+
+    text-decoration: none;
+}
+
+/* SIGNUP */
+.signup-btn {
+    background: #2563eb;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
 }
