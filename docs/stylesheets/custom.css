@@ -47,9 +47,9 @@ body,
     color: #ff0020 !important;
 
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.4rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
 
     border: 1px solid #99b9ec;
     border-radius: 10px;
@@ -130,15 +130,15 @@ body,
 /* Vertical guide line */
 .md-sidebar--secondary .md-nav__list {
     border-left: 1px solid #d1d5db;
-    padding-left: 1rem;
-    margin-left: 0.2rem;
+    padding-left: 0.5rem;
+    margin-left: 0rem;
 }
 
 /* TOC items */
 .md-sidebar--secondary .md-nav__link {
     color: #6b7280 !important;
-    font-size: 0.84rem;
-    line-height: 1.7;
+    font-size: 0.75rem;
+    line-height: 1.3;
     font-weight: 450;
     position: relative;
 }
@@ -199,14 +199,14 @@ body,
 
 /* Level 2 Navigation */
 .md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link {
-    color: #6b7280 !important;
+    color: #26272a !important;
     font-weight: 450;
-    font-size: 0.80rem;
+    font-size: 0.83rem;
 }
 
 /* Level 3 Navigation */
 .md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
-    color: #9ca3af !important;
+    color: #36383c !important;
     font-weight: 400;
     font-size: 0.78rem;
 }
@@ -500,7 +500,8 @@ body,
 
 .md-search {
     position: relative;
-    top: 27px;
+    top: 26px;
+    right: 8px;
 }
 
 /* Center the top navigation tabs */
@@ -639,4 +640,113 @@ body,
 .md-tabs {
     overflow: hidden !important;
 }
+.md-sidebar--primary .md-nav__item--section:first-child {
+    border-top: none !important;
+    margin-top: 0;
+    padding-top: 0;
+}
 
+/* ===================================
+   COMPACT LEFT SIDEBAR NAVIGATION
+   =================================== */
+
+/* Reduce overall spacing between items */
+.md-sidebar--primary .md-nav__item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Main navigation links */
+.md-sidebar--primary .md-nav__link {
+    font-size: 0.82rem !important;
+    line-height: 1.2 !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    margin: 1px 0 !important;
+}
+
+/* Section titles (Overview, Architecture, Dashboard, etc.) */
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.md-sidebar--primary > .md-sidebar__scrollwrap
+.md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+}
+
+.md-sidebar--primary .md-nav__list
+> .md-nav__item
+> .md-nav
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link {
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+}
+
+.md-sidebar--primary .md-nav__list
+> .md-nav__item
+> .md-nav
+> .md-nav__list
+> .md-nav__item
+> .md-nav
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link {
+    font-size: 0.7rem !important;
+    font-weight: 400 !important;
+}
+
+/* Reduce indentation spacing */
+.md-sidebar--primary .md-nav__list .md-nav__list {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+/* Reduce spacing around expanded groups */
+.md-sidebar--primary .md-nav__item--nested > .md-nav {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    font-size: 0.2rem !important;
+    font-weight: 100 !important;
+}
+
+/* LEFT SIDEBAR */
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #cfd5de !important;
+    border-radius: 10px;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap:hover::-webkit-scrollbar-thumb {
+    background: #ff0020 !important;
+}
+
+/* RIGHT SIDEBAR */
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #cfd5de !important;
+    border-radius: 10px;
+}
+
+.md-sidebar--secondary .md-sidebar__scrollwrap:hover::-webkit-scrollbar-thumb {
+    background: #ff0020 !important;
+}
+
+/* TOC Level 2 */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
+    font-size: 0.69rem !important;
+    line-height: 1.3 !important;
+}
+
+/* TOC Level 3 */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    font-size: 0.65rem !important;
+    line-height: 1.3 !important;
+}

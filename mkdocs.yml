@@ -27,8 +27,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
+   # - navigation.sections
     - toc.follow
     - navigation.top
 
@@ -42,6 +41,9 @@ plugins:
 extra_css:
   - stylesheets/custom.css
 
+extra:
+  generator: false
+
 nav:
   - Home: index.md
   - Product Guide:
@@ -54,7 +56,7 @@ nav:
       - Architecture: SMS/sms_architecture.md
       - Dashboard: SMS/dashboard/dashboard_index.md
       - Control Centre:
-          - Control Centre Overview: SMS/control-centre/index.md
+          - Overview: SMS/control-centre/index.md
           - DB Configuration: SMS/control-centre/database-setup.md
           - DB Management:
                 - Update DB Configuration: SMS/control-centre/update-db-configuration.md
@@ -65,7 +67,7 @@ nav:
                 - View Service Provider Details: SMS/control-centre/view-sp-details.md
           - Error Control Center: SMS/control-centre/error-retry-management.md
       - Routing Setup:
-          - Routing Setup Overview: SMS/routing-setup/index.md
+          - Overview: SMS/routing-setup/index.md
           - Configure Routing Strategy:
                  - Round Robin: SMS/routing-setup/round-robin.md
                  - Percentage Allocation: SMS/routing-setup/percentage-allocation.md
@@ -77,10 +79,10 @@ nav:
           - Create Routing Combinations: SMS/routing-setup/routing-combinations.md
           - Edit Routing Combinations: SMS/routing-setup/edit_routing_combination.md
       - Analytics:
-          - Analytics Overview: SMS/analytics/index.md
+          - Overview: SMS/analytics/index.md
           - Report & Log: SMS/analytics/report-and-log.md
       - Administration:
-          - Administration Overview: SMS/administration/index.md
+          - Overview: SMS/administration/index.md
           - System Audit: SMS/administration/system-audit.md
   - WhatsApp:
       - Overview: whatsapp/index.md
