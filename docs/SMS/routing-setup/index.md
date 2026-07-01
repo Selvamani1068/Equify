@@ -1,4 +1,4 @@
-# Routing Setup Overview
+# Routing Setup Overview {#routing}
 
 If the [Control Centre](../control-centre/index.md) is where you tell Equify *who* your service providers are, **Routing Setup** is where you tell Equify *which provider should carry which message*. This is the section that turns a list of telecom partners into an intelligent, business-aware delivery strategy.
 

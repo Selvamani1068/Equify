@@ -1,4 +1,4 @@
-# Control Centre Overview
+# Control Centre Overview {#control_centre}
 
 The **Control Centre** is where the SMS module is configured rather than monitored. If the Dashboard answers *"is everything working right now?"*, the Control Centre answers *"how is everything set up?"* Almost every administrative task in the SMS module — connecting a database, onboarding a telecom partner, or defining what happens when a message fails — starts here.
 

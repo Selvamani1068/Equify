@@ -1,4 +1,4 @@
-# Analytics Overview
+# Analytics Overview {#analytics}
 
 Where the [Dashboard](../dashboard/index.md) is built for watching traffic as it happens today, **Analytics** is built for looking backward — generating formal reports, auditing exactly what happened to a specific message, and reviewing platform costs over time.
 

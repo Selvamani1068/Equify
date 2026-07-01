@@ -1,4 +1,4 @@
-# Administration Overview
+# Administration Overview {#admin}
 
 **Administration** is the smallest section in the SMS module's navigation menu, and the most specialized: it exists to answer one question — *who changed what, and when?* — about Equify's own configuration, rather than about message traffic itself.
 

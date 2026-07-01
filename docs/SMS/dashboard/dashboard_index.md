@@ -1,4 +1,4 @@
-# Dashboard Overview
+# Dashboard Overview {#dashboard}
 
 The Dashboard is the landing page of the Equify SMS platform. It provides a centralized view of SMS activity across the Equify platform and is designed to help users to understand the current state of SMS processing and delivery.
 
