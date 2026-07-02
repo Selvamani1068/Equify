@@ -18,15 +18,15 @@ communications at scale.
 <div class="hero-buttons">
 
 <a href="#get-started" class="hero-btn">
-Get Started →
+<strong>Get Started →</strong>
 </a>
 
 <a href="#sms-modules" class="hero-btn">
-SMS Module →
+<strong>SMS Module →</strong>
 </a>
 
 <a href="#whatsapp-modules" class="hero-btn">
-Whatsapp Module →
+<strong>Whatsapp Module →</strong>
 </a>
 </div>
 
@@ -97,11 +97,11 @@ Find everything you need to build, manage, and scale your SMS experience.
 
 <div class="card-actions">
 <a href="/sms/analytics/#analytics" class="card-btn">
-View Analytics →
+<strong>View Analytics →</strong>
 </a>
 
 <a href="/sms/administration/#admin" class="card-btn">
-Administration →
+<strong>Administration →</strong>
 </a>
 
 </div>
@@ -171,7 +171,7 @@ Find everything you need to build, manage, and scale your SMS experience.
 <div class="card-actions">
 
 <a href="sms/control-centre/" class="card-btn">
-Administration →
+<strong>Administration →</strong>
 </a>
 
 </div>
@@ -294,3 +294,4 @@ if (title) {
 
 });
 </script>
+

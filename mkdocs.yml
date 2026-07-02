@@ -15,6 +15,10 @@ markdown_extensions:
 
 theme:
   name: material
+  features:
+    - content.action.view
+    - content.code.copy
+    - content.image.zoom
 
   logo: assets/images/full_logo1.png
   favicon: assets/images/full_logo1.png
@@ -89,3 +93,5 @@ nav:
   - Release Notes: release_notes.md
   - FAQ: faq.md
 
+plugins:
+  - glightbox

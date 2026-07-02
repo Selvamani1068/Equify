@@ -1,10 +1,16 @@
 # Configure a Database Connection
 
-The **DB Configuration** feature is used to connect a client database to the Equify SMS platform. After the connection is configured, Equify can read message records from the database and process them through the SMS delivery workflow.
+---
 
-## Before you begin
+The **DB Configuration** feature is used to connect a client database to the Equify SMS platform.
 
-Make sure you have the following information:
+After the connection is configured, Equify can read message records from the database and process them through the SMS delivery workflow.
+
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
 
 - Database server hostname or IP address
 - Port number
@@ -14,18 +20,17 @@ Make sure you have the following information:
 - Database username and password
 - Database columns that contain SMS-related data
 
+---
+
 ## Create a Database Configuration
 
 1. Navigate to **Control Centre > Platform DB Setup > DB Configuration**.
 
 2. In the **Database System** section, enter the connection details.
-
-    | Field | Description |
-    |---------|-------------|
-    | **Connection Name** | A unique name for the database connection. |
-    | **Database Type** | Select the database role: **Input Database** or **Output Database**. |
-    | **Database Name** | Select the registered database. |
-    | **Driver** | Displays the database driver associated with the selected database. This field is populated automatically. |
+    - **Connection Name**: A unique name for the database connection.
+    - **Database Type**: Select the database role: **Input Database** or **Output Database**.
+    - **Database Name**: Select the registered database.
+    - **Driver**: Displays the database driver associated with the selected database. This field is populated automatically.
 
     !!! note
 
@@ -34,20 +39,15 @@ Make sure you have the following information:
         **Output Database** – Equify writes delivery status information and delivery reports back to the database.
 
 3. In the **Connection Settings** section, provide the database connection information.
-
-    | Field | Description |
-   |---------|-------------|
-   | **Host** | Database server hostname or IP address. |
-   | **Port** | Database listener port. |
-   | **Table** | Database table used by Equify. |
-   | **Database** | Database name. |
-   | **Schema** | Database schema name. |
-   | **Username** | Database user account. |
-   | **Password** | Password for the database user account. |
+    - **Host**: Database server hostname or IP address.
+    - **Port**: Database listener port.
+    - **Table**: Database table used by Equify.
+    - **Database**: Database name.
+    - **Schema**: Database schema name.
+    - **Username**: Database user account.
+    - **Password**: Password for the database user account.
 
     ![DB Configuration](../../assets/images/db-configuration-overview.png)
-
-    *Figure 1. Enter database and connection details.*
 
 4. Select **Configure DB Columns**.
 
@@ -56,8 +56,6 @@ Make sure you have the following information:
 6. Select **Add Mapping**.
 
     ![Database Column Mapping](../../assets/images/db-column-mapping.png)
-
-    *Figure 2. Map database columns to client parameters.*
 
 7. For each required parameter:
    
@@ -86,8 +84,6 @@ Make sure you have the following information:
         If the test fails, review the connection details and database credentials before testing again.
     ![Connection Status](../../assets/images/db-connection-success.png){ width="300" }
 
-    *Figure 3. Connection successful status.*
-
 13. Select **Save Configuration**.
 
 14. Verify that the new database configuration appears in the configured database list.
@@ -101,3 +97,27 @@ Make sure you have the following information:
 - [View DB Configuration](../../SMS/control-centre/view-db-configuration.md)
 - [Update DB Configuration](../../SMS/control-centre/update-db-configuration.md)
 - [Routing Setup](../routing-setup/index.md)
+
+
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
