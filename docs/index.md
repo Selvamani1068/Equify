@@ -7,7 +7,7 @@ hide:
 
 <div class="hero-content">
 
-<h1 class="hero-title">COMMUNICATION ORCHESTRATION PLATFORM</h1>
+<h1 class="hero-title">Communication Orchestration Platform</h1>
 
 <p class="hero-description">
 Equify centralizes communication processing, provider management,<br>
