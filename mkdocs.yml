@@ -51,7 +51,7 @@ extra:
 nav:
   - Home: index.md
   - Product Guide:
-    - Introduction: Product_Guide/overview1.md
+    - About Equify: Product_Guide/overview1.md
     - System Requirements: Product_Guide/system_requirements.md
     - Installation: Product_Guide/installation.md
     - Getting Started: Product_Guide/getting_started.md

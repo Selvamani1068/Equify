@@ -54,7 +54,7 @@ Start building scalable, intelligent SMS workflows in minutes.
 
 <div class="quick-content">
 
-<h3>Platform Overview</h3>
+<h3>About Equify</h3>
 
 <p>
 Learn how Equify manages communication processing, routing, delivery tracking, and operational monitoring.

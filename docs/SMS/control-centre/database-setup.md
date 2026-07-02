@@ -1,4 +1,4 @@
-# Configure a Database Connection
+# Configure a database connection
 
 ---
 
