@@ -15,6 +15,55 @@ body,
     padding-top: 0 !important;
 }
 
+body,
+.md-typeset {
+    color: #000306 !important;
+}
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th {
+    color: #000306 !important;
+}
+
+
+
+.quick-content p,
+.home-subtext,
+.home-subdesc {
+    color: #000306 !important;
+}
+
+.md-typeset h1:not(.hero-title),
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    color: #000306 !important;
+}
+.md-typeset h1 {
+    margin: 0;
+    padding: 0;
+    color: rgb(18, 28, 45);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    display: block;
+    word-break: break-word;
+}
+
+.md-typeset h2 {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(18, 28, 45);
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    display: inline;
+    word-break: break-word;
+}
+
 /* LEFT SIDEBAR */
 .md-sidebar--primary,
 .md-sidebar--primary .md-sidebar__scrollwrap,
@@ -33,6 +82,13 @@ body,
     background: #fafbfc !important;
     box-shadow: none !important;
     border: none !important;
+}
+
+.md-typeset img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
 }
 
 /* LEFT PANEL TITLE */
@@ -782,6 +838,7 @@ body,
 
 .hero-image {
     text-align: center;
+    
 }
 
 .feature-card h3 {
@@ -860,7 +917,7 @@ body,
     background: white;
     color: #111827;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 50;
 
     transition: all 0.2s ease;
 }
@@ -885,7 +942,7 @@ body,
 
 .hero-image img {
     width: 150%;
-    max-width: 1000px;
+    max-width: 1000px !important;
     height: auto;
     position: relative;
     left: -200px;
@@ -1296,6 +1353,48 @@ font-size:.9rem;
     border-color: #e5e7eb;
     color: #6b7280;
 }
+body:not(:has(.home-page)) .home-support-banner {
+    padding: 12px 10px !important;   /* was 56px 64px on home */
+    gap: 2rem !important;
+    margin-top: 32px !important;
+    margin-bottom: 16px !important;
+}
+/* Shrink the title/description to match the smaller banner */
+body:not(:has(.home-page)) .support-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.6rem !important;
+}
+
+body:not(:has(.home-page)) .support-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.2rem !important;
+}
+
+/* Optionally shrink or hide the icon cluster on inner pages */
+body:not(:has(.home-page)) .support-right {
+    height: 120px;
+}
+
+body:not(:has(.home-page)) .support-icon-bubble--1 {
+    width: 70px;
+    height: 70px;
+}
+
+body:not(:has(.home-page)) .support-icon-bubble--2 {
+    width: 50px;
+    height: 50px;
+}
+
+body:not(:has(.home-page)) .support-icon-bubble--3 {
+    width: 44px;
+    height: 44px;
+}
+body:not(:has(.home-page)) .home-support-banner .support-title,
+body:not(:has(.home-page)) .home-support-banner .support-desc,
+body:not(:has(.home-page)) .home-support-banner .support-legal {
+    padding-left: 40px;   /* adjust value to taste */
+}
 
 /* =====================================================
    TWILIO-STYLE SUPPORT BANNER FOOTER
@@ -1308,7 +1407,7 @@ font-size:.9rem;
     gap: 3rem;
 
     background: #0d1117;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 56px 64px;
     margin-top: 80px;
     margin-bottom: 16px;
@@ -1361,6 +1460,15 @@ font-size:.9rem;
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+}
+
+.home-support-banner,
+.home-support-banner p,
+.home-support-banner h1,
+.home-support-banner h2,
+.home-support-banner h3,
+.home-support-banner a {
+    color: #ffffff !important;
 }
 
 .support-legal a {
@@ -1476,4 +1584,44 @@ font-size:.9rem;
 /* Hide Home only when homepage is loaded */
 body:has(.home-page) .md-sidebar--primary .md-nav__item:first-child {
     display: none !important;
+}
+
+body,
+.md-typeset,
+.md-sidebar,
+.md-nav {
+    font-family: 'Inter var', 'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Helvetica Neue',
+        sans-serif !important;}
+/* =====================================
+   GLOBAL BODY TEXT (excluding headings)
+   ===================================== */
+
+.md-typeset,
+.md-typeset p,
+.md-typeset li,
+.md-typeset a,
+.md-typeset td {
+    font-size: 0.82rem !important;
+    line-height: 1.15rem !important;
+    font-weight: 395 !important;
+    /* Twilio magic */
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+
+    /* IMPORTANT for crisp rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.md-typeset figcaption {
+    text-align: center !important;
+    font-size: 0.8rem;
+    color: #3e3f43;
 }
