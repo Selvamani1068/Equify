@@ -163,8 +163,8 @@ body,
 
 /* Navigation section titles */
 .md-sidebar--primary .md-nav__item--section > .md-nav__link {
-    font-size: 0.85rem !important;
-    font-weight: 400;
+    font-size: 0.95rem !important;
+    font-weight: 600;
 }
 
 /* =====================================================
@@ -197,6 +197,25 @@ body,
 .md-sidebar--secondary .md-nav__link:hover {
     color: #2563eb !important;
 }
+
+/* Active item */
+.md-sidebar--secondary .md-nav__link--active {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+}
+
+/* Blue indicator bar */
+.md-sidebar--secondary .md-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #2563eb;
+    border-radius: 2px;
+}
+
 /* H3 items */
 .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
     color: #9ca3af !important;
@@ -240,6 +259,17 @@ body,
     color: #36383c !important;
     font-weight: 400;
     font-size: 0.78rem;
+}
+
+/* Active Page */
+.md-sidebar--primary .md-nav__link--active {
+    color: #ff0020 !important;
+    font-weight: 600 !important;
+}
+
+/* Hover */
+.md-sidebar--primary .md-nav__link:hover {
+    color: #ff0020 !important;
 }
 
 /* Reduce gap between logo and title */
@@ -504,7 +534,7 @@ body,
 
 .md-header__title {
     position: relative;
-    top: -20px;
+    top: 27px;
 }
 
 .md-header__title {
@@ -535,7 +565,116 @@ body,
    =================================== */
 
 :root {
-    --equify-accent: #6b7280;
+    --equify-red: #ff0020;
+}
+
+/* Active top menu underline */
+.md-tabs__item--active::after {
+    background: var(--equify-red) !important;
+}
+
+/* Active top menu text */
+.md-tabs__link--active {
+    color: var(--equify-red) !important;
+}
+
+/* Menu hover */
+.md-tabs__link:hover {
+    color: var(--equify-red) !important;
+}
+
+/* Active TOC item */
+.md-sidebar--secondary .md-nav__link--active {
+    color: var(--equify-red) !important;
+}
+
+/* TOC active indicator line */
+.md-sidebar--secondary .md-nav__link--active::before {
+    background: var(--equify-red) !important;
+}
+
+/* Parent active TOC item */
+.md-sidebar--secondary .md-nav__item--active > .md-nav__link {
+    background: var(--equify-red) !important;
+}
+
+/* TOC hover */
+.md-sidebar--secondary .md-nav__link:hover {
+    color: var(--equify-red) !important;
+}
+
+
+
+.md-typeset a:hover {
+    color: #cc0019;
+}
+
+/* Active page */
+.md-sidebar--primary .md-nav__link--active {
+    color: #374151 !important;       /* keep text dark */
+    font-weight: 600 !important;
+
+    background: #fff1f2 !important;  /* pale red */
+    border-radius: 6px;
+    padding-left: 12px !important;
+
+    position: relative;
+}
+
+/* Red indicator bar */
+.md-sidebar--primary .md-nav__link--active::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: #ff0020;
+    border-radius: 2px;
+}
+
+/* Hover effect */
+.md-sidebar--primary .md-nav__link:hover {
+    background: #fff5f5;
+    border-radius: 6px;
+    color: inherit !important;
+}
+
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+    color: #374151 !important;
+    background: #fff1f2 !important;
+    border-radius: 6px;
+    position: relative;
+}
+
+.md-sidebar--primary .md-nav__item--active > .md-nav__link::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: #ff0020;
+    border-radius: 2px;
+}
+
+/* Active TOC item - all levels */
+.md-sidebar--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav__item .md-nav__link--active {
+    color: #ff1f3d !important;
+    font-weight: 600 !important;
+}
+
+/* Active nested TOC items */
+.md-sidebar--secondary .md-nav__list .md-nav__link--active {
+    color: #ff1f3d !important;
+}
+
+/* Active H3/H4 items */
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link--active,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active {
+    color: #ff1f3d !important;
+    font-weight: 600 !important;
 }
 
 /* Pull logo/title/search upward */
@@ -579,7 +718,7 @@ body,
 
 /* Section titles (Overview, Architecture, Dashboard, etc.) */
 .md-sidebar--primary .md-nav__item--section > .md-nav__link {
-    font-size: 0.85rem !important;
+    font-size: 1.2rem !important;
     line-height: 1.2 !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
@@ -587,7 +726,7 @@ body,
 
 .md-sidebar--primary > .md-sidebar__scrollwrap
 .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
-    font-size: 0.87rem !important;
+    font-size: 1.2rem !important;
     font-weight: 600 !important;
 }
 
@@ -1485,94 +1624,4 @@ body,
     text-align: center !important;
     font-size: 0.8rem;
     color: #3e3f43;
-}
-
-:root {
-    --equify-accent: #6b7280; /* enterprise grey */
-}
-.md-header__title .md-header__topic,
-.md-header__title .md-ellipsis {
-    display: none !important;
-}
-
-/* Static "Docs" label */
-.md-header__title::after {
-    content: "Docs";
-    display: inline-block;
-    color: #ff0020 !important;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-/* =====================================================
-   LEFT SIDEBAR — ACTIVE STATE & HOVER (all nesting levels)
-   ===================================================== */
-
-:root {
-    --equify-accent: #4b5563;    /* indicator bar color */
-    --equify-active-bg: #e5e7eb; /* clearly darker than sidebar bg */
-    --equify-hover-bg: #edeff2;
-}
-
-.md-sidebar--primary .md-nav__link {
-    border-radius: 4px;
-    border-left: 3px solid transparent; /* reserve space so active doesn't shift layout */
-    padding-left: 9px !important;
-    transition: background-color .15s ease, color .15s ease;
-}
-
-/* HOVER — matched at every nesting depth */
-.md-sidebar--primary .md-nav__link:hover,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link:hover,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link:hover {
-    background: var(--equify-hover-bg) !important;
-    color: #111827 !important;
-}
-
-/* ACTIVE — matched at every nesting depth so specificity always wins */
-.md-sidebar--primary .md-nav__link--active,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link--active,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active,
-.md-sidebar--primary .md-nav__item--active > .md-nav__link,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link,
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link {
-    background: var(--equify-active-bg) !important;
-    color: #111827 !important;
-    font-weight: 600 !important;
-    border-left: 3px solid var(--equify-accent) !important;
-}
-
-/* =====================================================
-   RIGHT SIDEBAR (TOC) — ACTIVE STATE & HOVER, ALL LEVELS
-   ===================================================== */
-
-:root {
-    --equify-toc-active-bg: #e5e7eb;
-    --equify-toc-hover-bg: #f0f1f3;
-    --equify-toc-bar: #4b5563;
-}
-
-.md-sidebar--secondary .md-nav__link {
-    border-radius: 4px;
-    padding: 3px 8px !important;
-    margin-left: -8px;
-    transition: background-color .15s ease, color .15s ease;
-    border-left: none !important;
-}
-
-/* HOVER — every nesting depth */
-.md-sidebar--secondary .md-nav__link:hover,
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link:hover,
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link:hover {
-    background: var(--equify-toc-hover-bg) !important;
-    color: #111827 !important;
-}
-
-/* ACTIVE — every nesting depth, background + bold + colored text */
-.md-sidebar--secondary .md-nav__link--active,
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link--active,
-.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active {
-    background: var(--equify-toc-active-bg) !important;
-    color: #111827 !important;
-    font-weight: 600 !important;
 }
