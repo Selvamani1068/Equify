@@ -260,13 +260,6 @@ body,
     font-weight: 400;
     font-size: 0.78rem;
 }
-
-/* Active Page */
-.md-sidebar--primary .md-nav__link--active {
-    color: #ff0020 !important;
-    font-weight: 600 !important;
-}
-
 /* Reduce gap between logo and title */
 .md-header__button.md-logo {
     margin-right: 0.5rem !important;
@@ -561,13 +554,6 @@ body,
 
 :root {
     --equify-accent: #6b7280;
-}
-
-/* Hover effect */
-.md-sidebar--primary .md-nav__link:hover {
-    background: #fff5f5;
-    border-radius: 6px;
-    color: inherit !important;
 }
 
 /* Pull logo/title/search upward */
@@ -1522,26 +1508,6 @@ body,
 :root {
     --equify-accent: #6b7280; /* enterprise grey */
 }
-
-/* LEFT ACTIVE ITEM */
-.md-sidebar--primary .md-nav__link--active,
-.md-sidebar--primary .md-nav__item--active > .md-nav__link {
-    background: #f3f4f6 !important;
-    color: #111827 !important;
-}
-
-/* LEFT ACTIVE INDICATOR */
-.md-sidebar--primary .md-nav__link--active::before,
-.md-sidebar--primary .md-nav__item--active > .md-nav__link::before {
-    background: var(--equify-accent) !important;
-}
-
-/* LEFT HOVER */
-.md-sidebar--primary .md-nav__link:hover {
-    background: #f3f4f6 !important;
-    color: #111827 !important;
-}
-
 /* RIGHT TOC ACTIVE */
 .md-sidebar--secondary .md-nav__link--active {
     color: var(--equify-accent) !important;
@@ -1570,3 +1536,40 @@ body,
     font-size: 1.1rem;
 }
 
+/* =====================================================
+   LEFT SIDEBAR — ACTIVE STATE & HOVER (all nesting levels)
+   ===================================================== */
+
+:root {
+    --equify-accent: #4b5563;    /* indicator bar color */
+    --equify-active-bg: #e5e7eb; /* clearly darker than sidebar bg */
+    --equify-hover-bg: #edeff2;
+}
+
+.md-sidebar--primary .md-nav__link {
+    border-radius: 4px;
+    border-left: 3px solid transparent; /* reserve space so active doesn't shift layout */
+    padding-left: 9px !important;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+/* HOVER — matched at every nesting depth */
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link:hover,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link:hover {
+    background: var(--equify-hover-bg) !important;
+    color: #111827 !important;
+}
+
+/* ACTIVE — matched at every nesting depth so specificity always wins */
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link--active,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link,
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link {
+    background: var(--equify-active-bg) !important;
+    color: #111827 !important;
+    font-weight: 600 !important;
+    border-left: 3px solid var(--equify-accent) !important;
+}
