@@ -52,7 +52,7 @@ Users can switch between views to analyze different operational areas.
     
     Shows total, delivered, and failed messages.
 
-  ![SMS Volume Cards](../../assets/images/sms_volume1.png) ()
+  ![SMS Volume Cards](../../assets/images/sms_volume1.png)
 
     This view helps users:
 
