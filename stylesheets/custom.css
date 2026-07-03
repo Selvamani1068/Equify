@@ -419,6 +419,12 @@ body,
     color: #9ca3af !important;
 }
 
+.md-search {
+    position: relative;
+    top: 26px;
+    right: 8px;
+}
+
 /* =====================================================
    TOP NAVIGATION
    ===================================================== */
@@ -536,11 +542,6 @@ body,
     left: -17px;   /* move towards logo */
 }
 
-.md-search {
-    position: relative;
-    top: 26px;
-    right: 8px;
-}
 
 /* Center the top navigation tabs */
 .md-tabs__list {
