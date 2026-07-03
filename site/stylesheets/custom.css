@@ -1588,3 +1588,65 @@ body,
     font-weight: 400 !important;
 /*    padding-left: 42px !important; */
 }
+
+/* =====================================================
+   HORIZONTAL TABS — TWILIO-STYLE PREREQUISITES BLOCK
+   ===================================================== */
+
+.md-typeset .tabbed-set {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.md-typeset .tabbed-labels {
+    padding: 0 1rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 1.5rem;
+}
+
+.md-typeset .tabbed-labels > label {
+    padding: 10px 16px !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #6b7280;
+    border: 1px solid transparent;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+    color: #111827;
+}
+
+.md-typeset .tabbed-content {
+    padding: 1.5rem;
+}
+
+.md-typeset .tabbed-content ul {
+    margin: 0;
+}
+
+.md-typeset .tabbed-content li {
+    margin-bottom: 0.6rem;
+}
+
+/* THE ACTUAL FIX — positional matching, same mechanism Material itself uses */
+.md-typeset .tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > label:nth-child(1),
+.md-typeset .tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > label:nth-child(2),
+.md-typeset .tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > label:nth-child(3),
+.md-typeset .tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > label:nth-child(4),
+.md-typeset .tabbed-set > input:nth-child(5):checked ~ .tabbed-labels > label:nth-child(5),
+.md-typeset .tabbed-set > input:nth-child(6):checked ~ .tabbed-labels > label:nth-child(6),
+.md-typeset .tabbed-set > input:nth-child(7):checked ~ .tabbed-labels > label:nth-child(7),
+.md-typeset .tabbed-set > input:nth-child(8):checked ~ .tabbed-labels > label:nth-child(8) {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+    background: #ffffff;
+    border: 1px solid #2563eb !important;
+    border-bottom: 1px solid #ffffff !important;
+    border-radius: 8px 8px 0 0;
+}
