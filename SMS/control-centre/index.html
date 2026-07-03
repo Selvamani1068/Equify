@@ -837,7 +837,7 @@
   <a href="#opening-the-control-centre" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening the Control Centre
+        Opening the control centre
       
     </span>
   </a>
@@ -845,21 +845,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-the-control-centre-contains" class="md-nav__link">
+  <a href="#control-centre-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What the Control Centre contains
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#who-should-have-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Who should have access
+        Control centre components
       
     </span>
   </a>
@@ -2006,7 +1995,7 @@
   <a href="#opening-the-control-centre" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening the Control Centre
+        Opening the control centre
       
     </span>
   </a>
@@ -2014,21 +2003,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-the-control-centre-contains" class="md-nav__link">
+  <a href="#control-centre-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What the Control Centre contains
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#who-should-have-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Who should have access
+        Control centre components
       
     </span>
   </a>
@@ -2063,36 +2041,33 @@
 
 
 
-<h1 id="control_centre">Control Centre Overview<a class="headerlink" href="#control_centre" title="Permanent link">¶</a></h1>
-<p>The <strong>Control Centre</strong> is where the SMS module is configured rather than monitored. If the Dashboard answers <em>"is everything working right now?"</em>, the Control Centre answers <em>"how is everything set up?"</em> Almost every administrative task in the SMS module — connecting a database, onboarding a telecom partner, or defining what happens when a message fails — starts here.</p>
-<h2 id="opening-the-control-centre">Opening the Control Centre<a class="headerlink" href="#opening-the-control-centre" title="Permanent link">¶</a></h2>
-<p>Select <strong>Control Centre</strong> in the left-hand navigation menu. It expands to reveal two groups of sub-pages.</p>
-<h2 id="what-the-control-centre-contains">What the Control Centre contains<a class="headerlink" href="#what-the-control-centre-contains" title="Permanent link">¶</a></h2>
+<h1 id="control_centre">Control centre overview<a class="headerlink" href="#control_centre" title="Permanent link">¶</a></h1>
+<hr>
+<p>The <strong>Control Centre</strong> serves as the primary configuration hub for the platform and enables organizations to manage communication infrastructure without requiring direct modifications to database or service provider integrations.</p>
+<p>User can use the <strong>Control Centre</strong> to configure databases, register service providers, manage provider settings, monitor message retries, and maintain operational control over the messaging environment.</p>
+<hr>
+<h3 id="opening-the-control-centre">Opening the control centre<a class="headerlink" href="#opening-the-control-centre" title="Permanent link">¶</a></h3>
+<p>Select <strong>Control Centre</strong> in the left navigation panel. It expands with two groups of sub-pages.</p>
+<hr>
+<h3 id="control-centre-components">Control centre components<a class="headerlink" href="#control-centre-components" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
 <th>Section</th>
-<th>Sub-pages</th>
-<th>What it is for</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Platform DB Setup</strong></td>
-<td>DB Configuration, DB Management</td>
-<td>Connecting Equify to the databases your applications already use, so that messages can be sent and delivery results recorded without writing custom integration code</td>
+<td>Configuring Equify to your application databases.</td>
 </tr>
 <tr>
 <td><strong>Service Provider (SP)</strong></td>
-<td>SP Registration, SP Management, Error Control Center</td>
-<td>Onboarding telecom partners and aggregators, managing their credentials and API behavior, and defining what Equify should do when a partner's API returns an error</td>
+<td>Registering service providers, managing their credentials and API behavior, and defining what Equify should do when a partner's API returns an error.</td>
 </tr>
 </tbody>
 </table>
-<p>The remainder of this section walks through each of these in the order a new administrator would typically use them: connecting a database first, then onboarding a service provider, then defining how errors from that provider should be handled.</p>
-<h2 id="who-should-have-access">Who should have access<a class="headerlink" href="#who-should-have-access" title="Permanent link">¶</a></h2>
-<p>Because every setting in the Control Centre affects how live customer messages are sent, access to this section should be limited to a small number of trusted platform administrators — typically the same team responsible for integrating Equify with your core business applications and managing your telecom vendor relationships. Day-to-day operations staff should generally only need the <a href="../dashboard/index.md">Dashboard</a>.</p>
-<p>Continue to <a href="database-setup/">Platform Database Setup</a> to begin.</p>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>
