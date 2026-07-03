@@ -53,3 +53,11 @@ Individually, each routing strategy answers one business question. Routing Combi
 ## What's next
 
 This concludes the seven routing strategies documented in this edition of the guide. The **Intelligent Routing** screen, listed alongside Traffic Management in the navigation menu, is a distinct, not-yet-released capability — see [Intelligent Routing](intelligent-routing.md) for what the application currently shows.
+
+
+---
+
+## What to do next
+
+- Modify combinations in [Edit Routing Combinations](edit_routing_combination.md)
+- Monitor routing performance in [Analytics](../analytics/index.md)

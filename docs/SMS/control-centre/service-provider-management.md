@@ -37,3 +37,10 @@ Selecting the edit (pencil) action reopens the same four-step wizard used during
 - Exactly one provider at a time can be marked **Default**. The default provider is the one Equify falls back to under [Round Robin Routing](../routing-setup/round-robin.md) when no more specific rule applies to a message, so this setting should be reviewed carefully before being changed in a live environment.
 
 Continue to [Error and Retry Management](error-retry-management.md) to define what Equify should do automatically when a provider's API returns an error.
+
+---
+
+## Related articles
+
+- [View Service Provider Details](view-sp-details.md)
+- [Service Provider Registration](service-provider-registration.md)

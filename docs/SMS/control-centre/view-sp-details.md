@@ -34,3 +34,10 @@
     1. Open the campaign.
     2. Click **Delete**.
     3. Confirm the action.
+
+---
+
+## Related articles
+
+- [Service Provider Management](service-provider-management.md)
+- [Service Provider Registration](service-provider-registration.md)

@@ -30,3 +30,10 @@ Round Robin by itself is a reasonable starting point for an organization that:
 For most enterprise deployments, Round Robin is used less as the primary strategy and more as the dependable floor beneath a stack of more specific rules — which is exactly the pattern shown in [Routing Combinations](routing-combinations.md).
 
 Continue to [Percentage Allocation](percentage-allocation.md) for a routing strategy that gives you precise, deliberate control over the split, rather than an even one.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

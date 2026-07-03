@@ -37,3 +37,10 @@ An expand icon at the start of each row reveals further detail about that specif
 Every other screen in the [Control Centre](../control-centre/index.md) and [Routing Setup](../routing-setup/index.md) lets an administrator change how live customer traffic is handled — which provider gets which messages, what counts as a retryable error, which department gets priority. System Audit is the safety net underneath all of that configurability: a permanent, searchable record of exactly who changed what and when, available to any administrator without needing to involve engineering or request a database extract. For an organization operating under regulatory or internal audit requirements, this is often the screen that turns "we configured Equify carefully" into "we can prove how Equify was configured, and by whom."
 
 This completes the Administration section, and with it, every section of the SMS module reviewed for this edition of the guide. Continue to the [Glossary](../reference/glossary.md) or [FAQ](../reference/faq.md) for quick reference, or return to the [SMS Module Overview](../index.md).
+
+---
+
+## Related articles
+
+- [Administration Overview](index.md)
+- [Analytics](../analytics/index.md)

@@ -51,3 +51,10 @@ Once a template has been created, use its mapping action (sliders icon) to open 
 A retail bank running a fixed, pre-approved "50% discount" promotional template can register that template once, map it permanently to a cost-efficient promotional provider, and rely on Equify to route every future send of that exact template correctly — regardless of which marketing team member or which scheduling tool ultimately triggers the campaign.
 
 Continue to [Service Type Routing](service-type-routing.md) to route based on the broader purpose of a message — OTP, transactional, or promotional — rather than a specific template.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

@@ -41,3 +41,10 @@ As you adjust percentages, the **Percentage Distribution Summary** bar at the to
 Imagine your organization currently sends all OTP traffic through a single long-standing provider, and you want to test a second provider without risking a sudden, full cutover. You could configure Percentage Allocation to send 90% of traffic to the existing provider and 10% to the new one, monitor the new provider's [delivery rate and latency](../dashboard/service-providers.md) for a few days, and then gradually increase its share as confidence grows — all without writing a single line of code or involving your development team.
 
 Continue to [Functional Routing](functional-routing.md) to route traffic based on which part of the business it comes from, rather than by a fixed split.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

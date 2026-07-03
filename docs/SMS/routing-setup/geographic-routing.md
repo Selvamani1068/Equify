@@ -31,3 +31,10 @@ A national retailer might find that one provider consistently delivers faster in
     Geographic Routing depends on Equify being able to determine which circle a given recipient number belongs to. In most deployments this is derived automatically from the recipient's mobile number, consistent with standard Indian telecom numbering conventions.
 
 Continue to [Routing Combinations](routing-combinations.md) to see how Geographic Routing and the six other strategies in this chapter can be combined into a single, prioritized decision chain.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

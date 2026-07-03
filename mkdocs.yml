@@ -55,6 +55,7 @@ nav:
   - SMS:
       - Overview: overview.md
       - Architecture: SMS/sms_architecture.md
+      - Getting Started: SMS/getting_started.md
       - Dashboard: SMS/dashboard/dashboard_index.md
       - Control Centre:
           - Overview: SMS/control-centre/index.md

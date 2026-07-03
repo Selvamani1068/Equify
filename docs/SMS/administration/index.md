@@ -13,3 +13,9 @@ In the left-hand navigation menu, select **Administration**. It expands to revea
 | [**System Audit**](system-audit.md) | A searchable history of every configuration change made across the SMS module, by every user |
 
 Continue to [System Audit](system-audit.md) for the full walkthrough.
+
+---
+
+## What to do next
+
+- Review system activity in [System Audit](system-audit.md)

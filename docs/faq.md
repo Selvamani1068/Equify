@@ -75,3 +75,11 @@ Unlike every other chapter in this guide, [Intelligent Routing](../routing-setup
 **Is anything in this guide still missing?**
 
 **Billing**, listed under [Analytics](../analytics/index.md), was visible in the navigation menu during this review but was not opened on screen, so it is not yet documented in detail. Every other screen referenced in the navigation menu — Dashboard, Control Centre, Routing Setup's Traffic Management, Report & Log, and System Audit — has been reviewed and is documented in full in this edition.
+
+---
+
+## Related articles
+
+- [Getting started](Product_Guide/getting_started.md)
+- [SMS Overview](overview.md)
+- [Whatsapp Overview](overview.md)

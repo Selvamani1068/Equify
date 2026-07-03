@@ -92,11 +92,11 @@ Before you begin, ensure you have the following:
 
 ---
 
-## Related Articles
+## What to do next
 
-- [View DB Configuration](../../SMS/control-centre/view-db-configuration.md)
-- [Update DB Configuration](../../SMS/control-centre/update-db-configuration.md)
-- [Routing Setup](../routing-setup/index.md)
+- Verify configuration in [View DB Configuration](view-db-configuration.md)
+- Update settings if needed in [Update DB Configuration](update-db-configuration.md)
+- Continue setup in [Service Provider Registration](service-provider-registration.md)
 
 
 <div class="home-support-banner">

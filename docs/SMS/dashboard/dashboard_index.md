@@ -116,3 +116,15 @@ Users can switch between views to analyze different operational areas.
     To be added
 
 
+
+
+
+---
+
+## What to do next
+
+- Configure system components in [Control Centre](../control-centre/index.md)
+- Set up routing logic in [Routing Setup](../routing-setup/index.md)
+- Analyze system data in [Analytics](../analytics/index.md)
+
+

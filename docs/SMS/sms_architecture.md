@@ -12,15 +12,15 @@ At a high level, the Equify architecture consists of three logical domains:
 | Equify Platform | Receives, processes, routes, delivers, and tracks SMS communications |
 | Service Providers | Deliver messages to end recipients |
 
-## Equify Platform Architecture
+## Equify platform architecture
 
   ![SMS Architecture](../../assets/images/architecture.svg)
 
 ---
 
-## Architectural Domains
+## Architectural domains
 
-### Client System
+### Client system
 
 The Client System represents the business applications and databases that generate communication requests.
 
@@ -37,7 +37,7 @@ The client environment may include:
 - Input databases that generate message requests
 - Output databases that receive final delivery status information
 
-### Equify Platform
+### Equify platform
 
 The Equify Platform is responsible for communication orchestration and contains three major processing engines:
 
@@ -47,7 +47,7 @@ The Equify Platform is responsible for communication orchestration and contains 
 
 Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
 
-### Service Providers
+### Service providers
 
 Service Providers are external messaging providers responsible for delivering communications to end recipients.
 
@@ -57,31 +57,31 @@ This architecture allows organizations to distribute traffic, implement failover
 
 ---
 
-## Message Processing Engine
+## Message processing engine
 
 The Message Processing Engine is responsible for receiving, validating, routing, and dispatching messages.
 
 The engine includes a set of services responsible for message ingestion, validation, routing, and delivery.
 
-### Integration Layer
+### Integration layer
 
 The Integration Layer serves as the entry point into the platform.
 
 Communication requests can enter Equify through either business applications or database-driven workflows.
 
-### Message API Service
+### Message API service
 
 The Message API Service provides a secure HTTPS interface that allows enterprise applications to submit message requests to Equify.
 
 Incoming requests are validated and transformed into a standardized internal format before entering the processing pipeline.
 
-### DB Connector Service
+### DB connector service
 
 The DB Connector Service supports database-driven communication workflows.
 
 This service retrieves records directly from client databases or consumes database change events published through Debezium CDC, converting them into structured message requests for processing.
 
-### Operations and Maintenance Service
+### Operations and maintenance service
 
 The Operations and Maintenance Service provides administrative capabilities for managing the platform configuration.
 
@@ -89,33 +89,33 @@ Administrators use this service to manage provider configurations, routing strat
 
 Configuration data is persisted in MySQL and synchronized to Redis to support low-latency access by processing services.
 
-### Kafka Cluster
+### Kafka cluster
 
 Kafka is used to exchange message requests, delivery events, audit records, and operational metrics between platform services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.
 
-### Middleware Service
+### Middleware service
 
 The Middleware Service performs business-rule validation and routing evaluation.
 
 Based on configured routing strategies, the service determines which provider should receive the message and publishes the request to the appropriate provider-specific processing channel.
 
-### Delivery Management Layer
+### Delivery management layer
 
 The Delivery Management Layer is responsible for selecting providers and dispatching messages.
 
-### Dispatcher Service
+### Dispatcher service
 
 The Dispatcher Service consumes routed messages and transforms them into provider-specific request formats.
 
 The service invokes the provider's HTTPS APIs and submits the message for delivery.
 
-### Retry Service
+### Retry service
 
 The Retry Service manages delivery failures.
 
 When a provider returns a retryable error, the service automatically routes the message to an alternate provider based on configured retry policies and fallback routing rules.
 
-### Routing Architecture
+### Routing architecture
 
 Routing controls how SMS traffic is distributed across the messaging providers configured in the platform.
 
@@ -135,15 +135,15 @@ Organizations can select the routing approach that best aligns with operational,
 
 ---
 
-## DLR Processing Layer
+## DLR processing layer
 
 The DLR Processing Layer manages message status updates received from service providers.
 
-### DLR Processing Engine
+### DLR processing engine
 
 The DLR Processing Engine manages delivery acknowledgements and delivery reports received from messaging providers and updates message status throughout the delivery lifecycle.
 
-### DLR API Service
+### DLR API service
 
 Messaging providers send delivery reports back to Equify through dedicated HTTPS API endpoints.
 
@@ -151,7 +151,7 @@ These reports contain status information that indicates whether messages were de
 
 Received DLR payloads are validated and published to Kafka for processing.
 
-### DLR Processor Service
+### DLR processor service
 
 The DLR Processor consumes delivery report events from Kafka.
 
@@ -170,13 +170,13 @@ Depending on configuration, delivery status information can be:
 
 ---
 
-## Analytics and Operations Layer
+## Analytics and operations layer
 
 The Analytics and Operations Layer provides visibility into communication activity, platform performance, and infrastructure health.
 
 It transforms messaging events, delivery information, audit logs, and operational metrics into dashboards, reports, alerts, and monitoring insights that support day-to-day operations and platform administration.
 
-### ClickHouse Analytics Store
+### ClickHouse analytics store
 
 Messaging events, delivery information, audit logs, and operational metrics are processed through the analytics pipeline and stored in ClickHouse for reporting and analysis.
 
@@ -189,13 +189,13 @@ The platform stores:
 - System health metrics
 - Application performance metrics
 
-### Redis Cache
+### Redis cache
 
 Redis is used as the platform's in-memory data store for runtime processing.
 
 Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.
 
-### System Metrics Collection
+### System metrics collection
 
 Background monitoring scripts execute periodically across all servers and collect metrics related to:
 
@@ -209,11 +209,11 @@ Background monitoring scripts execute periodically across all servers and collec
 
 The collected data is published to Kafka and processed by ClickHouse for reporting purposes.
 
-### Analytics Processing
+### Analytics processing
 
 Communication events, delivery information, audit records, and system metrics are processed through the analytics engine and prepared for reporting and operational analysis.
 
-### Dashboard and Reporting Services
+### Dashboard and reporting services
 
 In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.
 
@@ -232,7 +232,7 @@ These dashboards help operations teams monitor communication activity, investiga
 
 ---
 
-## End-to-End Communication Flow
+## End-to-end communication flow
 
 The following sequence summarizes the complete communication lifecycle:
 
@@ -248,6 +248,14 @@ The following sequence summarizes the complete communication lifecycle:
 10. Audit events and operational metrics are processed by the Analytics Engine.
 11. Dashboards, reports, and logs provide operational visibility into the complete messaging lifecycle.
 
+---
+
+## Related articles
+
+- [SMS Overview](../overview.md)
+- [Control Centre](control-centre/index.md)
+- [Routing Setup](routing-setup/index.md)
+- [Create routing combinations](routing-setup/routing-combinations.md)
 
 <div class="home-support-banner">
   <div class="support-left">

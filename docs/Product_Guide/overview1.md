@@ -12,7 +12,7 @@ Applications and databases integrate with Equify through API-based and database-
 
 ---
 
-## Key Benefits
+## Key benefits
 
 - Centralized communication management
 - Reduced integration complexity
@@ -22,7 +22,7 @@ Applications and databases integrate with Equify through API-based and database-
 
 ---
 
-## Supported Channels
+## Supported channels
 
 Equify currently supports:
 
@@ -33,7 +33,7 @@ The platform is designed to support additional channels as business needs evolve
 
 ---
 
-## Common Use Cases
+## Common use cases
 
 - One-time passwords (OTPs)
 - Transaction notifications
@@ -43,7 +43,7 @@ The platform is designed to support additional channels as business needs evolve
 
 ---
 
-## How Equify Works
+## How Equify works
 
 1. Applications or databases send communication requests to Equify.
 2. Equify validates and processes the request.
@@ -53,6 +53,14 @@ The platform is designed to support additional channels as business needs evolve
 6. Results are stored and made available for tracking and reporting.
 
 Equify ensures reliable message delivery while providing complete visibility into the communication lifecycle.
+
+---
+
+## What to do next
+
+- Check [System requirements](system_requirements.md)
+- Install the product using the [Installation guide](installation.md)
+- Continue with [Getting started](getting_started.md)
 
 
 <div class="home-support-banner">

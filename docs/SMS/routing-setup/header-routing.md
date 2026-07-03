@@ -43,3 +43,10 @@ A confirmation banner reading **"Header Routing Strategy Updated Successfully"**
 Functional Routing and Header Routing solve a similar problem from two different directions. Functional Routing is the right choice when your *department* is the deciding factor and that department always uses the same backend application. Header Routing is the better choice when a single shared application serves many different purposes, and the application itself — rather than the department that happens to be using it — needs to specify the route on a per-request basis.
 
 Continue to [Template Routing](template-routing.md) to route based on the specific message template being sent, rather than the request that carries it.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

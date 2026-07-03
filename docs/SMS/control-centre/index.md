@@ -20,3 +20,11 @@ The remainder of this section walks through each of these in the order a new adm
 Because every setting in the Control Centre affects how live customer messages are sent, access to this section should be limited to a small number of trusted platform administrators — typically the same team responsible for integrating Equify with your core business applications and managing your telecom vendor relationships. Day-to-day operations staff should generally only need the [Dashboard](../dashboard/index.md).
 
 Continue to [Platform Database Setup](database-setup.md) to begin.
+
+---
+
+## What to do next
+
+- Configure database in [DB Configuration](database-setup.md)
+- Register providers in [Service Provider Registration](service-provider-registration.md)
+- Set up routing in [Routing Setup](../routing-setup/index.md)

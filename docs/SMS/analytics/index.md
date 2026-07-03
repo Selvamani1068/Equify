@@ -21,3 +21,10 @@ In the left-hand navigation menu, select **Analytics**. It expands to reveal two
 ## Report & Log
 
 [**Report & Log**](report-and-log.md) is the fully documented half of Analytics in this edition of the guide. It is split into two tabs — **Reports**, for high-level, filterable, downloadable summaries; and **Logs**, for searching the exact record of an individual message, down to the specific error or delivery code returned. Continue to [Report & Log](report-and-log.md) for the full walkthrough.
+
+---
+
+## What to do next
+
+- View detailed reports in [Report & Log](report-and-log.md)
+- Optimize routing in [Routing Setup](../routing-setup/index.md)

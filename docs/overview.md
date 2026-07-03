@@ -18,23 +18,23 @@ By centralizing communication operations, Equify enables organizations to improv
 
 ---
 
-## Key Features
+## Key features
 
 Equify provides the following capabilities to support large-scale communication operations:
 
-- **Dashboard and Monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
-- **Communication Processing** – Receive and process communication requests from enterprise applications and connected data sources.
-- **Multi-Provider Management** – Integrate and manage multiple telecom service providers through a unified interface.
-- **Routing Management** – Configure routing policies based on message type, department, template, header values, or traffic distribution requirements.
-- **Delivery Tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
-- **Retry and Failover** – Improve delivery reliability through automated retry and alternate provider routing.
-- **Analytics and Reporting** – Analyze communication performance through operational reports and dashboards.
-- **Audit and Governance** – Maintain visibility into configuration changes and administrative activities.
-- **Centralized Administration** – Manage platform settings, provider configurations, routing rules, and user access from a single location.
+- **Dashboard and monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
+- **Communication processing** – Receive and process communication requests from enterprise applications and connected data sources.
+- **Multi-provider management** – Integrate and manage multiple telecom service providers through a unified interface.
+- **Routing management** – Configure routing policies based on message type, department, template, header values, or traffic distribution requirements.
+- **Delivery tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
+- **Retry and failover** – Improve delivery reliability through automated retry and alternate provider routing.
+- **Analytics and reporting** – Analyze communication performance through operational reports and dashboards.
+- **Audit and governance** – Maintain visibility into configuration changes and administrative activities.
+- **Centralized administration** – Manage platform settings, provider configurations, routing rules, and user access from a single location.
 
 ---
 
-## How Equify Works
+## How Equify works
 
 Equify manages the complete lifecycle of business communications through a centralized orchestration framework.
 
@@ -49,6 +49,14 @@ Equify manages the complete lifecycle of business communications through a centr
 
 This workflow enables organizations to maintain reliable communication delivery while ensuring operational visibility and control across the messaging ecosystem.
 
+---
+
+## What to do next
+
+- Understand system design in [Architecture](SMS/sms_architecture.md)
+- Set up core components in [Control Centre](SMS/control-centre/index.md)
+- Configure routing in [Routing Setup](SMS/routing-setup/index.md)
+- Monitor activity in [Dashboard](SMS/dashboard/dashboard_index.md)
 
 <div class="home-support-banner">
   <div class="support-left">

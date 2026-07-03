@@ -123,3 +123,10 @@ The final step displays a complete summary of everything entered across the prev
 Once you are satisfied with the summary, complete the wizard to save the new service provider. It then appears in the [Service Provider Management](service-provider-management.md) list, ready to be assigned a [routing strategy](../routing-setup/index.md).
 
 Continue to [Service Provider Management](service-provider-management.md) to see how registered providers are reviewed, edited, and maintained over time.
+
+---
+
+## What to do next
+
+- Manage providers in [Service Provider Management](service-provider-management.md)
+- Configure routing in [Routing Setup](../routing-setup/index.md)

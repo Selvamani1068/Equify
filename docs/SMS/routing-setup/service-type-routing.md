@@ -38,3 +38,10 @@ A typical configuration maps **OTP** to a small, carefully chosen set of the mos
     For Service Type Routing to work correctly, every message Equify processes needs to be correctly tagged with its service type at the point it is created — whether that tag comes from a [Template Routing](template-routing.md) mapping, a database column mapped during [Platform Database Setup](../control-centre/database-setup.md), or a field supplied directly through the Message API.
 
 Continue to [Geographic Routing](geographic-routing.md) to route based on where in the country a message is going, rather than what kind of message it is.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

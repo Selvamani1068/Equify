@@ -223,20 +223,6 @@ body,
     font-size: 0.82rem;
     line-height: 1.6;
 }
-
-/* Level 2 Navigation */
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link {
-    color: #26272a !important;
-    font-weight: 450;
-    font-size: 0.83rem;
-}
-
-/* Level 3 Navigation */
-.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
-    color: #36383c !important;
-    font-weight: 400;
-    font-size: 0.78rem;
-}
 /* Reduce gap between logo and title */
 .md-header__button.md-logo {
     margin-right: 0.5rem !important;
@@ -1566,4 +1552,39 @@ body,
     color: #111827 !important;
     font-weight: 600 !important;
     border-left: 3px solid var(--equify-accent) !important;
+}
+/* =====================================================
+   LEFT SIDEBAR — CLEAR VISUAL HIERARCHY BY DEPTH
+   ===================================================== */
+
+/* Level 1 — top sections (Overview, Architecture, Control Centre) */
+.md-sidebar--primary > .md-sidebar__scrollwrap .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
+    color: #111827 !important;
+    font-size: 0.87rem !important;
+    font-weight: 600 !important;
+ /*   padding-left: 12px !important; */
+}
+
+/* Level 2 — e.g. Overview, DB Configuration, DB Management under Control Centre */
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__link {
+    color: #4b5563 !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+ /*   padding-left: 22px !important; */
+}
+
+/* Level 3 — e.g. Update DB Configuration, View DB Configuration under DB Management */
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    color: #5c616b !important;
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+/*    padding-left: 32px !important; */
+}
+
+/* Level 4 — deepest, if used */
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__list .md-nav__link {
+    color: #676a70 !important;
+    font-size: 0.72rem !important;
+    font-weight: 400 !important;
+/*    padding-left: 42px !important; */
 }

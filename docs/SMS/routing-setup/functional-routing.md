@@ -39,3 +39,10 @@ Use **Search departments…** to find a specific entry, or select **Add Departme
 A bank might map its **CREDIT** and **LOAN** departments — both of which send time-sensitive OTPs and account alerts — to its most reliable, lowest-latency provider, while mapping **SALES** and **HR**, which send a higher volume of less time-sensitive notifications, to a lower-cost provider. Functional Routing makes this distinction enforceable at the platform level, rather than relying on each department's own application to make the right choice every time.
 
 Continue to [Header Routing](header-routing.md) to see how routing decisions can instead be driven by the calling application itself, at the moment a message is submitted.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

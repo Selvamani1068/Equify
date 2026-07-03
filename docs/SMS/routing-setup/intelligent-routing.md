@@ -19,3 +19,10 @@ While the feature itself is not yet documented, its name and placement strongly 
 ## In the meantime
 
 Until Intelligent Routing ships, build your routing policy using the seven proven strategies in [Traffic Management](index.md), combined through [Routing Combinations](routing-combinations.md) as needed. Administrators who want to be notified the moment Intelligent Routing becomes available can select **Notify Me** on the Coming Soon screen itself.
+
+---
+
+## What to do next
+
+- Explore other routing strategies in [Routing Overview](index.md)
+- Combine strategies in [Create Routing Combinations](routing-combinations.md)

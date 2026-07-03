@@ -85,3 +85,10 @@ Select **Download** to export the current search results as a CSV file (for exam
 A customer support agent receives a complaint that a particular customer never received their OTP. Rather than escalating to engineering, the agent opens **Report & Log**, switches to the **Logs** tab, enters the customer's mobile number and the approximate date, and immediately sees the exact message: which provider it was sent through, whether that provider's API accepted it, what the delivery status was, and — critically — the **DLR Reason** or **Api Error Code** that explains exactly why it failed. What would otherwise be an engineering investigation becomes a two-minute, self-service lookup.
 
 Continue to [Administration](../administration/index.md) to see how Equify tracks changes made to the platform's own configuration, as opposed to changes happening to message traffic.
+
+---
+
+## Related articles
+
+- [Analytics Overview](index.md)
+- [Error Control Center](../control-centre/error-retry-management.md)

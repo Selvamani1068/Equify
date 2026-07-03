@@ -47,3 +47,13 @@ The **Routing Combinations** tab lets you chain multiple strategies into a singl
 A useful mental model is that Equify evaluates routing rules the way a business analyst would read a decision table from top to bottom: the most specific applicable rule wins, and if nothing specific applies, traffic falls through to Round Robin so that no message is ever left without a provider. The [Routing Combinations](routing-combinations.md) chapter shows exactly how that ordering is configured in practice.
 
 Continue to [Round Robin Routing](round-robin.md) to begin with the platform's foundational strategy.
+
+---
+
+## What to do next
+
+- Choose a routing strategy
+- Configure routing logic using:
+    - [Round Robin](round-robin.md)
+    - [Percentage Allocation](percentage-allocation.md)
+- Create routing combinations in [Routing Combinations](routing-combinations.md)
