@@ -144,13 +144,13 @@ Ensure that you have the following information from your SMS provider:
 
       1. Paste the JSON request body provided by the service provider into the request body field.
 
-            ``` json
-            {
-              "to": "",
-              "from": "",
-              "text": ""
-            }
-            ```
+          ```json
+          {
+            "to": "",
+            "from": "",
+            "text": ""
+          }
+          ```
          ![Register SP22](../../assets/images/sp_reg_22.png)
 
       2. Verify that the JSON preview is generated successfully.
@@ -177,9 +177,9 @@ Ensure that you have the following information from your SMS provider:
     2. Add the required request headers.
     3. Click **Save changes**.
 
-      The request API configuration is saved successfully.
+        The request API configuration is saved successfully.
       
-      You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
+        You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
 
     4. Click **Save and continue**.
 
@@ -269,6 +269,8 @@ Ensure that you have the following information from your SMS provider:
 
     1. Review all information carefully.
     2. Click **Submit**.
+
+---
 
 ## Result
 
