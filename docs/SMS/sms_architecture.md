@@ -252,9 +252,9 @@ The following sequence summarizes the complete communication lifecycle:
 
 ## What to do next
 
-- Set up the system using [Getting Started](../SMS/getting_started.md)
-- Configure components in [Control Centre](control-centre/index.md)
-- Define routing logic in [Routing Setup](routing-setup/index.md)
+- Set up the system using [Getting started](../SMS/getting_started.md)
+- Configure components in [Control centre](control-centre/index.md)
+- Define routing logic in [Routing setup](routing-setup/index.md)
 
 <div class="home-support-banner">
   <div class="support-left">

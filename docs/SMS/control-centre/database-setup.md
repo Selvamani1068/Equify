@@ -22,7 +22,7 @@ Before you begin, ensure you have the following:
 
 ---
 
-## Create a Database Configuration
+## Create a database configuration
 
 1. Navigate to **Control Centre > Platform DB Setup > DB Configuration**.
 
@@ -89,6 +89,9 @@ Before you begin, ensure you have the following:
 14. Verify that the new database configuration appears in the configured database list.
 
     The database connection is now available for use by the Equify.
+
+!!! Note
+    By default, a newly created DB configuration is inactive. To activate the created database configuration, navigate to **Control Centre > Platform DB Setup > DB Management**, and then enable the toggle switch corresponding to the required database configuration.
 
 ---
 

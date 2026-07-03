@@ -14,8 +14,8 @@ This guide helps you set up and validate SMS messaging in Equify. By the end of 
 Before you begin, ensure that:
 
 - The Equify platform is installed *(see [Installation](../Product_Guide/installation.md))*  
-- The database is configured *(see [DB Configuration](control-centre/database-setup.md))*  
-- At least one SMS provider account is available *(see [Service Provider Registration](control-centre/service-provider-registration.md))*  
+- The database is configured *(see [DB configuration](control-centre/database-setup.md))*  
+- At least one SMS provider account is available *(see [Service provider registration](control-centre/service-provider-registration.md))*  
 
 ---
 
@@ -26,12 +26,12 @@ Set up the database connection required for SMS processing.
 1. Go to **Control Centre → Platform DB Setup → DB Configuration**. 
 2. Enter the required database details.
 
-For detailed instructions, refer to *[DB Configuration](control-centre/database-setup.md)*.  
+For detailed instructions, refer to *[DB configuration](control-centre/database-setup.md)*.  
 
 You can also:
 
-- Update existing configuration → *[Update DB Configuration](control-centre/update-db-configuration.md)*  
-- View saved configuration → *[View DB Configuration](control-centre/view-db-configuration.md)*  
+- Update existing configuration → *[Update DB configuration](control-centre/update-db-configuration.md)*  
+- View saved configuration → *[View DB configuration](control-centre/view-db-configuration.md)*  
 
 ---
 
@@ -42,12 +42,12 @@ Register an SMS service provider to enable message delivery.
 1. Navigate to **Control Centre → Service Provider (SP) → SP Registration**  
 2. Add provider details such as credentials and endpoints.
 
-For detailed instructions, refer to *[Register Service Provider](control-centre/service-provider-registration.md)*.
+For detailed instructions, refer to *[Register service provider](control-centre/service-provider-registration.md)*.
 
 After registration, you can:
 
-- Manage providers → *[Service Provider Management](control-centre/service-provider-management.md)*  
-- View provider details → *[View Service Provider Details](control-centre/view-sp-details.md)*  
+- Manage providers → *[Service provider management](control-centre/service-provider-management.md)*  
+- View provider details → *[View service provider details](control-centre/view-sp-details.md)*  
 
 ---
 
@@ -57,16 +57,16 @@ Define how messages are routed to providers.
 
 1. Go to **Routing Setup → Traffic Management**. 
 2. Select a routing strategy:
-    - *[Round Robin](routing-setup/round-robin.md)*  
-    - *[Percentage Allocation](routing-setup/percentage-allocation.md)*  
-    - *[Functional Routing](routing-setup/functional-routing.md)*  
-    - *[Header Routing](routing-setup/header-routing.md)*  
-    - *[Template Routing](routing-setup/template-routing.md)*  
-    - *[Service Type Routing](routing-setup/service-type-routing.md)*  
-    - *[Geographic Routing](routing-setup/geographic-routing.md)*  
+    - *[Round robin](routing-setup/round-robin.md)*  
+    - *[Percentage allocation](routing-setup/percentage-allocation.md)*  
+    - *[Functional routing](routing-setup/functional-routing.md)*  
+    - *[Header routing](routing-setup/header-routing.md)*  
+    - *[Template routing](routing-setup/template-routing.md)*  
+    - *[Service type routing](routing-setup/service-type-routing.md)*  
+    - *[Geographic routing](routing-setup/geographic-routing.md)*  
 3. Configure rules based on your requirements.
 
-To understand routing concepts, refer to *[Routing Overview](routing-setup/index.md)*.
+To understand routing concepts, refer to *[Routing overview](routing-setup/index.md)*.
 
 ---
 
@@ -77,11 +77,11 @@ Create routing combinations to control message flow.
 1. Navigate to **Routing Setup → Routing Management → Combinations**.  
 2. Define routing logic using configured service providers.
 
-For detailed instructions, refer to *[Create Routing Combinations](routing-setup/routing-combinations.md)*.
+For detailed instructions, refer to *[Create routing combinations](routing-setup/routing-combinations.md)*.
 
 You can also:
 
-- Modify combinations → [Edit Routing Combinations](routing-setup/edit_routing_combination.md)  
+- Modify combinations → [Edit routing combinations](routing-setup/edit_routing_combination.md)  
 
 ---
 
@@ -91,12 +91,12 @@ Validate your configuration by sending a test message.
 
 
 1. Trigger an SMS request (via database or API).  
-2. Verify message delivery status in *[Reports and Logs](analytics/report-and-log.md) *.   
+2. Verify message delivery status in *[Reports and logs](analytics/report-and-log.md) *.   
 
 If messages fail:
 
-- Check retry handling → [Error Control Center](control-centre/error-retry-management.md)  
-- Verify routing → [Routing Overview](routing-setup/index.md)  
+- Check retry handling → [Error control center](control-centre/error-retry-management.md)  
+- Verify routing → [Routing overview](routing-setup/index.md)  
 
 ---
 
@@ -110,18 +110,18 @@ Track delivery status and system logs.
     - Errors  
     - Retry attempts  
 
-For detailed insights, refer to *[Reports and Logs](analytics/report-and-log.md)*.  
+For detailed insights, refer to *[Reports and logs](analytics/report-and-log.md)*.  
 
-For auditing, refer to *[System Audit](administration/system-audit.md)*.
+For auditing, refer to *[System audit](administration/system-audit.md)*.
 
 ---
 
 ## Related articles
 
-- [DB Configuration](control-centre/database-setup.md)  
-- [Service Provider Registration](control-centre/service-provider-registration.md)  
-- [Routing Setup](routing-setup/index.md)  
-- [Reports and Logs](analytics/report-and-log.md)  
+- [DB configuration](control-centre/database-setup.md)  
+- [Service provider registration](control-centre/service-provider-registration.md)  
+- [Routing setup](routing-setup/index.md)  
+- [Reports and logs](analytics/report-and-log.md)  
 
 
 <div class="home-support-banner">

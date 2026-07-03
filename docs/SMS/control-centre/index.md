@@ -1,25 +1,25 @@
-# Control Centre Overview {#control_centre}
+# Control centre overview {#control_centre}
 
-The **Control Centre** is where the SMS module is configured rather than monitored. If the Dashboard answers *"is everything working right now?"*, the Control Centre answers *"how is everything set up?"* Almost every administrative task in the SMS module — connecting a database, onboarding a telecom partner, or defining what happens when a message fails — starts here.
+---
 
-## Opening the Control Centre
+The **Control Centre** serves as the primary configuration hub for the platform and enables organizations to manage communication infrastructure without requiring direct modifications to database or service provider integrations.
 
-Select **Control Centre** in the left-hand navigation menu. It expands to reveal two groups of sub-pages.
+User can use the **Control Centre** to configure databases, register service providers, manage provider settings, monitor message retries, and maintain operational control over the messaging environment.
 
-## What the Control Centre contains
+---
 
-| Section | Sub-pages | What it is for |
-|---|---|---|
-| **Platform DB Setup** | DB Configuration, DB Management | Connecting Equify to the databases your applications already use, so that messages can be sent and delivery results recorded without writing custom integration code |
-| **Service Provider (SP)** | SP Registration, SP Management, Error Control Center | Onboarding telecom partners and aggregators, managing their credentials and API behavior, and defining what Equify should do when a partner's API returns an error |
+### Opening the control centre
 
-The remainder of this section walks through each of these in the order a new administrator would typically use them: connecting a database first, then onboarding a service provider, then defining how errors from that provider should be handled.
+Select **Control Centre** in the left navigation panel. It expands with two groups of sub-pages.
 
-## Who should have access
+---
 
-Because every setting in the Control Centre affects how live customer messages are sent, access to this section should be limited to a small number of trusted platform administrators — typically the same team responsible for integrating Equify with your core business applications and managing your telecom vendor relationships. Day-to-day operations staff should generally only need the [Dashboard](../dashboard/index.md).
+### Control centre components
 
-Continue to [Platform Database Setup](database-setup.md) to begin.
+| Section | Description |
+|---|---|
+| **Platform DB Setup** | Configuring Equify to your application databases.|
+| **Service Provider (SP)** | Registering service providers, managing their credentials and API behavior, and defining what Equify should do when a partner's API returns an error. |
 
 ---
 
