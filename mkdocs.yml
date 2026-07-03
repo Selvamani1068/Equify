@@ -39,9 +39,6 @@ theme:
     text: Inter
     code: JetBrains Mono
 
-plugins:
-  - search
-
 extra_css:
   - stylesheets/custom.css
 
@@ -95,3 +92,4 @@ nav:
 
 plugins:
   - glightbox
+  - search
