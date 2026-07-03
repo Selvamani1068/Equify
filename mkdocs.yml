@@ -19,6 +19,7 @@ theme:
     - content.action.view
     - content.code.copy
     - content.image.zoom
+    - content.tabs.link
 
   logo: assets/images/full_logo1.png
   favicon: assets/images/full_logo1.png
