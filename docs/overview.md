@@ -54,9 +54,8 @@ This workflow enables organizations to maintain reliable communication delivery 
 ## What to do next
 
 - Understand system design in [Architecture](SMS/sms_architecture.md)
-- Set up core components in [Control Centre](SMS/control-centre/index.md)
-- Configure routing in [Routing Setup](SMS/routing-setup/index.md)
-- Monitor activity in [Dashboard](SMS/dashboard/dashboard_index.md)
+- Set up the system using [Getting Started](sms_getting_started.md)
+- Monitor activity in [Dashboard](dashboard/dashboard_index.md)
 
 <div class="home-support-banner">
   <div class="support-left">
