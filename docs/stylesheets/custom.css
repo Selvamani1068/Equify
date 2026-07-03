@@ -193,29 +193,6 @@ body,
     position: relative;
 }
 
-/* Hover */
-.md-sidebar--secondary .md-nav__link:hover {
-    color: #2563eb !important;
-}
-
-/* Active item */
-.md-sidebar--secondary .md-nav__link--active {
-    color: #2563eb !important;
-    font-weight: 600 !important;
-}
-
-/* Blue indicator bar */
-.md-sidebar--secondary .md-nav__link--active::before {
-    content: "";
-    position: absolute;
-    left: -17px;
-    top: 0;
-    height: 100%;
-    width: 3px;
-    background: #2563eb;
-    border-radius: 2px;
-}
-
 /* H3 items */
 .md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
     color: #9ca3af !important;
@@ -408,7 +385,6 @@ body,
 .md-search__input {
     background: #1f2937 !important;
     color: #ffffff !important;
-    border-radius: 8px !important;
 }
 
 .md-search__input::placeholder {
@@ -1509,20 +1485,6 @@ body,
 :root {
     --equify-accent: #6b7280; /* enterprise grey */
 }
-/* RIGHT TOC ACTIVE */
-.md-sidebar--secondary .md-nav__link--active {
-    color: var(--equify-accent) !important;
-}
-
-/* RIGHT TOC INDICATOR */
-.md-sidebar--secondary .md-nav__link--active::before {
-    background: var(--equify-accent) !important;
-}
-
-/* RIGHT HOVER */
-.md-sidebar--secondary .md-nav__link:hover {
-    color: var(--equify-accent) !important;
-}
 .md-header__title .md-header__topic,
 .md-header__title .md-ellipsis {
     display: none !important;
@@ -1569,6 +1531,37 @@ body,
 .md-sidebar--primary .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link,
 .md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list .md-nav__item--active > .md-nav__link {
+    background: var(--equify-active-bg) !important;
+    color: #111827 !important;
+    font-weight: 600 !important;
+    border-left: 3px solid var(--equify-accent) !important;
+}
+/* =====================================================
+   RIGHT SIDEBAR (TOC) — ACTIVE STATE & HOVER (all levels)
+   Matches left sidebar enterprise style
+   ===================================================== */
+
+.md-sidebar--secondary .md-nav__link {
+    display: block;
+    border-left: 3px solid transparent;
+    border-radius: 0 4px 4px 0;
+    padding: 3px 8px 3px 6px !important;
+    margin-left: -0.5rem;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+/* HOVER — every nesting depth */
+.md-sidebar--secondary .md-nav__link:hover,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link:hover,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link:hover {
+    background: var(--equify-hover-bg) !important;
+    color: #111827 !important;
+}
+
+/* ACTIVE — every nesting depth so specificity always wins over H3/H4 color rules */
+.md-sidebar--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link--active,
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__list .md-nav__link--active {
     background: var(--equify-active-bg) !important;
     color: #111827 !important;
     font-weight: 600 !important;
