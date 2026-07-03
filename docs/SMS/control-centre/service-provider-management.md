@@ -4,7 +4,7 @@ Once one or more service providers have been registered, **SP Management** becom
 
 ## Opening the list
 
-In the left-hand navigation menu, select **Control Centre › Service Provider (SP) › SP Management**. The **Service Provider Management** screen lists every registered provider.
+In the left navigation menu, select **Control Centre › Service Provider (SP) › SP Management**. The **Service Provider Management** screen lists every registered provider.
 
 | Column | Description |
 |---|---|
