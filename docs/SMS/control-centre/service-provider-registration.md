@@ -2,13 +2,13 @@
 
 ---
 
-A Service Provider (SP) represents an SMS gateway or messaging platform that Equify uses to send messages. Before message can be routed to a provider, user must register the provider and configure its request and response settings.
+A Service Provider (SP) represents an SMS gateway or messaging platform that Equify uses to send messages. Before message can be routed to a provider, the provider must be registered and its request and response settings must be configured.
 
 ---
 
 ## Before you begin
 
-Ensure you have the following information from your SMS provider:
+Ensure that you have the following information from your SMS provider:
 
 - Service provider name
 - API endpoint URL
@@ -17,7 +17,7 @@ Ensure you have the following information from your SMS provider:
 - Request parameters and headers
 - Success response format
 - Error response format
-- DLR (Delivery Receipt) response format (if supported)
+- DLR (Delivery Receipt) response format
 
 ---
 
@@ -30,8 +30,8 @@ Ensure you have the following information from your SMS provider:
     3. **Response Mapping**: set up success, error, and DLR response handling
     4. **Preview**: review your information
 
-!!! Note
-    Completed steps can be accessible, so you can step backward to correct an earlier entry without losing your progress.
+    !!! Note
+        Completed steps remain accessible. You can return to a previous step to modify the configuration without losing your progress.
 
 === "Step 1"
 
@@ -53,13 +53,13 @@ Ensure you have the following information from your SMS provider:
       2. Verify the automatically populated **Channel** and **Code values**.
       3. Click **Save and continue**.
 
-      Service provider details saved and click Step 2 to proceed to the next step.
+      The service provider details are saved successfully.
 
 === "Step 2"
 
     ## Configure Request API
 
-    In this step, configure the API endpoint that Equify will use to submit messages to the service provider.
+    In this step, configure the API endpoint that Equify uses to submit messages to the service provider.
 
     !!! Note
         Set up at least one API endpoint with its parameters, headers, and authentication to continue.
@@ -93,7 +93,7 @@ Ensure you have the following information from your SMS provider:
             - Do not require a JSON request body
             - Pass parameters through URL query parameters
 
-      4. Select the service type from the **Service Type** dropdown.
+      4. Select a service type from the **Service Type** dropdown.
 
         === "Any"
 
@@ -111,9 +111,9 @@ Ensure you have the following information from your SMS provider:
 
             Select **Promotional** for marketing and advertising campaigns.
 
-      5. Select the protocol as **http://** or **https://** from the **Protocol** dropdown  in the **API URL** section.
-      6. Enter the API url in the URL field.
-      7. Select the authentication from the **Auth Type** dropdown.
+      5. Select either **http://** or **https://** from the **Protocol** dropdown.
+      6. Enter the API URL in the **URL** field.
+      7. Select the authentication method from the **Auth Type** dropdown.
       
         === "Basic Auth"
 
@@ -132,7 +132,7 @@ Ensure you have the following information from your SMS provider:
             |---------|-------------|
             | Bearer Token | Authentication token supplied by the provider |
 
-      8. Select **Encrypt request body**, if the provider requires encrypted request payloads.
+      8. Select **Encrypt request body** if the service provider requires encrypted request payloads.
       9. Click **Add Configuration**.
 
         !!! Note
@@ -142,7 +142,7 @@ Ensure you have the following information from your SMS provider:
 
     ### Configure API request
 
-      1. Paste the JSON request body format provided by the service provider in the textbox field.
+      1. Paste the JSON request body provided by the service provider into the request body field.
 
             ``` json
             {
@@ -160,7 +160,7 @@ Ensure you have the following information from your SMS provider:
       1. Click **Add Mapping**.
       2. Select a **System Parameter**.
       3. Select the corresponding **Client Parameter**.
-      4. Repeat until all mandatory parameters are mapped.
+      4. Repeat the process until all required parameters are mapped.
 
         Common mandatory parameters:
 
@@ -177,11 +177,13 @@ Ensure you have the following information from your SMS provider:
     2. Add the required request headers.
     3. Click **Save changes**.
 
-      Request API configuration is saved and user can add multiple request API configuration by clicking **Create** in the top-right corner of the screen.
+      The request API configuration is saved successfully.
+      
+      You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
 
     4. Click **Save and continue**.
 
-      Configure Request API saved and click Step 3 to proceed to the next step.
+      The request API configuration is saved successfully.
 
 
 === "Step 3"
@@ -205,7 +207,7 @@ Ensure you have the following information from your SMS provider:
         ```
 
     3. Click **Submit**.
-    4. In the Success Response section, fill the following fields:
+    4. In the Success Response section, configure the following fields:
 
         | Field | Description |
         |---------|-------------|
@@ -229,7 +231,7 @@ Ensure you have the following information from your SMS provider:
         ```
 
     2. Click **Submit**.
-    3. In the Error Response section, fill the following fields::
+    3. In the Error Response section, configure the following fields::
 
         | Field | Description |
         |---------|-------------|
@@ -245,7 +247,7 @@ Ensure you have the following information from your SMS provider:
     1. Paste the DLR response JSON provided by the service provider.
     2. Click **Save and continue**.
 
-    Success, error and DLR response saved and click Step 4 to proceed to the next step.
+    The success, error, and DLR response configurations are saved successfully.
 
 === "Step 4"
 
