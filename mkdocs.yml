@@ -62,12 +62,12 @@ nav:
           - Overview: SMS/control-centre/index.md
           - DB Configuration: SMS/control-centre/database-setup.md
           - DB Management:
-                - Update DB Configuration: SMS/control-centre/update-db-configuration.md
                 - View DB Configuration: SMS/control-centre/view-db-configuration.md
+                - Update DB Configuration: SMS/control-centre/update-db-configuration.md
           - Service Provider Registration: SMS/control-centre/service-provider-registration.md
           - SP Management:
-                - Update Service Provider Details: SMS/control-centre/service-provider-management.md
-                - View Service Provider Details: SMS/control-centre/view-sp-details.md
+                - View Service Provider: SMS/control-centre/view-sp-details.md
+                - Update Service Provider: SMS/control-centre/service-provider-management.md
           - Error Control Center: SMS/control-centre/error-retry-management.md
       - Routing Setup:
           - Overview: SMS/routing-setup/index.md

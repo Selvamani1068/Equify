@@ -251,7 +251,7 @@ Ensure that you have the following information from your SMS provider:
 
 === "Step 4"
 
-    ## Review and Complete Registration
+    ## Review and Complete
 
     Review all configured information before completing the registration.
 

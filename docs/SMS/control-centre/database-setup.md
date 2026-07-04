@@ -97,9 +97,9 @@ Before you begin, ensure you have the following:
 
 ## What to do next
 
-- Verify configuration in [View DB Configuration](view-db-configuration.md)
-- Update settings if needed in [Update DB Configuration](update-db-configuration.md)
-- Continue setup in [Service Provider Registration](service-provider-registration.md)
+- Verify configuration in [View DB configuration](view-db-configuration.md)
+- Update settings if needed in [Update DB configuration](update-db-configuration.md)
+- Continue setup in [Service provider registration](service-provider-registration.md)
 
 
 <div class="home-support-banner">

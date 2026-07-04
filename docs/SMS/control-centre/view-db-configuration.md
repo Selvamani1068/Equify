@@ -9,6 +9,18 @@ User can view the created database configuration details using **DB Management**
 ## To view database details
 
 1. Navigate to **Control Centre > Platform DB Setup > DB Management**.
+
+    The **DB Management** screen lists configured databases with the following information:
+
+    | Column | Description |
+|---|---|
+| **Connection Name** | The unique identifier/label given to the database connection. |
+| **Database Type** | Indicates whether the connection is used as an input database or output database. |
+| **Registry Name** | The underlying database engine/technology used. |
+| **Created At** | Date and timestamp when the connection was configured. |
+| **Status** | Toggle switch showing whether the connection is currently active (ON) or inactive (OFF). |
+| **Actions** | A menu (⋮) offering options to edit or view the specific DB connection. |
+
 2. Click the **Actions** menu (⋮) of the database configuration that you want to update.
 3. Select **View details** from the **ACTIONS** menu.  
 

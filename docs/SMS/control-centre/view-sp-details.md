@@ -1,43 +1,39 @@
-## Campaign Operations
+# View service provider details
 
-=== "Create Campaign"
+---
 
-    Steps to create a new campaign:
+User can view the registered service provider details using **SP Management** feature. This guide describes the procedure for viewing the service provider registration details.
 
-    1. Navigate to Campaigns.
-    2. Click **Create Campaign**.
-    3. Enter campaign details.
-    4. Click **Save**.
+---
 
-=== "Edit Campaign"
+## To view SP details
 
-    Steps to modify an existing campaign:
+1. Navigate to **Control Centre > Service Provider (SP) > SP Management**.
 
-    1. Open the campaign list.
-    2. Select a campaign.
-    3. Click **Edit**.
-    4. Update the required fields.
+    The **SP Management** screen lists registered service providers with the following information:
 
-=== "Schedule Campaign"
+    | Column | Description |
+|---|---|
+| **SP Name** | The provider's registered name, for example `Equence`, `Airtel`, `Jio`, or `Videocon` |
+| **Modified By** | The user who last changed this provider's configuration. |
+| **Modified At** | When that change was made. |
+| **Deactivation Reason** | A free-text note explaining why a provider was disabled, if applicable, or `—` if the provider has never been deactivated. |
+| **Status** | Toggle switch showing whether the provider is currently active (ON) or inactive (OFF). |
+| **Actions** | A menu (⋮) offering options to edit or view the specific service provider. |
 
-    Steps to schedule a campaign:
+2. Click the **Actions** menu (⋮) of the SP registration that you want to view details.
 
-    1. Open the campaign.
-    2. Select **Schedule**.
-    3. Choose the date and time.
-    4. Save the schedule.
+    ![update DB](../../assets/images/sp_view.png)
 
-=== "Delete Campaign"
+The **Service Provider Details** screens opens and displays the complete configuration information for the selected service provider.
 
-    Steps to delete a campaign:
-
-    1. Open the campaign.
-    2. Click **Delete**.
-    3. Confirm the action.
+!!! note
+    * User can register a new service provider by clicking **New Service Provider** in the top-right corner of the screen. For more information, refer to *[SP registration](service-provider-registration.md)*.
+    * User can update an existing service provider registration by clicking **Edit** in the top-right corner of the screen. For more information, refer to *[Update service provider details](service-provider-management.md)*.
 
 ---
 
 ## Related articles
 
-- [Service Provider Management](service-provider-management.md)
-- [Service Provider Registration](service-provider-registration.md)
+- [Update service provider](service-provider-management.md)
+- [Service provider registration](service-provider-registration.md)
