@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#percentage-allocation" class="md-skip">
+        <a href="#percentage-allocation-routing" class="md-skip">
           Skip to content
         </a>
       
@@ -1426,10 +1426,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-percentage-allocation-does" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Percentage Allocation does
+        Before you begin
       
     </span>
   </a>
@@ -1437,10 +1437,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opening-percentage-allocation" class="md-nav__link">
+  <a href="#open-percentage-allocation-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Percentage Allocation
+        Open percentage allocation routing
       
     </span>
   </a>
@@ -1448,35 +1448,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-a-percentage-split" class="md-nav__link">
+  <a href="#configure-percentage-allocation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting a percentage split
+        Configure percentage allocation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure percentage allocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tracking-your-progress-with-the-distribution-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tracking your progress with the distribution summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A practical example
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2113,10 +2108,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-percentage-allocation-does" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Percentage Allocation does
+        Before you begin
       
     </span>
   </a>
@@ -2124,10 +2119,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opening-percentage-allocation" class="md-nav__link">
+  <a href="#open-percentage-allocation-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Percentage Allocation
+        Open percentage allocation routing
       
     </span>
   </a>
@@ -2135,35 +2130,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-a-percentage-split" class="md-nav__link">
+  <a href="#configure-percentage-allocation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting a percentage split
+        Configure percentage allocation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure percentage allocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tracking-your-progress-with-the-distribution-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tracking your progress with the distribution summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A practical example
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2195,17 +2185,38 @@
 
 
 
-<h1 id="percentage-allocation">Percentage Allocation<a class="headerlink" href="#percentage-allocation" title="Permanent link">¶</a></h1>
-<p>Where <a href="../round-robin/">Round Robin</a> splits traffic evenly without judgment, <strong>Percentage Allocation</strong> gives you precise, deliberate control over exactly what share of your traffic each service provider receives.</p>
-<h2 id="what-percentage-allocation-does">What Percentage Allocation does<a class="headerlink" href="#what-percentage-allocation-does" title="Permanent link">¶</a></h2>
-<p>Percentage Allocation routes traffic based on specific probability percentages assigned to each service provider, for precise volume control. Rather than every provider receiving an equal share, you decide the exact split — for example, sending half of all traffic to one provider and half to another, or gradually increasing a new provider's share from a small starting percentage while you build confidence in its reliability.</p>
-<h2 id="opening-percentage-allocation">Opening Percentage Allocation<a class="headerlink" href="#opening-percentage-allocation" title="Permanent link">¶</a></h2>
+<h1 id="percentage-allocation-routing">Percentage allocation routing<a class="headerlink" href="#percentage-allocation-routing" title="Permanent link">¶</a></h1>
+<hr>
+<p>Percentage Allocation Routing distributes traffic according to defined percentages. Each provider receives traffic based on its assigned allocation.</p>
+<p>Use Percentage Allocation Routing when you want to:</p>
+<ul>
+<li>Gradually migrate traffic to a new provider.</li>
+<li>Split traffic between primary and secondary providers.</li>
+<li>Allocate traffic based on contractual commitments.</li>
+</ul>
+<hr>
+<h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">¶</a></h2>
+<p>Ensure that:</p>
+<ul>
+<li>Service providers are registered and active.</li>
+<li>The required providers are available for routing.</li>
+<li>Total allocation percentages equal 100%.</li>
+</ul>
+<hr>
+<h2 id="open-percentage-allocation-routing">Open percentage allocation routing<a class="headerlink" href="#open-percentage-allocation-routing" title="Permanent link">¶</a></h2>
 <ol>
-<li>In the left-hand navigation menu, select <strong>Routing Setup › Traffic Management</strong>.</li>
-<li>On the <strong>Strategy Catalog</strong> tab, select <strong>Configure</strong> on the <strong>Percentage Allocation</strong> card. You can also reach this screen directly through the breadcrumb path <strong>Dashboard › Traffic Management › Percentage Based</strong>.</li>
+<li>
+<p>Navigate to <strong>Routing Setup &gt; Traffic Management</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/route3.png" data-desc-position="bottom"><img alt="Percentage Allocation" src="../../../assets/images/route3.png"></a></p>
+</li>
+<li>
+<p>Select <strong>Percentage Allocation</strong>.</p>
+</li>
+<li>The <strong>Percentage Allocation</strong> screen opens.</li>
 </ol>
-<h2 id="setting-a-percentage-split">Setting a percentage split<a class="headerlink" href="#setting-a-percentage-split" title="Permanent link">¶</a></h2>
-<p>The <strong>Percentage Allocation</strong> screen lists every registered service provider in a table:</p>
+<hr>
+<h2 id="configure-percentage-allocation">Configure percentage allocation<a class="headerlink" href="#configure-percentage-allocation" title="Permanent link">¶</a></h2>
+<p>The screen displays all available service providers with the following informations:</p>
 <table>
 <thead>
 <tr>
@@ -2215,48 +2226,67 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Service Provider ID</strong></td>
-<td>The provider's internal identifier</td>
+<td><strong>Provider ID</strong></td>
+<td>Unique provider identifier.</td>
 </tr>
 <tr>
-<td><strong>Service Provider Name</strong></td>
-<td>The provider's registered name</td>
+<td><strong>Provider Name</strong></td>
+<td>Service provider name.</td>
 </tr>
 <tr>
-<td><strong>Service Provider Code</strong></td>
-<td>The short code generated for the provider, for example <code>equi101</code> or <code>jio103</code></td>
+<td><strong>Provider Code</strong></td>
+<td>Unique provider code.</td>
 </tr>
 <tr>
-<td><strong>Current Percentage</strong></td>
-<td>The percentage of traffic currently assigned to this provider</td>
+<td><strong>Current %</strong></td>
+<td>Currently assigned traffic percentage.</td>
 </tr>
 <tr>
-<td><strong>Set Percentage</strong></td>
-<td>An editable field where you enter the new percentage you want this provider to receive</td>
+<td><strong>Set %</strong></td>
+<td>Percentage of traffic to assign to the provider.</td>
 </tr>
 </tbody>
 </table>
-<p>To change the split, enter a new value into the <strong>Set Percentage</strong> field for each provider you want to adjust, then select <strong>Save Distribution</strong> in the top-right corner of the screen.</p>
-<h2 id="tracking-your-progress-with-the-distribution-summary">Tracking your progress with the distribution summary<a class="headerlink" href="#tracking-your-progress-with-the-distribution-summary" title="Permanent link">¶</a></h2>
-<p>As you adjust percentages, the <strong>Percentage Distribution Summary</strong> bar at the top of the screen updates in real time, showing:</p>
-<ul>
-<li>What percentage of the total 100% has currently been allocated (for example, <strong>100% complete</strong>).</li>
-<li>Which provider currently holds the <strong>Highest</strong> share, and what that share is (for example, <strong>Highest: 50% (Equence)</strong>).</li>
-<li>How many service providers currently have a non-zero allocation (for example, <strong>2 service providers configured</strong>).</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">The split must add up to 100%</p>
-<p>Equify expects your percentages across all providers to total 100%. A common, safe pattern is to split traffic between exactly two providers — for example 50% and 50%, as shown in a typical configuration — while leaving every other registered provider at 0%, rather than spreading a small percentage across many providers at once.</p>
-</div>
-<h2 id="a-practical-example">A practical example<a class="headerlink" href="#a-practical-example" title="Permanent link">¶</a></h2>
-<p>Imagine your organization currently sends all OTP traffic through a single long-standing provider, and you want to test a second provider without risking a sudden, full cutover. You could configure Percentage Allocation to send 90% of traffic to the existing provider and 10% to the new one, monitor the new provider's <a href="../dashboard/service-providers.md">delivery rate and latency</a> for a few days, and then gradually increase its share as confidence grows — all without writing a single line of code or involving your development team.</p>
-<p>Continue to <a href="../functional-routing/">Functional Routing</a> to route traffic based on which part of the business it comes from, rather than by a fixed split.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/route4.png" data-desc-position="bottom"><img alt="Percentage Allocation" src="../../../assets/images/route4.png"></a></p>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
+<ol>
+<li>Locate the required provider.</li>
+<li>Enter the desired traffic percentage in the <strong>Set %</strong> field.</li>
+<li>Repeat for all required providers.</li>
+<li>Verify that the total allocation equals <strong>100%</strong>.</li>
+<li>Confirm that the <strong>Distribution Summary</strong> displays <strong>100% complete</strong>.</li>
+<li>Click <strong>Save Distribution</strong>.</li>
+</ol>
+<p>Percentage Allocation Routing is configured successfully.</p>
+<p>Equify distributes traffic according to the configured percentages.</p>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>
-<li>Explore other routing strategies in <a href="../">Routing Overview</a></li>
-<li>Combine strategies in <a href="../routing-combinations/">Create Routing Combinations</a></li>
+<li>Explore other routing strategies in <a href="../">Routing overview</a></li>
+<li>Combine strategies in <a href="../routing-combinations/">Create routing combinations</a></li>
 </ul>
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
 
 
 
