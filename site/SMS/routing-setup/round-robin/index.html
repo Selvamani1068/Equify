@@ -1398,10 +1398,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-round-robin-does" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Round Robin does
+        Before you begin
       
     </span>
   </a>
@@ -1409,10 +1409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opening-round-robin-configuration" class="md-nav__link">
+  <a href="#open-round-robin-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Round Robin configuration
+        Open round robin routing
       
     </span>
   </a>
@@ -1420,24 +1420,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-round-robin-is-also-the-system-fallback" class="md-nav__link">
+  <a href="#configure-round-robin-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Round Robin is also the system fallback
+        Configure round robin routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure round robin routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-rely-on-round-robin-alone" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to rely on Round Robin alone
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2102,10 +2108,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-round-robin-does" class="md-nav__link">
+  <a href="#before-you-begin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Round Robin does
+        Before you begin
       
     </span>
   </a>
@@ -2113,10 +2119,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#opening-round-robin-configuration" class="md-nav__link">
+  <a href="#open-round-robin-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Round Robin configuration
+        Open round robin routing
       
     </span>
   </a>
@@ -2124,24 +2130,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-round-robin-is-also-the-system-fallback" class="md-nav__link">
+  <a href="#configure-round-robin-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Round Robin is also the system fallback
+        Configure round robin routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure round robin routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-rely-on-round-robin-alone" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to rely on Round Robin alone
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2173,36 +2185,103 @@
 
 
 
-<h1 id="round-robin-routing">Round Robin Routing<a class="headerlink" href="#round-robin-routing" title="Permanent link">¶</a></h1>
-<p>Round Robin is the simplest of Equify's seven routing strategies, and the most important one to understand first, because it plays a special role: it is the platform's <strong>automatic, system-wide fallback</strong>.</p>
-<h2 id="what-round-robin-does">What Round Robin does<a class="headerlink" href="#what-round-robin-does" title="Permanent link">¶</a></h2>
-<p>Round Robin distributes traffic equally across every available service provider, in a continuous circular order — the first message goes to provider A, the second to provider B, the third to provider C, and the cycle repeats — to ensure load balancing across your providers. No single provider is favored over another, and no business context (department, region, or service type) is taken into account.</p>
-<h2 id="opening-round-robin-configuration">Opening Round Robin configuration<a class="headerlink" href="#opening-round-robin-configuration" title="Permanent link">¶</a></h2>
-<ol>
-<li>In the left-hand navigation menu, select <strong>Routing Setup › Traffic Management</strong>.</li>
-<li>On the <strong>Strategy Catalog</strong> tab, select <strong>Configure</strong> on the <strong>Round Robin</strong> card.</li>
-</ol>
-<h2 id="why-round-robin-is-also-the-system-fallback">Why Round Robin is also the system fallback<a class="headerlink" href="#why-round-robin-is-also-the-system-fallback" title="Permanent link">¶</a></h2>
-<p>Round Robin has a second, equally important job. On the <strong>Routing Combinations</strong> tab of Traffic Management, Equify displays a permanent <strong>System Fallback</strong> notice:</p>
-<blockquote>
-<p><em>"Round Robin routing automatically serves as the final fallback mechanism for any traffic that does not match specific routing rules."</em></p>
-</blockquote>
-<p>In practice, this means you do not need to define a catch-all rule yourself. If a message does not match any <a href="../functional-routing/">Functional Routing</a>, <a href="../header-routing/">Header Routing</a>, <a href="../geographic-routing/">Geographic Routing</a>, or other specific rule you have configured, Equify does not reject it or leave it stuck — it automatically distributes it evenly across your active providers using Round Robin. This guarantee is what allows administrators to configure routing incrementally, adding more specific rules over time, without ever risking a message having nowhere to go.</p>
-<h2 id="when-to-rely-on-round-robin-alone">When to rely on Round Robin alone<a class="headerlink" href="#when-to-rely-on-round-robin-alone" title="Permanent link">¶</a></h2>
-<p>Round Robin by itself is a reasonable starting point for an organization that:</p>
+<h1 id="round-robin-routing">Round robin routing<a class="headerlink" href="#round-robin-routing" title="Permanent link">¶</a></h1>
+<hr>
+<p>Round Robin Routing distributes messages evenly across multiple service providers. Each new message is assigned to the next available provider in sequence, ensuring balanced traffic distribution and reducing dependency on a single provider.</p>
+<p>Use Round Robin Routing when you want to:</p>
 <ul>
-<li>Has only just onboarded its first two or three service providers and has not yet defined department-, region-, or service-type-specific rules.</li>
-<li>Wants simple, even load distribution across providers of genuinely similar cost, quality, and latency.</li>
-<li>Wants a safety net in place before layering more targeted strategies on top, as described in <a href="../routing-combinations/">Routing Combinations</a>.</li>
+<li>Balance traffic across multiple providers.</li>
+<li>Prevent overloading a single provider.</li>
+<li>Maintain equal provider utilization.</li>
+<li>Configure a default fallback routing strategy.</li>
 </ul>
-<p>For most enterprise deployments, Round Robin is used less as the primary strategy and more as the dependable floor beneath a stack of more specific rules — which is exactly the pattern shown in <a href="../routing-combinations/">Routing Combinations</a>.</p>
-<p>Continue to <a href="../percentage-allocation/">Percentage Allocation</a> for a routing strategy that gives you precise, deliberate control over the split, rather than an even one.</p>
+<hr>
+<h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">¶</a></h2>
+<p>Ensure that:</p>
+<ul>
+<li>At least one service provider is registered.</li>
+<li>The required service providers are active.</li>
+<li>Service provider configurations have been verified.</li>
+</ul>
+<hr>
+<h2 id="open-round-robin-routing">Open round robin routing<a class="headerlink" href="#open-round-robin-routing" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>Navigate to <strong>Routing Setup &gt; Traffic Management</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/route3.png" data-desc-position="bottom"><img alt="Percentage Allocation" src="../../../assets/images/route3.png"></a></p>
+</li>
+<li>
+<p>Select <strong>Round Robin</strong>.</p>
+</li>
+<li>The <strong>Round Robin Strategy</strong> screen opens.</li>
+</ol>
+<hr>
+<h2 id="configure-round-robin-routing">Configure round robin routing<a class="headerlink" href="#configure-round-robin-routing" title="Permanent link">¶</a></h2>
+<p>The screen displays all available service providers with the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Provider ID</strong></td>
+<td>Unique identifier assigned to the provider.</td>
+</tr>
+<tr>
+<td><strong>Provider Name</strong></td>
+<td>Registered service provider name.</td>
+</tr>
+<tr>
+<td><strong>Provider Code</strong></td>
+<td>Unique provider code.</td>
+</tr>
+<tr>
+<td><strong>Selection Checkbox</strong></td>
+<td>Includes the provider in the round robin sequence.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/route2.png" data-desc-position="bottom"><img alt="Routing robin" src="../../../assets/images/route2.png"></a></p>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
+<ol>
+<li>Select the checkbox beside each provider you want to include in the routing sequence.</li>
+<li>Optionally use the <strong>Search by provider name</strong> field to locate a specific provider.</li>
+<li>Verify the selected providers.</li>
+<li>Click <strong>Save Strategy</strong>.</li>
+</ol>
+<p>Round Robin Routing is configured successfully.</p>
+<p>Equify distributes messages sequentially across all selected providers.</p>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>
-<li>Explore other routing strategies in <a href="../">Routing Overview</a></li>
-<li>Combine strategies in <a href="../routing-combinations/">Create Routing Combinations</a></li>
+<li>Explore other routing strategies in <a href="../">Routing overview</a></li>
+<li>Combine strategies in <a href="../routing-combinations/">Create routing combinations</a></li>
 </ul>
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
 
 
 
