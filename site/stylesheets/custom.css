@@ -1604,19 +1604,19 @@ body,
     padding: 0 !important;
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
-    min-height: 0 !important;
-    gap: 0 !important;
+    min-height: -10 !important;
+    gap: -10 !important;
 }
 
 .md-typeset .tabbed-labels > label {
     padding: 2px 12px !important;
     margin: 0 !important;
     line-height: 1 !important;
-    min-height: 24px !important;
+    min-height: 10px !important;
     display: flex;
     align-items: center;
     font-size: 0.85rem;
-    border-radius: 0 !important;
+    border-radius: 2 !important;
 }
 
 .md-typeset .tabbed-labels > label:hover {
@@ -1646,8 +1646,8 @@ body,
     border: 1px solid #535762 !important;
     border-bottom: 1px solid #ffffff !important;
     border-radius: 8px 8px 0 0;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top: -10 !important;
+    padding-bottom: -10 !important;
     background: #faf8f8;
 }
 

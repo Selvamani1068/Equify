@@ -68,7 +68,9 @@ nav:
           - SP Management:
                 - View Service Provider: SMS/control-centre/view-sp-details.md
                 - Update Service Provider: SMS/control-centre/service-provider-management.md
-          - Error Control Center: SMS/control-centre/error-retry-management.md
+          - Error Control Center:
+              - Configure Retry Management: SMS/control-centre/error-retry-management.md
+              - Configure Error Management: SMS/control-centre/error_manage.md
       - Routing Setup:
           - Overview: SMS/routing-setup/index.md
           - Configure Routing Strategy:

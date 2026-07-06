@@ -10,10 +10,10 @@
       
       
       
-        <link rel="prev" href="../update-db-configuration/">
+        <link rel="prev" href="../database-setup/">
       
       
-        <link rel="next" href="../service-provider-registration/">
+        <link rel="next" href="../update-db-configuration/">
       
       
         
@@ -879,34 +879,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../update-db-configuration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Update DB Configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -995,6 +967,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-db-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Update DB Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1093,14 +1093,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../service-provider-management/" class="md-nav__link">
+      <a href="../view-sp-details/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Update Service Provider Details
+    View Service Provider
   
 
     
@@ -1121,14 +1121,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../view-sp-details/" class="md-nav__link">
+      <a href="../service-provider-management/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    View Service Provider Details
+    Update Service Provider
   
 
     
@@ -2027,8 +2027,47 @@
 <hr>
 <h2 id="to-view-database-details">To view database details<a class="headerlink" href="#to-view-database-details" title="Permanent link">¶</a></h2>
 <ol>
-<li>Navigate to <strong>Control Centre &gt; Platform DB Setup &gt; DB Management</strong>.</li>
-<li>Click the <strong>Actions</strong> menu (⋮) of the database configuration that you want to update.</li>
+<li>
+<p>Navigate to <strong>Control Centre &gt; Platform DB Setup &gt; DB Management</strong>.</p>
+<p>The <strong>DB Management</strong> screen lists configured databases with the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Connection Name</strong></td>
+<td>The unique identifier/label given to the database connection.</td>
+</tr>
+<tr>
+<td><strong>Database Type</strong></td>
+<td>Indicates whether the connection is used as an input database or output database.</td>
+</tr>
+<tr>
+<td><strong>Registry Name</strong></td>
+<td>The underlying database engine/technology used.</td>
+</tr>
+<tr>
+<td><strong>Created At</strong></td>
+<td>Date and timestamp when the connection was configured.</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Toggle switch showing whether the connection is currently active (ON) or inactive (OFF).</td>
+</tr>
+<tr>
+<td><strong>Actions</strong></td>
+<td>A menu (⋮) offering options to edit or view the specific DB connection.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click the <strong>Actions</strong> menu (⋮) of the database configuration that you want to update.</p>
+</li>
 <li>
 <p>Select <strong>View details</strong> from the <strong>ACTIONS</strong> menu.  </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/view_db.png" data-desc-position="bottom"><img alt="update DB" src="../../../assets/images/view_db.png"></a></p>
