@@ -1,52 +1,180 @@
-# Header Routing
+# Header routing
 
-Functional Routing decides a provider based on which department sent a message. **Header Routing** takes a more technical approach: it inspects the HTTP request itself, at the moment a message is submitted, and lets the calling application signal which route it wants.
+---
 
-## What Header Routing does
+**Header Routing** enables routing decisions based on values supplied in request headers. It allows the calling application to influence routing behavior by including predefined header values in API requests.
 
-Header Routing inspects HTTP headers dynamically to determine the optimal downstream provider for each request. Each configured header is associated with one or more service providers, so that any application calling the Equify Message API can request a specific routing behavior simply by including the correct header in its request, without needing any separate configuration on the application side.
+For example:
 
-## Opening Header Routing
+- Banking applications can use one header value to route traffic through a preferred provider group.
+- Promotional campaigns can use a different header value.
+- Partner integrations can specify routing preferences without modifying existing routing strategies.
 
-1. In the left-hand navigation menu, select **Routing Setup › Traffic Management**.
-2. On the **Strategy Catalog** tab, select **Configure** on the **Header Routing** card. You can also reach this screen directly through the breadcrumb path **Dashboard › Traffic Management › Header Based**.
+Header Routing is configured in two stages:
 
-## Reviewing configured headers
+1. Create and manage headers that represent routing identifiers.
+2. Map one or more service providers to each header.
 
-The **Header Management** screen lists every header Equify has been configured to recognize:
+When a request contains a configured header value, Equify evaluates the header and routes traffic using the providers mapped to that header.
+
+---
+
+## Open header management
+
+1. Navigate to **Routing Setup**.
+2. Select **Traffic Management**.
+3. Click **Header Routing**.
+
+   ![Functional Routing](../../assets/images/route3.png)
+
+The **Header Management** page opens with the following information:
 
 | Column | Description |
-|---|---|
-| **Header Name** | A short, code-like identifier such as `EQUENC`, `AIRTEL`, `FINBKK`, `Videocon`, `ICICIB`, or `AXISBK` |
-| **Description** | A plain-language label, such as *"Equence Header"* or *"ICICI Bank Header"* |
-| **Code** | The exact header value calling applications must send |
-| **Modified At / Modified By** | When the header was last changed, and by whom |
-| **Status** | A toggle that enables or disables routing for this header |
-| **Actions** | Edit the header's details (pencil icon), or open its provider mapping (sliders icon) |
+|----------|-------------|
+| **Header Name** | The display name of the routing header. This is used to identify the header configuration within Equify. |
+| **Description** | A brief explanation of the header's purpose or business use case. |
+| **Code** | The unique header code used by applications when submitting requests. Equify uses this value to identify the correct Header Routing configuration. |
+| **Modified At** | The date and time when the header configuration was last updated. |
+| **Modified By** | The user who most recently modified the header configuration. |
+| **Status** | Indicates whether the header configuration is active. Active headers can participate in routing decisions. |
+| **Actions** | Provides options to edit the header configuration or configure provider mappings. |
 
-Use **Search headers…** to find a specific entry, or select **Add Header** in the top-right corner to define a new one.
+   ![Functional Routing](../../assets/images/route12.png)
 
-!!! example "A header for a specific business relationship"
-    The list of headers configured in a live environment often reflects specific partner or client relationships rather than generic categories — for example, separate headers for `FINKBK` (a banking partner), `ICICIB` and `AXISBK` (named banks), and `123456` mapped to the description *"promo"* for promotional traffic. This makes Header Routing especially well suited to organizations that operate as a platform on behalf of several distinct end clients, each of whom should be routed differently.
+**Available actions**
 
-## Mapping a header to service providers
+| Action | Description |
+|------------|-------------|
+| **Search Headers** | Searches configured headers by name. |
+| **Add Header** | Creates a new routing header. |
+| **Header List** | Displays configured headers. |
+| **Status Toggle** | Enables or disables a header configuration. |
+| **Edit Header** | Updates header details. |
+| **Configure Mapping** | Assigns service providers to a header. |
 
-1. From the header list, select the mapping action (the sliders icon) next to the header you want to configure.
-2. The **Configure Header Mapping** panel opens, identifying the specific header being configured.
-3. Select the checkbox next to every service provider that should handle requests carrying this header, using **Search Service Provider's…** to find a specific entry if needed.
-4. Select **Save Mapping** to apply your change to this header only, or **Copy to All** to apply the same provider selection to every other configured header.
+---
 
-A confirmation banner reading **"Header Routing Strategy Updated Successfully"** confirms the change has been applied.
+## Create header
 
-## When to use Header Routing instead of Functional Routing
+Use this procedure to create a new routing header.
 
-Functional Routing and Header Routing solve a similar problem from two different directions. Functional Routing is the right choice when your *department* is the deciding factor and that department always uses the same backend application. Header Routing is the better choice when a single shared application serves many different purposes, and the application itself — rather than the department that happens to be using it — needs to specify the route on a per-request basis.
+### Procedure
 
-Continue to [Template Routing](template-routing.md) to route based on the specific message template being sent, rather than the request that carries it.
+1. Open **Header Management**.
+2. Click **Add Header**.
+
+       ![Functional Routing](../../assets/images/route13.png)
+
+    The **Add New Header** window opens.
+
+3. In **Header Name**, enter the header name.
+
+       ![Functional Routing](../../assets/images/route14.png){ width="300" }
+
+4. In **Header Code**, enter a unique header code.
+5. In **Description**, enter a description.
+6. Click **Add Header**.
+
+!!! note
+
+    Header codes must be unique. Changes may take up to one minute to propagate throughout the platform.
+
+
+The header is created and appears in the **Header Management** list. Configure provider mappings for the newly created header.
+
+---
+
+## Edit header
+
+Use this procedure to modify an existing header.
+
+### Procedure
+
+1. Open **Header Management**.
+2. Locate the header.
+3. Click the **Edit** icon.
+4. Update the fields as required
+
+    ![Functional Routing](../../assets/images/route15.png){ width="300" }
+
+5. Click **Update Header** to save changes.
+
+The header configuration is updated. Review the provider mappings associated with the header.
+
+---
+
+## Enable or disable header
+
+Use this procedure to control whether a header participates in routing decisions.
+
+### Procedure
+
+1. Open **Header Management**.
+2. Locate the header.
+3. Use the **Status** toggle.
+
+    - Enable the toggle to activate the header.
+    - Disable the toggle to deactivate the header.
+
+    ![Functional Routing](../../assets/images/route16.png)
+
+The header is enabled or disabled for routing. Verify routing configurations before processing traffic.
+
+---
+
+## Configure header mapping
+
+Use this procedure to associate service providers with a header.
+
+### Procedure
+
+1. Open **Header Management**.
+2. Locate the required header.
+3. Click the **Configure Mapping** icon.
+
+      ![Functional Routing](../../assets/images/route17.png)
+
+    The **Configure Header Mapping** window opens.
+
+4. Review the available service providers.
+
+5. Select the service providers that should be associated with the header.
+
+      ![Functional Routing](../../assets/images/route18.png){ width="300" }
+
+7. (Optional) Click **Copy to All** to apply the same provider selection to all configured headers.
+
+8. Click **Save Mapping**.
+
+The selected providers are mapped to the header. Use the configured header value in API requests so that Equify can apply the corresponding routing logic.
 
 ---
 
 ## What to do next
 
-- Explore other routing strategies in [Routing Overview](index.md)
-- Combine strategies in [Create Routing Combinations](routing-combinations.md)
+- Explore other routing strategies in [Routing overview](index.md)
+- Combine strategies in [Create routing combinations](routing-combinations.md)
+
+
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>

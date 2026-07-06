@@ -1,39 +1,90 @@
-# Round Robin Routing
+# Round robin routing
 
-Round Robin is the simplest of Equify's seven routing strategies, and the most important one to understand first, because it plays a special role: it is the platform's **automatic, system-wide fallback**.
+---
 
-## What Round Robin does
+Round Robin Routing distributes messages evenly across multiple service providers. Each new message is assigned to the next available provider in sequence, ensuring balanced traffic distribution and reducing dependency on a single provider.
 
-Round Robin distributes traffic equally across every available service provider, in a continuous circular order — the first message goes to provider A, the second to provider B, the third to provider C, and the cycle repeats — to ensure load balancing across your providers. No single provider is favored over another, and no business context (department, region, or service type) is taken into account.
+Use Round Robin Routing when you want to:
 
-## Opening Round Robin configuration
+- Balance traffic across multiple providers.
+- Prevent overloading a single provider.
+- Maintain equal provider utilization.
+- Configure a default fallback routing strategy.
 
-1. In the left-hand navigation menu, select **Routing Setup › Traffic Management**.
-2. On the **Strategy Catalog** tab, select **Configure** on the **Round Robin** card.
+---
 
-## Why Round Robin is also the system fallback
+## Before you begin
 
-Round Robin has a second, equally important job. On the **Routing Combinations** tab of Traffic Management, Equify displays a permanent **System Fallback** notice:
+Ensure that:
 
-> *"Round Robin routing automatically serves as the final fallback mechanism for any traffic that does not match specific routing rules."*
+- At least one service provider is registered.
+- The required service providers are active.
+- Service provider configurations have been verified.
 
-In practice, this means you do not need to define a catch-all rule yourself. If a message does not match any [Functional Routing](functional-routing.md), [Header Routing](header-routing.md), [Geographic Routing](geographic-routing.md), or other specific rule you have configured, Equify does not reject it or leave it stuck — it automatically distributes it evenly across your active providers using Round Robin. This guarantee is what allows administrators to configure routing incrementally, adding more specific rules over time, without ever risking a message having nowhere to go.
+---
 
-## When to rely on Round Robin alone
+## Open round robin routing
 
-Round Robin by itself is a reasonable starting point for an organization that:
+1. Navigate to **Routing Setup > Traffic Management**.
 
-- Has only just onboarded its first two or three service providers and has not yet defined department-, region-, or service-type-specific rules.
-- Wants simple, even load distribution across providers of genuinely similar cost, quality, and latency.
-- Wants a safety net in place before layering more targeted strategies on top, as described in [Routing Combinations](routing-combinations.md).
+      ![Percentage Allocation](../../assets/images/route3.png)
 
-For most enterprise deployments, Round Robin is used less as the primary strategy and more as the dependable floor beneath a stack of more specific rules — which is exactly the pattern shown in [Routing Combinations](routing-combinations.md).
+2. Select **Round Robin**.
+3. The **Round Robin Strategy** screen opens.
 
-Continue to [Percentage Allocation](percentage-allocation.md) for a routing strategy that gives you precise, deliberate control over the split, rather than an even one.
+---
+
+## Configure round robin routing
+
+The screen displays all available service providers with the following information:
+
+| Column | Description |
+|----------|-------------|
+| **Provider ID** | Unique identifier assigned to the provider. |
+| **Provider Name** | Registered service provider name. |
+| **Provider Code** | Unique provider code. |
+| **Selection Checkbox** | Includes the provider in the round robin sequence. |
+
+   ![Routing robin](../../assets/images/route2.png)
+
+### Procedure
+
+1. Select the checkbox beside each provider you want to include in the routing sequence.
+2. Optionally use the **Search by provider name** field to locate a specific provider.
+3. Verify the selected providers.
+4. Click **Save Strategy**.
+
+Round Robin Routing is configured successfully.
+
+Equify distributes messages sequentially across all selected providers.
 
 ---
 
 ## What to do next
 
-- Explore other routing strategies in [Routing Overview](index.md)
-- Combine strategies in [Create Routing Combinations](routing-combinations.md)
+- Explore other routing strategies in [Routing overview](index.md)
+- Combine strategies in [Create routing combinations](routing-combinations.md)
+
+
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>

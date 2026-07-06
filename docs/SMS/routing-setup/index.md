@@ -1,52 +1,109 @@
-# Routing Setup Overview {#routing}
+# Routing setup overview {#routing}
 
-If the [Control Centre](../control-centre/index.md) is where you tell Equify *who* your service providers are, **Routing Setup** is where you tell Equify *which provider should carry which message*. This is the section that turns a list of telecom partners into an intelligent, business-aware delivery strategy.
+---
 
-## Opening Routing Setup
+**Routing Setup** determines how Equify selects a service provider for each message. After service providers are registered and configured, use **Routing Setup** to define the rules that control message distribution across providers based on business requirements, traffic patterns, message types, regions, and routing priorities.
 
-In the left-hand navigation menu, select **Routing Setup**. It expands to reveal **Traffic Management** and **Intelligent Routing**.
+Routing Setup enables you to:
 
-=== "Traffic Management"
+- Distribute traffic across multiple service providers
+- Prioritize providers for specific message categories
+- Route messages based on business functions or regions
+- Balance traffic between providers
+- Standardize routing behavior across campaigns
+- Create complex routing decision flows using multiple strategies
 
-    ## Traffic Management
+---
 
-    Selecting **Traffic Management** opens a screen with two tabs: **Strategy Catalog** and **Routing Combinations**.
+## Open routing setup
 
-=== "Routing Combinations"
+1. In the left navigation pane, select **Routing Setup**.
+2. Expand the menu to view the available routing sections.
 
-    ### Routing Combinations
+The following options are available:
 
-    The **Routing Combinations** tab lets you chain multiple strategies into a single, prioritized decision — for example, checking the department first, then the circle, then the service type, before finally falling back to a percentage split. This is covered in full in [Routing Combinations](routing-combinations.md), the most advanced chapter in this section.
+- Traffic Management
+- Intelligent Routing (coming soon)
 
-### The Strategy Catalog
+---
 
-The **Strategy Catalog** presents seven distinct routing strategies as a set of cards, each with a short description and a **Configure** link:
+## Traffic management
 
-| Strategy | What it does | Typical use case |
-|---|---|---|
-| [**Round Robin**](round-robin.md) | Distributes traffic equally across all available providers in a circular order, to ensure load balancing | The platform-wide default fallback for traffic that matches no other rule |
-| [**Percentage Allocation**](percentage-allocation.md) | Routes traffic based on specific probability percentages assigned to each provider, for precise volume control | Gradually shifting volume from an incumbent provider to a new one |
-| [**Functional Routing**](functional-routing.md) | Routes specific traffic based on business functions, internal departments, or operational units | Giving the Credit department a different provider than the Sales department |
-| [**Header Routing**](header-routing.md) | Inspects HTTP headers dynamically to determine the optimal downstream provider for each request | Letting the calling application specify its preferred route at the point of integration |
-| [**Template Routing**](template-routing.md) | Applies pre-configured routing templates to standardize message handling across different campaigns | Standardizing how a specific, recurring message template (such as a promotional campaign) is always routed |
-| [**Service Type Routing**](service-type-routing.md) | Segregates and prioritizes traffic based on service types like OTP, Transactional, or Promotional | Ensuring OTP messages always use your fastest, most reliable providers |
-| [**Geographic Routing**](geographic-routing.md) | Optimizes delivery rates by routing traffic based on the source origin, region, or telecom circle | Using the provider with the strongest local network in a specific state or circle |
+Traffic Management is the central area where routing strategies are configured and managed.
 
-Each strategy can be configured independently, and most organizations end up using several of them together — which is exactly what the second tab is for.
+When you open Traffic Management, the page displays two tabs:
+    
+- Strategies
+- Combinations
 
-### Routing Combinations
 
-The **Routing Combinations** tab lets you chain multiple strategies into a single, prioritized decision — for example, checking the department first, then the circle, then the service type, before finally falling back to a percentage split. This is covered in full in [Routing Combinations](routing-combinations.md), the most advanced chapter in this section.
+=== "Strategies"
 
-## Intelligent Routing
+    The **Strategies** tab displays all available routing methods supported by Equify.
 
-**Intelligent Routing**, listed in the navigation menu alongside Traffic Management, is confirmed as a not-yet-released, in-development feature — the application itself displays a "Coming Soon" screen when this section is opened. See [Intelligent Routing](intelligent-routing.md) for full details of what is currently shown.
+    Each strategy can be configured independently and later combined with other strategies to create more advanced routing workflows.
+    
+    The following routing strategies are available:
 
-## How to think about routing as a whole
+    | Strategy | Description |
+    |-----------|-------------|
+    | **Round Robin** | Distributes traffic equally across available service providers in a circular sequence. |
+    | **Percentage Allocation** | Routes traffic according to predefined percentage allocations assigned to each provider. |
+    | **Functional Routing** | Routes traffic based on business functions, departments, or operational units. |
+    | **Header Routing** | Uses HTTP header values to dynamically determine the destination provider. |
+    | **Template Routing** | Routes messages based on predefined message templates. |
+    | **Service Type Routing** | Routes messages according to categories such as OTP, Transactional, or Promotional. |
+    | **Geographic Routing** | Routes messages based on geographic region, telecom circle, or source location. |
 
-A useful mental model is that Equify evaluates routing rules the way a business analyst would read a decision table from top to bottom: the most specific applicable rule wins, and if nothing specific applies, traffic falls through to Round Robin so that no message is ever left without a provider. The [Routing Combinations](routing-combinations.md) chapter shows exactly how that ordering is configured in practice.
+=== "Routing combinations"
 
-Continue to [Round Robin Routing](round-robin.md) to begin with the platform's foundational strategy.
+    Routing Combinations allow you to combine multiple routing strategies into a single routing workflow.
+
+    A routing combination defines the order in which Equify evaluates routing rules when selecting a service provider for outbound traffic.
+
+    Routing combinations help organizations implement complex routing requirements while maintaining a predictable fallback path.
+
+    ### Open routing combinations
+
+    1. Navigate to **Routing Setup > Traffic Management**.
+    2. Select the **Combinations** tab.
+
+    The Routing Combinations page opens and displays the following information:
+
+    | Column | Description |
+    |----------|-------------|
+    | Strategy Name | Name of the routing combination. |
+    | Description | Summary of the routing sequence configured in the combination. |
+    | Modified At | Date and time when the combination was last updated. |
+    | Modified By | User who last modified the combination. |
+    | Status | Indicates whether the routing combination is active or inactive. |
+    | Actions | Opens management options for the selected combination. |
+
+    ---
+
+    ### Enable or disable a routing combination
+
+    Use the **Status** toggle to activate or deactivate a routing combination.
+
+    ### Activate a combination
+
+    1. Locate the routing combination.
+    2. Turn on the **Status** toggle.
+
+    ![Routing Active](../../assets/images/route1.png)
+
+    The combination becomes available for routing decisions.
+
+    ### Deactivate a combination
+
+    1. Locate the routing combination.
+    2. Turn off the **Status** toggle.
+
+    The combination is excluded from routing decisions until reactivated.
+
+
+    !!!Note
+        By default, **Round Robin** routing automatically serves as the final fallback mechanism for any traffic that does not match a specific routing rule.
 
 ---
 
@@ -56,4 +113,28 @@ Continue to [Round Robin Routing](round-robin.md) to begin with the platform's f
 - Configure routing logic using:
     - [Round Robin](round-robin.md)
     - [Percentage Allocation](percentage-allocation.md)
-- Create routing combinations in [Routing Combinations](routing-combinations.md)
+- Create routing combinations in [Routing combinations](routing-combinations.md)
+
+
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
