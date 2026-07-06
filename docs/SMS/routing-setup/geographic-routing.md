@@ -25,7 +25,7 @@ The **Geographic Routing Management** screen lists every telecom circle Equify h
 
 ## A practical example
 
-A national retailer might find that one provider consistently delivers faster in northeastern circles such as Assam, while a competing provider performs better across southern circles such as AP. Geographic Routing lets the retailer encode that real-world knowledge directly into the platform, so that every message benefits from the best available route for its destination, without requiring a manual decision for each campaign.
+A national vider consistently delivers faster in northeastern circles such as Assam, while a competing provider performs better across southern circles such as AP. Geographic Routing lets the retailer encode that real-world knowledge directly into the platform, so that every message benefits from the best available route for its destination, without requiring a manual decision for each campaign.
 
 !!! info "Determining the destination circle"
     Geographic Routing depends on Equify being able to determine which circle a given recipient number belongs to. In most deployments this is derived automatically from the recipient's mobile number, consistent with standard Indian telecom numbering conventions.
