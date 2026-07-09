@@ -1856,10 +1856,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opening-system-audit" class="md-nav__link">
+  <a href="#open-system-audit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening System Audit
+        Open system audit
       
     </span>
   </a>
@@ -1867,32 +1867,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-the-audit-trail" class="md-nav__link">
+  <a href="#filter-audit-records" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filtering the audit trail
+        Filter audit records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter audit records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filter-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter options
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-an-audit-entry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading an audit entry
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-screen-matters-for-an-enterprise-deployment" class="md-nav__link">
+  <a href="#search-audit-records" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this screen matters for an enterprise deployment
+        Search audit records
       
     </span>
   </a>
@@ -2100,10 +2106,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opening-system-audit" class="md-nav__link">
+  <a href="#open-system-audit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening System Audit
+        Open system audit
       
     </span>
   </a>
@@ -2111,32 +2117,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-the-audit-trail" class="md-nav__link">
+  <a href="#filter-audit-records" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filtering the audit trail
+        Filter audit records
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter audit records">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filter-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter options
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reading-an-audit-entry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reading an audit entry
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-this-screen-matters-for-an-enterprise-deployment" class="md-nav__link">
+  <a href="#search-audit-records" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why this screen matters for an enterprise deployment
+        Search audit records
       
     </span>
   </a>
@@ -2171,75 +2183,60 @@
 
 
 
-<h1 id="system-audit">System Audit<a class="headerlink" href="#system-audit" title="Permanent link">¶</a></h1>
-<p>If every other chapter in this guide is about configuring or monitoring SMS traffic, <strong>System Audit</strong> is about governing the platform itself. Its subtitle states its purpose plainly: <em>"Track all system changes and user activities."</em></p>
-<h2 id="opening-system-audit">Opening System Audit<a class="headerlink" href="#opening-system-audit" title="Permanent link">¶</a></h2>
-<p>In the left-hand navigation menu, select <strong>Administration › System Audit</strong>.</p>
-<h2 id="filtering-the-audit-trail">Filtering the audit trail<a class="headerlink" href="#filtering-the-audit-trail" title="Permanent link">¶</a></h2>
-<p>Three controls at the top of the screen let you narrow the audit history before searching:</p>
+<h1 id="system-audit">System audit<a class="headerlink" href="#system-audit" title="Permanent link">¶</a></h1>
+<hr>
+<p>The <strong>System Audit</strong> page provides a centralized view of user activities and system events recorded within Equify. Use this page to monitor configuration changes, review user actions, and investigate operational activities across the platform.</p>
+<hr>
+<h2 id="open-system-audit">Open system audit<a class="headerlink" href="#open-system-audit" title="Permanent link">¶</a></h2>
+<ol>
+<li>In the left navigation pane, select <strong>Administration</strong>.</li>
+<li>Select <strong>System Audit</strong>.<pre><code>![Functional Routing](../../assets/images/admin1.png)
+</code></pre>
+</li>
+</ol>
+<p>The <strong>System Audit</strong> page opens and displays audit records that match the selected filters.</p>
+<hr>
+<h2 id="filter-audit-records">Filter audit records<a class="headerlink" href="#filter-audit-records" title="Permanent link">¶</a></h2>
+<p>Use the available filters to narrow the audit records displayed on the page.</p>
+<h3 id="filter-options">Filter options<a class="headerlink" href="#filter-options" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Field</th>
+<th>Filter</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Search Usernames…</strong></td>
-<td>Restrict results to changes made by a specific user</td>
+<td><strong>Username</strong></td>
+<td>Search audit records for a specific user.</td>
 </tr>
 <tr>
-<td><strong>Date range</strong></td>
-<td>The period to search within, using the same calendar control used throughout Equify, with the same quick-select options (<strong>Today</strong>, <strong>Yesterday</strong>, <strong>Last 7 days</strong>, <strong>Last 14 days</strong>, <strong>Last 30 days</strong>, <strong>This month</strong>, <strong>Last month</strong>)</td>
-</tr>
-<tr>
-<td><strong>All Events</strong></td>
-<td>Restrict results to a specific type of change, or leave as <strong>All Events</strong> to see everything</td>
-</tr>
-</tbody>
-</table>
-<p>Select <strong>Search</strong> to apply your filters. If no changes match — for example, when searching only today's date on a quiet day — Equify displays <strong>"No Audit Records — Logs will appear here."</strong></p>
-<h2 id="reading-an-audit-entry">Reading an audit entry<a class="headerlink" href="#reading-an-audit-entry" title="Permanent link">¶</a></h2>
-<p>Each row in the <strong>System Audit</strong> table answers the five questions any compliance or security review will ask about a configuration change:</p>
-<table>
-<thead>
-<tr>
-<th>Column</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Date &amp; Time</strong></td>
-<td>Exactly when the change was made</td>
-</tr>
-<tr>
-<td><strong>User</strong></td>
-<td>Who made it</td>
-</tr>
-<tr>
-<td><strong>Event Details</strong></td>
-<td>A plain-language description of what happened, for example <strong>"VENDOR SERVICE API UPDATED"</strong> or <strong>"TEMPLATE CREATED"</strong></td>
-</tr>
-<tr>
-<td><strong>Entity Name</strong></td>
-<td>The specific record affected, for example a service provider name such as <strong>Infobip</strong> or <strong>Equence</strong>, or a template name such as <strong>new</strong> or <strong>temp2</strong></td>
+<td><strong>Date Range</strong></td>
+<td>Specify the start and end dates for the audit search.</td>
 </tr>
 <tr>
 <td><strong>Event Type</strong></td>
-<td>A short badge classifying the change, such as <strong>UPDATE</strong> or <strong>CREATE</strong></td>
+<td>Filter records by event category, such as <strong>CREATE</strong>, <strong>UPDATE</strong>, or <strong>DELETE</strong>.</td>
 </tr>
 </tbody>
 </table>
-<p>An expand icon at the start of each row reveals further detail about that specific change without leaving the page.</p>
-<h2 id="why-this-screen-matters-for-an-enterprise-deployment">Why this screen matters for an enterprise deployment<a class="headerlink" href="#why-this-screen-matters-for-an-enterprise-deployment" title="Permanent link">¶</a></h2>
-<p>Every other screen in the <a href="../../control-centre/">Control Centre</a> and <a href="../../routing-setup/">Routing Setup</a> lets an administrator change how live customer traffic is handled — which provider gets which messages, what counts as a retryable error, which department gets priority. System Audit is the safety net underneath all of that configurability: a permanent, searchable record of exactly who changed what and when, available to any administrator without needing to involve engineering or request a database extract. For an organization operating under regulatory or internal audit requirements, this is often the screen that turns "we configured Equify carefully" into "we can prove how Equify was configured, and by whom."</p>
-<p>This completes the Administration section, and with it, every section of the SMS module reviewed for this edition of the guide. Continue to the <a href="../reference/glossary.md">Glossary</a> or <a href="../reference/faq.md">FAQ</a> for quick reference, or return to the <a href="../index.md">SMS Module Overview</a>.</p>
+<h2 id="search-audit-records">Search audit records<a class="headerlink" href="#search-audit-records" title="Permanent link">¶</a></h2>
+<ol>
+<li>Enter a username in the <strong>Username</strong> field, if required.</li>
+<li>Select a <strong>Date Range</strong>.</li>
+<li>Select an <strong>Event Type</strong>.</li>
+<li>Select <strong>Search</strong>.</li>
+</ol>
+<p>The system displays audit records that match the specified criteria.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Select the <strong>Clear Filters</strong> to clear all filter value and restore the default view.</p>
+</div>
 <hr>
 <h2 id="related-articles">Related articles<a class="headerlink" href="#related-articles" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../">Administration Overview</a></li>
+<li><a href="../">Administration overview</a></li>
 <li><a href="../../analytics/">Analytics</a></li>
 </ul>
 

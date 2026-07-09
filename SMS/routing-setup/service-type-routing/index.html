@@ -1538,57 +1538,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-service-type-routing-does" class="md-nav__link">
+  <a href="#open-service-type-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Service Type Routing does
+        Open service type routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open service type routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-service-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available service types
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#opening-service-type-routing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#available-actions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Service Type Routing
+        Available actions
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#the-three-service-types" class="md-nav__link">
+  <a href="#configure-service-type-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three service types
+        Configure service type mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure service type mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mapping-a-service-type-to-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mapping a service type to providers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A practical example
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2113,57 +2125,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#what-service-type-routing-does" class="md-nav__link">
+  <a href="#open-service-type-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Service Type Routing does
+        Open service type routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open service type routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-service-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available service types
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#opening-service-type-routing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#available-actions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Service Type Routing
+        Available actions
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#the-three-service-types" class="md-nav__link">
+  <a href="#configure-service-type-mapping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The three service types
+        Configure service type mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure service type mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mapping-a-service-type-to-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mapping a service type to providers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-practical-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        A practical example
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2195,59 +2219,108 @@
 
 
 
-<h1 id="service-type-routing">Service Type Routing<a class="headerlink" href="#service-type-routing" title="Permanent link">¶</a></h1>
-<p>Not every SMS your organization sends carries the same urgency. A one-time password that arrives thirty seconds late is a failed login; a promotional offer that arrives thirty seconds late makes no difference at all. <strong>Service Type Routing</strong> lets Equify treat these categories of traffic differently, on purpose.</p>
-<h2 id="what-service-type-routing-does">What Service Type Routing does<a class="headerlink" href="#what-service-type-routing-does" title="Permanent link">¶</a></h2>
-<p>Service Type Routing segregates and prioritizes traffic based on service types like OTP, Transactional, or Promotional. Rather than every message competing for the same providers under the same conditions, each service type can be assigned its own dedicated set of providers — typically your fastest and most reliable providers for OTP traffic, and more cost-efficient providers for promotional traffic where a few extra seconds of latency carries no real business cost.</p>
-<h2 id="opening-service-type-routing">Opening Service Type Routing<a class="headerlink" href="#opening-service-type-routing" title="Permanent link">¶</a></h2>
+<h1 id="service-type-routing">Service type routing<a class="headerlink" href="#service-type-routing" title="Permanent link">¶</a></h1>
+<hr>
+<p><strong>Service Type Routing</strong> allows you to associate service providers with predefined message service types, such as OTP, Promotional, and Transactional. These mappings determine which service providers are eligible to process messages belonging to a specific service category.</p>
+<p>To configure service type routing:</p>
 <ol>
-<li>In the left-hand navigation menu, select <strong>Routing Setup › Traffic Management</strong>.</li>
-<li>On the <strong>Strategy Catalog</strong> tab, select <strong>Configure</strong> on the <strong>Service Type Routing</strong> card. You can also reach this screen directly through the breadcrumb path <strong>Dashboard › Traffic Management › Service Types</strong>.</li>
+<li>Select a service type.</li>
+<li>Map one or more service providers to the service type.</li>
+<li>Save the mapping configuration.</li>
 </ol>
-<h2 id="the-three-service-types">The three service types<a class="headerlink" href="#the-three-service-types" title="Permanent link">¶</a></h2>
-<p>Unlike departments, headers, or templates, Equify's service types are fixed and built into the platform rather than something you create yourself. The <strong>Service Type Management</strong> screen lists exactly three entries:</p>
+<hr>
+<h2 id="open-service-type-routing">Open service type routing<a class="headerlink" href="#open-service-type-routing" title="Permanent link">¶</a></h2>
+<p>The <strong>Service Type Routing</strong> page opens with the following information.</p>
 <table>
 <thead>
 <tr>
-<th>Service Type Name</th>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Type Name</strong></td>
+<td>Name of the service type.</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Description of the message category.</td>
+</tr>
+<tr>
+<td><strong>Actions</strong></td>
+<td>Provides access to service provider mapping configuration.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/route3.png" data-desc-position="bottom"><img alt="Functional Routing" src="../../../assets/images/route3.png"></a></p>
+<h3 id="available-service-types">Available service types<a class="headerlink" href="#available-service-types" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Service Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>OTP</strong></td>
-<td>Otp Messages</td>
+<td>Used for one-time password and verification messages.</td>
 </tr>
 <tr>
 <td><strong>Promotional</strong></td>
-<td>Promotional Messages</td>
+<td>Used for marketing and promotional communications.</td>
 </tr>
 <tr>
 <td><strong>Transactional</strong></td>
-<td>Transactional Messages</td>
+<td>Used for transactional and service-related notifications.</td>
 </tr>
 </tbody>
 </table>
-<p>Because these three categories are standard across the platform, this screen has no <strong>Add</strong> button — your work here is limited to mapping each of the three existing service types to the providers you want to handle them, using the mapping action (sliders icon) next to each row.</p>
-<h2 id="mapping-a-service-type-to-providers">Mapping a service type to providers<a class="headerlink" href="#mapping-a-service-type-to-providers" title="Permanent link">¶</a></h2>
+<h3 id="available-actions">Available actions<a class="headerlink" href="#available-actions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Configure Mapping</strong></td>
+<td>Maps service providers to the selected service type.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="configure-service-type-mapping">Configure service type mapping<a class="headerlink" href="#configure-service-type-mapping" title="Permanent link">¶</a></h2>
+<p>Service type mapping determines which service providers can process messages for a specific service type.</p>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
 <ol>
-<li>From the service type list, select the mapping action next to the service type you want to configure — for example, <strong>OTP</strong>.</li>
-<li>The <strong>Configure Service Mapping</strong> panel opens, identifying the service type in its subtitle (for example, <em>"Service Type: OTP"</em>).</li>
-<li>Select the checkbox next to every service provider that should be eligible to carry this type of traffic. As with the other mapping panels in this guide, a running count confirms your selection — for example, <em>"3 item(s) selected. Will be copied to OTP's Service Type Routing."</em></li>
-<li>Select <strong>Save Mapping</strong> to apply the change to this service type alone, or <strong>Copy to All</strong> to apply the same provider selection across all three service types.</li>
+<li>Navigate to <strong>Routing Setup &gt; Traffic Management &gt; Service Type Routing</strong>.</li>
+<li>Locate the required service type.</li>
+<li>
+<p>Click the <strong>Configure Mapping</strong> icon.</p>
+<pre><code>![Functional Routing](../../assets/images/route28.png)
+</code></pre>
+<p>The <strong>Configure Service Mapping</strong> window displays all available service providers for the selected service type.</p>
+</li>
+<li>
+<p>Select one or more service providers from the list.</p>
+<pre><code>![Functional Routing](../../assets/images/route29.png){ width="300" }
+</code></pre>
+</li>
+<li>
+<p>(Optional) Click <strong>Copy to All</strong> to apply the same provider mapping to all service types.</p>
+</li>
+<li>Click <strong>Save Mapping</strong>.</li>
 </ol>
-<h2 id="a-practical-example">A practical example<a class="headerlink" href="#a-practical-example" title="Permanent link">¶</a></h2>
-<p>A typical configuration maps <strong>OTP</strong> to a small, carefully chosen set of the most reliable providers available — since every additional provider in an OTP chain is another opportunity for delay — while mapping <strong>Promotional</strong> to a wider pool of providers selected mainly for cost efficiency. <strong>Transactional</strong> messages, which sit between the two in urgency, are often mapped to a similar set of providers as OTP, but with a longer list of acceptable fallbacks.</p>
-<div class="admonition info">
-<p class="admonition-title">Service type and message classification</p>
-<p>For Service Type Routing to work correctly, every message Equify processes needs to be correctly tagged with its service type at the point it is created — whether that tag comes from a <a href="../template-routing/">Template Routing</a> mapping, a database column mapped during <a href="../../control-centre/database-setup/">Platform Database Setup</a>, or a field supplied directly through the Message API.</p>
-</div>
-<p>Continue to <a href="../geographic-routing/">Geographic Routing</a> to route based on where in the country a message is going, rather than what kind of message it is.</p>
+<p>The selected service providers are mapped to the service type.</p>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>
-<li>Explore other routing strategies in <a href="../">Routing Overview</a></li>
-<li>Combine strategies in <a href="../routing-combinations/">Create Routing Combinations</a></li>
+<li>Explore other routing strategies in <a href="../">Routing overview</a></li>
+<li>Combine strategies in <a href="../routing-combinations/">Create routing combinations</a></li>
 </ul>
 
 
