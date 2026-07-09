@@ -11,7 +11,7 @@ Use this procedure to modify an existing routing combination, including its name
 1. Navigate to **Routing Setup** > **Traffic Management**.
 2. Select the **Combinations** tab.
 
-        ![Functional Routing](../../assets/images/route33.png)
+    ![Functional Routing](../../assets/images/route33.png)
 
 3. Locate the routing combination that you want to modify.
 4. In the **Actions** column, select the **Configure** icon.
@@ -20,7 +20,7 @@ Use this procedure to modify an existing routing combination, including its name
 
 5. Update the **Combination Name**, if required.
 
-        ![Functional Routing](../../assets/images/route36.png){ width="300" }
+    ![Functional Routing](../../assets/images/route36.png){ width="600" }
 
 6. Update the **Description**, if required.
 

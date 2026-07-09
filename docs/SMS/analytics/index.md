@@ -1,24 +1,30 @@
 # Analytics overview {#analytics}
 
+---
+
 **Analytics** provides access to reporting, message tracking, and billing information within Equify SMS. Use Analytics to review historical messaging activity, generate reports, investigate message delivery issues, and analyze platform usage.
 
 Analytics helps you review past activity and retrieve detailed records for auditing and troubleshooting purposes.
+
+---
 
 ## Open analytics
 
 1. In the left navigation pane, select **Analytics**.
 2. Expand the **Analytics** menu to view the available sections:
-   - **Billing**
-   - **Report & Log**
+    - **Billing**
+    - **Report & Log**
 
-        ![Functional Routing](../../assets/images/analytics1.png)
+    ![Functional Routing](../../assets/images/analytics1.png)
+
+---
 
 ## Analytics sections
 
 | Section | Description |
 |----------|-------------|
 | **Billing** | View billing-related information and platform usage details. |
-| [**Report & Log**] | Generate reports and search detailed message delivery logs. |
+| **Report & Log** | Generate reports and search detailed message delivery logs. |
 
 ## Billing
 
@@ -26,6 +32,8 @@ The **Billing** section provides access to billing and usage information associa
 
 !!! Note
     Billing functionality will be added in a future release after the feature has been fully evaluated.
+
+---
 
 ## Report & Log
 

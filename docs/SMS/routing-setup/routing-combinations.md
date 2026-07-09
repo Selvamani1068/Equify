@@ -12,7 +12,7 @@
 
 2. Select the **Combinations** tab.
 
-        ![Functional Routing](../../assets/images/route33.png)
+    ![Functional Routing](../../assets/images/route33.png)
 
 3. Select **New Combination**.
 
@@ -20,7 +20,7 @@
 
 4. In the **Combination Name** field, enter a unique name for the routing combination.
 
-        ![Functional Routing](../../assets/images/route34.png){ width="300" }
+    ![Functional Routing](../../assets/images/route34.png){ width="500" }
 
 5. In the **Description** field, enter a description that explains the purpose of the routing combination.
 
@@ -41,9 +41,9 @@
 The routing combination is created and displayed in the Combination Routing list.
 
 !!! Notes
-- Combination names can contain letters, numbers, hyphens (`-`), and underscores (`_`) only.
-- The execution sequence determines the routing evaluation order.
-- Round Robin routing serves as the final fallback mechanism when no routing rule matches.
+    - Combination names can contain letters, numbers, hyphens (`-`), and underscores (`_`) only.
+    - The execution sequence determines the routing evaluation order.
+    - Round Robin routing serves as the final fallback mechanism when no routing rule matches.
 
 ---
 

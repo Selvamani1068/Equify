@@ -22,17 +22,17 @@ This procedure describes the steps to generate and download message reports base
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Reports** tab.
 
-        ![Functional Routing](../../assets/images/analytics2.png)
+    ![Functional Routing](../../assets/images/analytics2.png)
 
 3. Configure one or more filters:
 
-   | Field | Description |
-   |---------|-------------|
-   | **Service Provider** | Select the service provider. |
-   | **Header** | Select the sender header. |
-   | **Department** | Select the department. |
-   | **Template IDs** | Enter one or more template IDs. |
-   | **Date Range** | Select the reporting period. |
+    | Field | Description |
+    |---------|-------------|
+    | **Service Provider** | Select the service provider. |
+    | **Header** | Select the sender header. |
+    | **Department** | Select the department. |
+    | **Template IDs** | Enter one or more template IDs. |
+    | **Date Range** | Select the reporting period. |
 
 4. Click **Search**.
 
@@ -55,7 +55,7 @@ This procedure describes the steps to search message transaction logs for troubl
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Logs** tab.
 
-        ![Functional Routing](../../assets/images/analytics3.png)
+    ![Functional Routing](../../assets/images/analytics3.png)
 
 3. Select a value from **Search Type**.
 4. Enter the corresponding value in the **Value** field.

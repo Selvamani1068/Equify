@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#routing-combinations" class="md-skip">
+        <a href="#create-combination-routing" class="md-skip">
           Skip to content
         </a>
       
@@ -1600,10 +1600,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opening-routing-combinations" class="md-nav__link">
+  <a href="#create-a-combination-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Routing Combinations
+        Create a combination routing
       
     </span>
   </a>
@@ -1611,57 +1611,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-system-fallback" class="md-nav__link">
+  <a href="#enable-or-disable-combination-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the system fallback
+        Enable or disable combination routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enable or disable combination routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reviewing-existing-combinations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reviewing existing combinations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-a-new-combination" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Building a new combination
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-this-is-the-platforms-most-strategically-important-screen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why this is the platform's most strategically important screen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's next
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2122,10 +2095,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#opening-routing-combinations" class="md-nav__link">
+  <a href="#create-a-combination-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Opening Routing Combinations
+        Create a combination routing
       
     </span>
   </a>
@@ -2133,57 +2106,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-system-fallback" class="md-nav__link">
+  <a href="#enable-or-disable-combination-routing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the system fallback
+        Enable or disable combination routing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enable or disable combination routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reviewing-existing-combinations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reviewing existing combinations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-a-new-combination" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Building a new combination
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-this-is-the-platforms-most-strategically-important-screen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why this is the platform's most strategically important screen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's next
-      
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2215,91 +2161,80 @@
 
 
 
-<h1 id="routing-combinations">Routing Combinations<a class="headerlink" href="#routing-combinations" title="Permanent link">¶</a></h1>
-<p>Every strategy described so far in this chapter works perfectly well on its own. But real organizations rarely make routing decisions based on just one factor. A bank, for example, might want to check the <strong>department</strong> first, then the <strong>template</strong>, then the <strong>header</strong>, and only fall back to a simple <strong>percentage split</strong> if none of those more specific rules apply. <strong>Routing Combinations</strong> is where you build exactly that kind of layered decision logic — and it is, arguably, the single most powerful screen in the SMS module.</p>
-<h2 id="opening-routing-combinations">Opening Routing Combinations<a class="headerlink" href="#opening-routing-combinations" title="Permanent link">¶</a></h2>
+<h1 id="create-combination-routing">Create combination routing<a class="headerlink" href="#create-combination-routing" title="Permanent link">¶</a></h1>
+<hr>
+<p>Combination routing allows you to combine multiple routing strategies and define the order in which they are evaluated. The system processes routing strategies according to the configured execution sequence. If no routing rule matches, Round Robin routing is used as the final fallback mechanism.</p>
+<hr>
+<h2 id="create-a-combination-routing">Create a combination routing<a class="headerlink" href="#create-a-combination-routing" title="Permanent link">¶</a></h2>
 <ol>
-<li>In the left-hand navigation menu, select <strong>Routing Setup › Traffic Management</strong>.</li>
-<li>Select the <strong>Routing Combinations</strong> tab, next to <strong>Strategy Catalog</strong>.</li>
-</ol>
-<h2 id="understanding-the-system-fallback">Understanding the system fallback<a class="headerlink" href="#understanding-the-system-fallback" title="Permanent link">¶</a></h2>
-<p>Before creating your first combination, Equify displays a permanent reminder at the top of this screen:</p>
-<blockquote>
-<p><strong>System Fallback</strong> — <em>"Round Robin routing automatically serves as the final fallback mechanism for any traffic that does not match specific routing rules."</em></p>
-</blockquote>
-<p>This is the same guarantee described in <a href="../round-robin/">Round Robin Routing</a>. No matter how many combinations you build, you can never accidentally create a message that has nowhere to go — Round Robin always catches it.</p>
-<h2 id="reviewing-existing-combinations">Reviewing existing combinations<a class="headerlink" href="#reviewing-existing-combinations" title="Permanent link">¶</a></h2>
-<p>Below the fallback notice, a table lists every combination strategy that has already been created:</p>
-<table>
-<thead>
-<tr>
-<th>Column</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Strategy Name</strong></td>
-<td>The combination's name, together with a short description of the strategies it chains together — for example, <em>"RoutingCombination-2"</em> described as <code>Template-&gt;header-&gt;dept-&gt;circle-&gt;serviceType</code></td>
-</tr>
-<tr>
-<td><strong>Modified At / Modified By</strong></td>
-<td>When the combination was last changed, and by whom</td>
-</tr>
-<tr>
-<td><strong>Status</strong></td>
-<td>A toggle that activates or deactivates the entire combination</td>
-</tr>
-<tr>
-<td><strong>Actions</strong></td>
-<td>Reorder or edit the combination</td>
-</tr>
-</tbody>
-</table>
-<p>Use <strong>Search by name or ID…</strong> to find a specific combination once your list grows.</p>
-<h2 id="building-a-new-combination">Building a new combination<a class="headerlink" href="#building-a-new-combination" title="Permanent link">¶</a></h2>
-<ol>
-<li>Select <strong>New Combination</strong> in the top-right corner.</li>
 <li>
-<p>In the <strong>Create Combination Routing</strong> panel, complete:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Combination Name</strong></td>
-<td>A unique name for this combination, for example <code>RoutingCombination-4</code>. Names may only contain letters, numbers, hyphens, and underscores</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>A free-text description of what this combination does or is for</td>
-</tr>
-</tbody>
-</table>
+<p>Navigate to <strong>Routing Setup</strong> &gt; <strong>Traffic Management</strong>.</p>
 </li>
 <li>
-<p>Under <strong>Available Routing Strategies</strong>, you will see every strategy covered in this chapter — <strong>Circle Based</strong>, <strong>Department Based</strong>, <strong>Header Based</strong>, <strong>Percentage Based</strong>, <strong>Service Type Based</strong>, and <strong>Template Based</strong> — each with a <strong>+</strong> button. Selecting <strong>+</strong> moves that strategy into the <strong>Execution Sequence</strong> panel on the right, and the counter above the list (for example, <em>"4 active"</em>) tracks how many strategies are currently included.</p>
+<p>Select the <strong>Combinations</strong> tab.</p>
+<pre><code>![Functional Routing](../../assets/images/route33.png)
+</code></pre>
 </li>
-<li>In the <strong>Execution Sequence</strong> panel, reorder the selected strategies by dragging the handle (the grid of dots) on the left of each entry. The panel is explicitly labelled <strong>"Top = Top Priority"</strong> — the strategy at the top of the list is evaluated first, and Equify only moves on to the next strategy in the sequence if the one above it does not produce a routing decision for a given message.</li>
-<li>Remove a strategy from the sequence at any time using the trash-can icon on its row, without losing your other selections.</li>
-<li>Select <strong>Create Combination</strong> to save.</li>
+<li>
+<p>Select <strong>New Combination</strong>.</p>
+<p>The <strong>Create Combination Routing</strong> dialog box opens.</p>
+</li>
+<li>
+<p>In the <strong>Combination Name</strong> field, enter a unique name for the routing combination.</p>
+<pre><code>![Functional Routing](../../assets/images/route34.png){ width="300" }
+</code></pre>
+</li>
+<li>
+<p>In the <strong>Description</strong> field, enter a description that explains the purpose of the routing combination.</p>
+</li>
+<li>
+<p>Under <strong>Available Routing Strategies</strong>, locate the routing strategies that you want to include.</p>
+</li>
+<li>
+<p>Select the <strong>Add (+)</strong> icon for each routing strategy.</p>
+<p>The selected routing strategies are added to the <strong>Execution Sequence</strong> section.</p>
+</li>
+<li>
+<p>Arrange the routing strategies in the required order.</p>
+<p>The strategy at the top of the list has the highest priority and is evaluated first.</p>
+</li>
+<li>
+<p>Review the execution sequence.</p>
+</li>
+<li>
+<p>Select <strong>Create Combination</strong>.</p>
+</li>
 </ol>
-<div class="admonition example">
-<p class="admonition-title">A real four-layer combination</p>
-<p>A combination built from <strong>Header Based</strong>, <strong>Template Based</strong>, <strong>Department Based</strong>, and <strong>Percentage Based</strong>, in that priority order, behaves as follows for every incoming message: Equify first checks whether the request's header matches a configured rule; if not, it checks whether the message's template matches a rule; if not, it checks the sending department; and if none of those three more specific strategies apply, it finally falls back to the configured percentage split across providers. Only if even that percentage configuration is incomplete does the message fall through to platform-wide Round Robin.</p>
+<p>The routing combination is created and displayed in the Combination Routing list.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
 </div>
-<h2 id="why-this-is-the-platforms-most-strategically-important-screen">Why this is the platform's most strategically important screen<a class="headerlink" href="#why-this-is-the-platforms-most-strategically-important-screen" title="Permanent link">¶</a></h2>
-<p>Individually, each routing strategy answers one business question. Routing Combinations is what lets your organization encode its <em>entire</em> routing policy — every department's preference, every premium template's dedicated route, every regional nuance — into a single, ordered, auditable decision chain that a non-technical administrator can review and adjust in minutes, with Round Robin standing permanently behind all of it as an unconditional safety net. This is the feature that turns Equify from a simple SMS gateway into a genuine enterprise routing engine.</p>
-<h2 id="whats-next">What's next<a class="headerlink" href="#whats-next" title="Permanent link">¶</a></h2>
-<p>This concludes the seven routing strategies documented in this edition of the guide. The <strong>Intelligent Routing</strong> screen, listed alongside Traffic Management in the navigation menu, is a distinct, not-yet-released capability — see <a href="../intelligent-routing/">Intelligent Routing</a> for what the application currently shows.</p>
+<ul>
+<li>Combination names can contain letters, numbers, hyphens (<code>-</code>), and underscores (<code>_</code>) only.</li>
+<li>The execution sequence determines the routing evaluation order.</li>
+<li>Round Robin routing serves as the final fallback mechanism when no routing rule matches.</li>
+</ul>
+<hr>
+<h2 id="enable-or-disable-combination-routing">Enable or disable combination routing<a class="headerlink" href="#enable-or-disable-combination-routing" title="Permanent link">¶</a></h2>
+<p>Use this procedure to enable or disable the routing combinations.</p>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
+<ol>
+<li>Navigate to <strong>Routing Setup</strong> &gt; <strong>Traffic Management</strong>.</li>
+<li>Select the <strong>Combinations</strong> tab.</li>
+<li>Locate the combination.</li>
+<li>
+<p>Use the <strong>Status</strong> toggle.</p>
+<ul>
+<li>Enable the toggle to activate the combination.</li>
+<li>Disable the toggle to deactivate the combination.</li>
+</ul>
+</li>
+</ol>
+<p>The routing combination is enabled or disabled for routing.</p>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>
-<li>Modify combinations in <a href="../edit_routing_combination/">Edit Routing Combinations</a></li>
+<li>Modify combinations in <a href="../edit_routing_combination/">Edit routing combinations</a></li>
 <li>Monitor routing performance in <a href="../../analytics/">Analytics</a></li>
 </ul>
 

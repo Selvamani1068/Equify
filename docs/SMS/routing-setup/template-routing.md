@@ -68,7 +68,7 @@ Use this procedure to create a new template.
     | **Template Name** | Name of the template. |
     | **Template Description** | Optional description for the template. |
   
-        ![Functional Routing](../../assets/images/route21.png){ width="300" }
+    ![Functional Routing](../../assets/images/route21.png){ width="300" }
   
 4. Click **Add Template**.
 
@@ -95,7 +95,7 @@ Use this procedure to modify an existing template.
     | **Template Name** | Name of the template. |
     | **Template Description** | Optional description for the template. |
 
-        ![Functional Routing](../../assets/images/route22.png){ width="300" }
+    ![Functional Routing](../../assets/images/route22.png){ width="300" }
 
 4. Click **Update Template**.
 
@@ -110,7 +110,7 @@ The updated configuration is saved.
 1. Click the **More Options** menu.
 2. Select **Download Sample Template**.
 
-        ![Functional Routing](../../assets/images/route23.png)
+     ![Functional Routing](../../assets/images/route23.png)
 
 3. Save the Excel file.
 
@@ -119,7 +119,7 @@ The updated configuration is saved.
 1. Click the **More Options** menu.
 2. Select **Upload Templates**.
 
-        ![Functional Routing](../../assets/images/route24.png)
+     ![Functional Routing](../../assets/images/route24.png)
 
 3. Choose the completed Excel file.
 4. Upload the file.
@@ -137,7 +137,7 @@ Template mapping determines which service providers can process traffic for a sp
 1. Locate the required template.
 2. Click the **Configure Mapping** icon.
 
-        ![Functional Routing](../../assets/images/route25.png)
+     ![Functional Routing](../../assets/images/route25.png)
 
 3. Select one or more service providers.
 
@@ -146,7 +146,7 @@ Template mapping determines which service providers can process traffic for a sp
     | **Service Provider** | Name of the service provider available for mapping. |
     | **Code** | Unique code assigned to the service provider. |
 
-        ![Functional Routing](../../assets/images/route26.png){ width="300" }
+    ![Functional Routing](../../assets/images/route26.png){ width="300" }
 
 4. Select the required service providers.
 

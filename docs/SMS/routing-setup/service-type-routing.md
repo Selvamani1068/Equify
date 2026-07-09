@@ -50,13 +50,13 @@ Service type mapping determines which service providers can process messages for
 2. Locate the required service type.
 3. Click the **Configure Mapping** icon.
 
-        ![Functional Routing](../../assets/images/route28.png)
+     ![Functional Routing](../../assets/images/route28.png)
 
      The **Configure Service Mapping** window displays all available service providers for the selected service type.
 
 4. Select one or more service providers from the list.
 
-        ![Functional Routing](../../assets/images/route29.png){ width="300" }
+     ![Functional Routing](../../assets/images/route29.png){ width="300" }
 
 5. (Optional) Click **Copy to All** to apply the same provider mapping to all service types.
 6. Click **Save Mapping**.

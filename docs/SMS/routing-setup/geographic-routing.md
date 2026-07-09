@@ -23,7 +23,7 @@ The **Geographic Routing** page opens with the following information:
 | **Status** | Indicates whether the circle is active. |
 | **Actions** | Provides access to geographic mapping configuration. |
 
-    ![Functional Routing](../../assets/images/route30.png)
+![Functional Routing](../../assets/images/route30.png)
 
 ### Available actions
 
@@ -43,13 +43,13 @@ Geographic mapping determines which service providers can be used for message de
 2. Locate the required circle.
 3. Click the **Configure Mapping** icon.
 
-        ![Functional Routing](../../assets/images/route31.png)
+     ![Functional Routing](../../assets/images/route31.png)
 
     The **Configure Geographic Mapping** window displays all available service providers that can be associated with the selected geographic location.
 
 4. Select one or more service providers.
 
-        ![Functional Routing](../../assets/images/route32.png){ width="300" }
+    ![Functional Routing](../../assets/images/route32.png){ width="300" }
 
 5. (Optional) Click **Copy to All** to apply the same provider mapping to all geographic circles.
 5. Click **Save Mapping**.

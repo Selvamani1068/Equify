@@ -11,7 +11,7 @@ The **System Audit** page provides a centralized view of user activities and sys
 1. In the left navigation pane, select **Administration**.
 2. Select **System Audit**.
 
-        ![Functional Routing](../../assets/images/admin1.png)
+    ![Functional Routing](../../assets/images/admin1.png)
 
 The **System Audit** page opens and displays audit records that match the selected filters.
 

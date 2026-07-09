@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#related-articles" class="md-skip">
+        <a href="#edit-routing-combinations" class="md-skip">
           Skip to content
         </a>
       
@@ -1574,6 +1574,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1616,12 +1618,25 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#related-articles" class="md-nav__link">
@@ -2042,12 +2057,25 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#related-articles" class="md-nav__link">
@@ -2077,13 +2105,78 @@
 
 
 
-  <h1>Edit Routing Combinations</h1>
-
+<h1 id="edit-routing-combinations">Edit routing combinations<a class="headerlink" href="#edit-routing-combinations" title="Permanent link">¶</a></h1>
+<hr>
+<p>Use this procedure to modify an existing routing combination, including its name, description, routing strategies, or execution sequence.</p>
+<hr>
+<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
+<ol>
+<li>Navigate to <strong>Routing Setup</strong> &gt; <strong>Traffic Management</strong>.</li>
+<li>
+<p>Select the <strong>Combinations</strong> tab.</p>
+<pre><code>![Functional Routing](../../assets/images/route33.png)
+</code></pre>
+</li>
+<li>
+<p>Locate the routing combination that you want to modify.</p>
+</li>
+<li>In the <strong>Actions</strong> column, select the <strong>Configure</strong> icon.</li>
+</ol>
+<p>The <strong>Edit Combination Routing</strong> dialog box opens.</p>
+<ol>
+<li>
+<p>Update the <strong>Combination Name</strong>, if required.</p>
+<pre><code>![Functional Routing](../../assets/images/route36.png){ width="300" }
+</code></pre>
+</li>
+<li>
+<p>Update the <strong>Description</strong>, if required.</p>
+</li>
+<li>
+<p>To add a routing strategy:</p>
+<ol>
+<li>Locate the required strategy under <strong>Available Routing Strategies</strong>.</li>
+<li>Select the <strong>Add (+)</strong> icon.</li>
+</ol>
+<p>The strategy is added to the <strong>Execution Sequence</strong> section.</p>
+</li>
+<li>
+<p>To remove a routing strategy:</p>
+<ol>
+<li>Locate the strategy in the <strong>Execution Sequence</strong> section.</li>
+<li>Select the <strong>Delete</strong> icon.</li>
+</ol>
+<p>The strategy is removed from the execution sequence.</p>
+</li>
+<li>
+<p>To change the routing priority:</p>
+<ol>
+<li>Drag and drop the routing strategies into the required order.</li>
+<li>Place the highest-priority strategy at the top of the list.</li>
+</ol>
+</li>
+<li>
+<p>Review the updated execution sequence.</p>
+</li>
+<li>
+<p>Select <strong>Update Combination</strong>.</p>
+</li>
+</ol>
+<p>The routing combination is updated successfully.</p>
+<p>The updated routing combination is available in the Combination Routing list. The system evaluates routing strategies according to the revised execution sequence.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Changes to the execution sequence affect the order in which routing rules are evaluated.</li>
+<li>The routing strategy at the top of the execution sequence has the highest priority.</li>
+<li>Round Robin routing remains the final fallback mechanism for unmatched traffic.</li>
+</ul>
+</div>
 <hr>
 <h2 id="related-articles">Related articles<a class="headerlink" href="#related-articles" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../routing-combinations/">Create Routing Combinations</a></li>
-<li><a href="../">Routing Overview</a></li>
+<li><a href="../routing-combinations/">Create routing combinations</a></li>
+<li><a href="../">Routing overview</a></li>
 </ul>
 
 

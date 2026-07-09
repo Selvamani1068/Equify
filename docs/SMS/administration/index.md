@@ -7,7 +7,7 @@
 1. In the left-hand navigation menu, select **Administration**.
 2. Select **System Audit**.
 
-        ![Functional Routing](../../assets/images/admin1.png)
+![Functional Routing](../../assets/images/admin1.png)
 
 ---
 
