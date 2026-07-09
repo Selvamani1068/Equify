@@ -17,11 +17,11 @@ The **System Audit** page opens and displays audit records that match the select
 
 ---
 
-## Filter audit records
+## Search audit records
 
-Use the available filters to narrow the audit records displayed on the page.
+This procedure describes the steps to narrow the audit records displayed on the page.
 
-### Filter options
+#### Filter options
 
 | Filter | Description |
 |----------|-------------|
@@ -29,7 +29,6 @@ Use the available filters to narrow the audit records displayed on the page.
 | **Date Range** | Specify the start and end dates for the audit search. |
 | **Event Type** | Filter records by event category, such as **CREATE**, **UPDATE**, or **DELETE**. |
 
-## Search audit records
 
 1. Enter a username in the **Username** field, if required.
 2. Select a **Date Range**.
