@@ -1,60 +1,184 @@
-# Template Routing
+# Template routing
 
-Many SMS programs are built around a small number of recurring, pre-approved message templates — a specific OTP format, a specific promotional offer, a specific payment reminder. **Template Routing** lets you attach a routing decision directly to the template itself, so the right provider is used every single time that template is sent, by anyone, from anywhere in the organization.
+---
 
-## What Template Routing does
+**Template Routing** allows users to create and maintain template identifiers used for template-based message routing. Templates can be mapped to one or more service providers to control how traffic is routed when a specific template is used.
 
-Template Routing applies pre-configured routing templates to standardize message handling across different campaigns. Once a template is registered with Equify and mapped to a service provider, every message that declares that template ID is routed consistently, without each individual sender needing to know or specify which provider should be used.
+To configure template-based routing:
 
-## Opening Template Routing
 
-1. In the left-hand navigation menu, select **Routing Setup › Traffic Management**.
-2. On the **Strategy Catalog** tab, select **Configure** on the **Template Routing** card. You can also reach this screen directly through the breadcrumb path **Dashboard › Traffic Management › Template Based**.
+1. Create a template.
+2. Map the template to the required service providers.
+3. Save the mapping configuration.
+4. Enable the template to make it available for routing.
 
-## Reviewing configured templates
+---
 
-The **Template Management** screen lists every template registered for routing purposes:
+## Open template management
+
+1. Navigate to **Routing Setup**.
+2. Select **Traffic Management**.
+3. Click **Template Routing**.
+
+   ![Functional Routing](../../assets/images/route3.png)
+
+The **Template Management** page opens with the following information:
 
 | Column | Description |
-|---|---|
-| **Template Name** | A short, human-readable name for the template |
-| **ID** | The exact template identifier used by the calling application or service provider |
-| **Description** | A free-text note describing the template's purpose, such as *"50% discount"* |
-| **Modified At / Modified By** | When the template was last changed, and by whom |
-| **Status** | A toggle that enables or disables routing for this template |
-| **Actions** | Edit the template's details (pencil icon), or open its provider mapping (sliders icon) |
+|----------|-------------|
+| **Template Name** | Name assigned to the template. |
+| **ID** | Unique identifier of the template. |
+| **Description** | Additional information about the template. |
+| **Modified At** | Date and time when the template was last modified. |
+| **Modified By** | User who last modified the template. |
+| **Status** | Indicates whether the template is enabled or disabled. |
+| **Actions** | Provides options to edit the template and configure template mapping. |
 
-Use **Search templates…** to find a specific entry once your list grows, or select **Add Template** in the top-right corner to register a new one.
+   ![Functional Routing](../../assets/images/route19.png)
 
-## Registering a new template
+### Available actions
 
-1. Select **Add Template** in the top-right corner.
-2. In the **Add New Template** panel, complete the following fields:
+| Action | Description |
+|----------|-------------|
+| **Add Template** | Creates a new template configuration. |
+| **Enable or Disable** | Activates or deactivates a template. |
+| **Edit** | Updates template details. |
+| **Configure Mapping** | Maps service providers to the selected template. |
+| **Download Sample Template** | Downloads a sample Excel file for bulk template configuration. |
+| **Upload Templates** | Uploads templates in bulk using the supported Excel format. |
+
+---
+
+## Add a template
+
+Use this procedure to create a new template.
+
+### Procedure
+
+1. Navigate to **Routing Setup > Traffic Management > Templates Routing**.
+2. Click **Add Template**.
+
+       ![Functional Routing](../../assets/images/route20.png)
+
+3. Enter the required information.
 
     | Field | Description |
-    |---|---|
-    | **Template ID** | A unique identifier for this template. Equify suggests a generated value, which can be overridden |
-    | **Template Name** | A short, recognizable name, for example *"XYZ-200"* or *"ABC-100"* |
-    | **Template Description** | A description of what the template is used for |
+    |---------|-------------|
+    | **Template ID** | Unique identifier for the template. |
+    | **Template Name** | Name of the template. |
+    | **Template Description** | Optional description for the template. |
+  
+        ![Functional Routing](../../assets/images/route21.png){ width="300" }
+  
+4. Click **Add Template**.
 
-3. Select **Add Template** to save. A confirmation banner reading **"Successfully saved template details"** confirms the template has been created, and it immediately appears in the template list.
+The template is added to the system and becomes available for mapping.
 
-!!! warning "Template IDs must be unique"
-    Equify requires every Template ID to be unique across the platform, and changes to template configuration may take up to one minute to fully propagate. Plan template naming conventions with this uniqueness requirement in mind, particularly in organizations where multiple teams may register templates independently.
+!!! Note
+    Template IDs must be unique. Configuration changes may take up to one minute to propagate.
 
-## Mapping a template to service providers
+---
 
-Once a template has been created, use its mapping action (sliders icon) to open the **Configure Template Mapping** panel and select which service providers should handle traffic for that specific template, following the same pattern used in [Functional Routing](functional-routing.md) and [Header Routing](header-routing.md): select the desired providers by checkbox, then **Save Mapping** for this template alone, or **Copy to All** to apply the same providers to every other configured template.
+## Update a template
 
-## A practical example
+Use this procedure to modify an existing template.
 
-A retail bank running a fixed, pre-approved "50% discount" promotional template can register that template once, map it permanently to a cost-efficient promotional provider, and rely on Equify to route every future send of that exact template correctly — regardless of which marketing team member or which scheduling tool ultimately triggers the campaign.
+### Procedure
 
-Continue to [Service Type Routing](service-type-routing.md) to route based on the broader purpose of a message — OTP, transactional, or promotional — rather than a specific template.
+1. Locate the template in the template list.
+2. Click the **Edit** icon.
+3. Update the required fields.
+
+    | Field | Description |
+    |---------|-------------|
+    | **Template ID** | Read-only field that identifies the template. |
+    | **Template Name** | Name of the template. |
+    | **Template Description** | Optional description for the template. |
+
+        ![Functional Routing](../../assets/images/route22.png){ width="300" }
+
+4. Click **Update Template**.
+
+The updated configuration is saved.
+
+---
+
+## Bulk template upload
+
+### Download the sample template
+
+1. Click the **More Options** menu.
+2. Select **Download Sample Template**.
+
+        ![Functional Routing](../../assets/images/route23.png)
+
+3. Save the Excel file.
+
+### Upload templates
+
+1. Click the **More Options** menu.
+2. Select **Upload Templates**.
+
+        ![Functional Routing](../../assets/images/route24.png)
+
+3. Choose the completed Excel file.
+4. Upload the file.
+
+The system imports the template configuration and makes the templates available for routing.
+
+---
+
+## Configure template mapping
+
+Template mapping determines which service providers can process traffic for a specific template.
+
+### Procedure
+
+1. Locate the required template.
+2. Click the **Configure Mapping** icon.
+
+        ![Functional Routing](../../assets/images/route25.png)
+
+3. Select one or more service providers.
+
+    | Field | Description |
+    |---------|-------------|
+    | **Service Provider** | Name of the service provider available for mapping. |
+    | **Code** | Unique code assigned to the service provider. |
+
+        ![Functional Routing](../../assets/images/route26.png){ width="300" }
+
+4. Select the required service providers.
+
+5. (Optional) Click **Copy to All** to apply the same provider selection to all added templates.
+5. Click **Save Mapping**.
+
+The selected service providers are mapped to the template.
+
+---
+
+## Enable or disable a template
+
+Use the **Status** toggle to enable or disable a template.
+
+### Enable a template
+
+1. Locate the template.
+2. Turn the **Status** toggle on.
+
+The template becomes available for routing.
+
+### Disable a template
+
+1. Locate the template.
+2. Turn the **Status** toggle off.
+
+The template is excluded from routing until it is enabled again.
+
 
 ---
 
 ## What to do next
 
-- Explore other routing strategies in [Routing Overview](index.md)
-- Combine strategies in [Create Routing Combinations](routing-combinations.md)
+- Explore other routing strategies in [Routing overview](index.md)
+- Combine strategies in [Create routing combinations](routing-combinations.md)

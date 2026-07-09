@@ -1,21 +1,16 @@
-# Administration Overview {#admin}
+# Administration overview {#admin}
 
-**Administration** is the smallest section in the SMS module's navigation menu, and the most specialized: it exists to answer one question — *who changed what, and when?* — about Equify's own configuration, rather than about message traffic itself.
+**Administration** section provides access to audit information for configuration changes made within Equify. Use this section to review system activities, track configuration updates, and identify who performed specific actions.
 
-## Opening Administration
+## Open administration
 
-In the left-hand navigation menu, select **Administration**. It expands to reveal a single sub-page: **System Audit**.
+1. In the left-hand navigation menu, select **Administration**.
+2. Select **System Audit**.
 
-## What Administration contains
-
-| Section | What it is for |
-|---|---|
-| [**System Audit**](system-audit.md) | A searchable history of every configuration change made across the SMS module, by every user |
-
-Continue to [System Audit](system-audit.md) for the full walkthrough.
+        ![Functional Routing](../../assets/images/admin1.png)
 
 ---
 
 ## What to do next
 
-- Review system activity in [System Audit](system-audit.md)
+- Review system activity in [System audit](system-audit.md)

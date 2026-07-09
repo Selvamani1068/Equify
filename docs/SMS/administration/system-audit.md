@@ -1,46 +1,49 @@
-# System Audit
+# System audit
 
-If every other chapter in this guide is about configuring or monitoring SMS traffic, **System Audit** is about governing the platform itself. Its subtitle states its purpose plainly: *"Track all system changes and user activities."*
+---
 
-## Opening System Audit
+The **System Audit** page provides a centralized view of user activities and system events recorded within Equify. Use this page to monitor configuration changes, review user actions, and investigate operational activities across the platform.
 
-In the left-hand navigation menu, select **Administration › System Audit**.
+---
 
-## Filtering the audit trail
+## Open system audit
 
-Three controls at the top of the screen let you narrow the audit history before searching:
+1. In the left navigation pane, select **Administration**.
+2. Select **System Audit**.
 
-| Field | Description |
-|---|---|
-| **Search Usernames…** | Restrict results to changes made by a specific user |
-| **Date range** | The period to search within, using the same calendar control used throughout Equify, with the same quick-select options (**Today**, **Yesterday**, **Last 7 days**, **Last 14 days**, **Last 30 days**, **This month**, **Last month**) |
-| **All Events** | Restrict results to a specific type of change, or leave as **All Events** to see everything |
+        ![Functional Routing](../../assets/images/admin1.png)
 
-Select **Search** to apply your filters. If no changes match — for example, when searching only today's date on a quiet day — Equify displays **"No Audit Records — Logs will appear here."**
+The **System Audit** page opens and displays audit records that match the selected filters.
 
-## Reading an audit entry
+---
 
-Each row in the **System Audit** table answers the five questions any compliance or security review will ask about a configuration change:
+## Filter audit records
 
-| Column | Description |
-|---|---|
-| **Date & Time** | Exactly when the change was made |
-| **User** | Who made it |
-| **Event Details** | A plain-language description of what happened, for example **"VENDOR SERVICE API UPDATED"** or **"TEMPLATE CREATED"** |
-| **Entity Name** | The specific record affected, for example a service provider name such as **Infobip** or **Equence**, or a template name such as **new** or **temp2** |
-| **Event Type** | A short badge classifying the change, such as **UPDATE** or **CREATE** |
+Use the available filters to narrow the audit records displayed on the page.
 
-An expand icon at the start of each row reveals further detail about that specific change without leaving the page.
+### Filter options
 
-## Why this screen matters for an enterprise deployment
+| Filter | Description |
+|----------|-------------|
+| **Username** | Search audit records for a specific user. |
+| **Date Range** | Specify the start and end dates for the audit search. |
+| **Event Type** | Filter records by event category, such as **CREATE**, **UPDATE**, or **DELETE**. |
 
-Every other screen in the [Control Centre](../control-centre/index.md) and [Routing Setup](../routing-setup/index.md) lets an administrator change how live customer traffic is handled — which provider gets which messages, what counts as a retryable error, which department gets priority. System Audit is the safety net underneath all of that configurability: a permanent, searchable record of exactly who changed what and when, available to any administrator without needing to involve engineering or request a database extract. For an organization operating under regulatory or internal audit requirements, this is often the screen that turns "we configured Equify carefully" into "we can prove how Equify was configured, and by whom."
+## Search audit records
 
-This completes the Administration section, and with it, every section of the SMS module reviewed for this edition of the guide. Continue to the [Glossary](../reference/glossary.md) or [FAQ](../reference/faq.md) for quick reference, or return to the [SMS Module Overview](../index.md).
+1. Enter a username in the **Username** field, if required.
+2. Select a **Date Range**.
+3. Select an **Event Type**.
+4. Select **Search**.
+
+The system displays audit records that match the specified criteria.
+
+!!! Note
+    Select the **Clear Filters** to clear all filter value and restore the default view.
 
 ---
 
 ## Related articles
 
-- [Administration Overview](index.md)
+- [Administration overview](index.md)
 - [Analytics](../analytics/index.md)

@@ -1,63 +1,71 @@
-# Routing Combinations
+# Create combination routing
 
-Every strategy described so far in this chapter works perfectly well on its own. But real organizations rarely make routing decisions based on just one factor. A bank, for example, might want to check the **department** first, then the **template**, then the **header**, and only fall back to a simple **percentage split** if none of those more specific rules apply. **Routing Combinations** is where you build exactly that kind of layered decision logic — and it is, arguably, the single most powerful screen in the SMS module.
+---
 
-## Opening Routing Combinations
+ Combination routing allows you to combine multiple routing strategies and define the order in which they are evaluated. The system processes routing strategies according to the configured execution sequence. If no routing rule matches, Round Robin routing is used as the final fallback mechanism.
 
-1. In the left-hand navigation menu, select **Routing Setup › Traffic Management**.
-2. Select the **Routing Combinations** tab, next to **Strategy Catalog**.
+---
 
-## Understanding the system fallback
+## Create a combination routing
 
-Before creating your first combination, Equify displays a permanent reminder at the top of this screen:
+1. Navigate to **Routing Setup** > **Traffic Management**.
 
-> **System Fallback** — *"Round Robin routing automatically serves as the final fallback mechanism for any traffic that does not match specific routing rules."*
+2. Select the **Combinations** tab.
 
-This is the same guarantee described in [Round Robin Routing](round-robin.md). No matter how many combinations you build, you can never accidentally create a message that has nowhere to go — Round Robin always catches it.
+        ![Functional Routing](../../assets/images/route33.png)
 
-## Reviewing existing combinations
+3. Select **New Combination**.
 
-Below the fallback notice, a table lists every combination strategy that has already been created:
+    The **Create Combination Routing** dialog box opens.
 
-| Column | Description |
-|---|---|
-| **Strategy Name** | The combination's name, together with a short description of the strategies it chains together — for example, *"RoutingCombination-2"* described as `Template->header->dept->circle->serviceType` |
-| **Modified At / Modified By** | When the combination was last changed, and by whom |
-| **Status** | A toggle that activates or deactivates the entire combination |
-| **Actions** | Reorder or edit the combination |
+4. In the **Combination Name** field, enter a unique name for the routing combination.
 
-Use **Search by name or ID…** to find a specific combination once your list grows.
+        ![Functional Routing](../../assets/images/route34.png){ width="300" }
 
-## Building a new combination
+5. In the **Description** field, enter a description that explains the purpose of the routing combination.
 
-1. Select **New Combination** in the top-right corner.
-2. In the **Create Combination Routing** panel, complete:
+6. Under **Available Routing Strategies**, locate the routing strategies that you want to include.
 
-    | Field | Description |
-    |---|---|
-    | **Combination Name** | A unique name for this combination, for example `RoutingCombination-4`. Names may only contain letters, numbers, hyphens, and underscores |
-    | **Description** | A free-text description of what this combination does or is for |
+7. Select the **Add (+)** icon for each routing strategy.
 
-3. Under **Available Routing Strategies**, you will see every strategy covered in this chapter — **Circle Based**, **Department Based**, **Header Based**, **Percentage Based**, **Service Type Based**, and **Template Based** — each with a **+** button. Selecting **+** moves that strategy into the **Execution Sequence** panel on the right, and the counter above the list (for example, *"4 active"*) tracks how many strategies are currently included.
-4. In the **Execution Sequence** panel, reorder the selected strategies by dragging the handle (the grid of dots) on the left of each entry. The panel is explicitly labelled **"Top = Top Priority"** — the strategy at the top of the list is evaluated first, and Equify only moves on to the next strategy in the sequence if the one above it does not produce a routing decision for a given message.
-5. Remove a strategy from the sequence at any time using the trash-can icon on its row, without losing your other selections.
-6. Select **Create Combination** to save.
+    The selected routing strategies are added to the **Execution Sequence** section.
 
-!!! example "A real four-layer combination"
-    A combination built from **Header Based**, **Template Based**, **Department Based**, and **Percentage Based**, in that priority order, behaves as follows for every incoming message: Equify first checks whether the request's header matches a configured rule; if not, it checks whether the message's template matches a rule; if not, it checks the sending department; and if none of those three more specific strategies apply, it finally falls back to the configured percentage split across providers. Only if even that percentage configuration is incomplete does the message fall through to platform-wide Round Robin.
+8. Arrange the routing strategies in the required order.
 
-## Why this is the platform's most strategically important screen
+    The strategy at the top of the list has the highest priority and is evaluated first.
 
-Individually, each routing strategy answers one business question. Routing Combinations is what lets your organization encode its *entire* routing policy — every department's preference, every premium template's dedicated route, every regional nuance — into a single, ordered, auditable decision chain that a non-technical administrator can review and adjust in minutes, with Round Robin standing permanently behind all of it as an unconditional safety net. This is the feature that turns Equify from a simple SMS gateway into a genuine enterprise routing engine.
+9. Review the execution sequence.
 
-## What's next
+10. Select **Create Combination**.
 
-This concludes the seven routing strategies documented in this edition of the guide. The **Intelligent Routing** screen, listed alongside Traffic Management in the navigation menu, is a distinct, not-yet-released capability — see [Intelligent Routing](intelligent-routing.md) for what the application currently shows.
+The routing combination is created and displayed in the Combination Routing list.
 
+!!! Notes
+- Combination names can contain letters, numbers, hyphens (`-`), and underscores (`_`) only.
+- The execution sequence determines the routing evaluation order.
+- Round Robin routing serves as the final fallback mechanism when no routing rule matches.
+
+---
+
+## Enable or disable combination routing
+
+Use this procedure to enable or disable the routing combinations.
+
+### Procedure
+
+1. Navigate to **Routing Setup** > **Traffic Management**.
+2. Select the **Combinations** tab.
+3. Locate the combination.
+4. Use the **Status** toggle.
+
+    - Enable the toggle to activate the combination.
+    - Disable the toggle to deactivate the combination.
+
+The routing combination is enabled or disabled for routing.
 
 ---
 
 ## What to do next
 
-- Modify combinations in [Edit Routing Combinations](edit_routing_combination.md)
+- Modify combinations in [Edit routing combinations](edit_routing_combination.md)
 - Monitor routing performance in [Analytics](../analytics/index.md)

@@ -1,30 +1,48 @@
-# Analytics Overview {#analytics}
+# Analytics overview {#analytics}
 
-Where the [Dashboard](../dashboard/index.md) is built for watching traffic as it happens today, **Analytics** is built for looking backward — generating formal reports, auditing exactly what happened to a specific message, and reviewing platform costs over time.
+**Analytics** provides access to reporting, message tracking, and billing information within Equify SMS. Use Analytics to review historical messaging activity, generate reports, investigate message delivery issues, and analyze platform usage.
 
-## Opening Analytics
+Analytics helps you review past activity and retrieve detailed records for auditing and troubleshooting purposes.
 
-In the left-hand navigation menu, select **Analytics**. It expands to reveal two sub-pages: **Billing** and **Report & Log**.
+## Open analytics
 
-## What Analytics contains
+1. In the left navigation pane, select **Analytics**.
+2. Expand the **Analytics** menu to view the available sections:
+   - **Billing**
+   - **Report & Log**
 
-| Section | What it is for |
-|---|---|
-| **Billing** | Platform cost and usage information |
-| [**Report & Log**](report-and-log.md) | Generating downloadable summary reports, and searching the detailed, per-message delivery log |
+        ![Functional Routing](../../assets/images/analytics1.png)
+
+## Analytics sections
+
+| Section | Description |
+|----------|-------------|
+| **Billing** | View billing-related information and platform usage details. |
+| [**Report & Log**] | Generate reports and search detailed message delivery logs. |
 
 ## Billing
 
-!!! note "To be completed"
-    **Billing** was visible in the navigation menu during this review but was not opened on screen, so its contents are not yet documented in this edition of the guide. Given its name and position alongside Report & Log, it most likely presents platform usage and cost information — for example, message volume against your service provider contracts — but this has not been confirmed directly and will be added once reviewed.
+The **Billing** section provides access to billing and usage information associated with SMS traffic and platform consumption.
+
+!!! Note
+    Billing functionality will be added in a future release after the feature has been fully evaluated.
 
 ## Report & Log
 
-[**Report & Log**](report-and-log.md) is the fully documented half of Analytics in this edition of the guide. It is split into two tabs — **Reports**, for high-level, filterable, downloadable summaries; and **Logs**, for searching the exact record of an individual message, down to the specific error or delivery code returned. Continue to [Report & Log](report-and-log.md) for the full walkthrough.
+The **Report & Log** section provides tools for reporting, auditing, and troubleshooting message activity.
+
+This section contains two tabs:
+
+| Tab | Description |
+|------|-------------|
+| **Reports** | Generate summary reports using configurable filters and export the results for analysis. |
+| **Logs** | Search individual message records and review detailed delivery information, including processing and delivery status. |
+
+Use **Reports** when you need aggregated operational data. Use **Logs** when you need to investigate a specific message or delivery event.
 
 ---
 
 ## What to do next
 
-- View detailed reports in [Report & Log](report-and-log.md)
-- Optimize routing in [Routing Setup](../routing-setup/index.md)
+- View detailed reports in [Report & log](report-and-log.md)
+- Optimize routing in [Routing setup](../routing-setup/index.md)

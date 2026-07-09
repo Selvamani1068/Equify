@@ -1,47 +1,71 @@
-# Service Type Routing
+# Service type routing
 
-Not every SMS your organization sends carries the same urgency. A one-time password that arrives thirty seconds late is a failed login; a promotional offer that arrives thirty seconds late makes no difference at all. **Service Type Routing** lets Equify treat these categories of traffic differently, on purpose.
+---
 
-## What Service Type Routing does
+**Service Type Routing** allows you to associate service providers with predefined message service types, such as OTP, Promotional, and Transactional. These mappings determine which service providers are eligible to process messages belonging to a specific service category.
 
-Service Type Routing segregates and prioritizes traffic based on service types like OTP, Transactional, or Promotional. Rather than every message competing for the same providers under the same conditions, each service type can be assigned its own dedicated set of providers — typically your fastest and most reliable providers for OTP traffic, and more cost-efficient providers for promotional traffic where a few extra seconds of latency carries no real business cost.
+To configure service type routing:
 
-## Opening Service Type Routing
+1. Select a service type.
+2. Map one or more service providers to the service type.
+3. Save the mapping configuration.
 
-1. In the left-hand navigation menu, select **Routing Setup › Traffic Management**.
-2. On the **Strategy Catalog** tab, select **Configure** on the **Service Type Routing** card. You can also reach this screen directly through the breadcrumb path **Dashboard › Traffic Management › Service Types**.
+---
 
-## The three service types
+## Open service type routing
 
-Unlike departments, headers, or templates, Equify's service types are fixed and built into the platform rather than something you create yourself. The **Service Type Management** screen lists exactly three entries:
+The **Service Type Routing** page opens with the following information.
 
-| Service Type Name | Description |
-|---|---|
-| **OTP** | Otp Messages |
-| **Promotional** | Promotional Messages |
-| **Transactional** | Transactional Messages |
+| Column | Description |
+|----------|-------------|
+| **Service Type Name** | Name of the service type. |
+| **Description** | Description of the message category. |
+| **Actions** | Provides access to service provider mapping configuration. |
 
-Because these three categories are standard across the platform, this screen has no **Add** button — your work here is limited to mapping each of the three existing service types to the providers you want to handle them, using the mapping action (sliders icon) next to each row.
+   ![Functional Routing](../../assets/images/route3.png)
 
-## Mapping a service type to providers
+### Available service types
 
-1. From the service type list, select the mapping action next to the service type you want to configure — for example, **OTP**.
-2. The **Configure Service Mapping** panel opens, identifying the service type in its subtitle (for example, *"Service Type: OTP"*).
-3. Select the checkbox next to every service provider that should be eligible to carry this type of traffic. As with the other mapping panels in this guide, a running count confirms your selection — for example, *"3 item(s) selected. Will be copied to OTP's Service Type Routing."*
-4. Select **Save Mapping** to apply the change to this service type alone, or **Copy to All** to apply the same provider selection across all three service types.
+| Service Type | Description |
+|-------------|-------------|
+| **OTP** | Used for one-time password and verification messages. |
+| **Promotional** | Used for marketing and promotional communications. |
+| **Transactional** | Used for transactional and service-related notifications. |
 
-## A practical example
+### Available actions
 
-A typical configuration maps **OTP** to a small, carefully chosen set of the most reliable providers available — since every additional provider in an OTP chain is another opportunity for delay — while mapping **Promotional** to a wider pool of providers selected mainly for cost efficiency. **Transactional** messages, which sit between the two in urgency, are often mapped to a similar set of providers as OTP, but with a longer list of acceptable fallbacks.
+| Action | Description |
+|----------|-------------|
+| **Configure Mapping** | Maps service providers to the selected service type. |
 
-!!! info "Service type and message classification"
-    For Service Type Routing to work correctly, every message Equify processes needs to be correctly tagged with its service type at the point it is created — whether that tag comes from a [Template Routing](template-routing.md) mapping, a database column mapped during [Platform Database Setup](../control-centre/database-setup.md), or a field supplied directly through the Message API.
+---
 
-Continue to [Geographic Routing](geographic-routing.md) to route based on where in the country a message is going, rather than what kind of message it is.
+## Configure service type mapping
+
+Service type mapping determines which service providers can process messages for a specific service type.
+
+### Procedure
+
+1. Navigate to **Routing Setup > Traffic Management > Service Type Routing**.
+2. Locate the required service type.
+3. Click the **Configure Mapping** icon.
+
+        ![Functional Routing](../../assets/images/route28.png)
+
+     The **Configure Service Mapping** window displays all available service providers for the selected service type.
+
+4. Select one or more service providers from the list.
+
+        ![Functional Routing](../../assets/images/route29.png){ width="300" }
+
+5. (Optional) Click **Copy to All** to apply the same provider mapping to all service types.
+6. Click **Save Mapping**.
+
+The selected service providers are mapped to the service type.
 
 ---
 
 ## What to do next
 
-- Explore other routing strategies in [Routing Overview](index.md)
-- Combine strategies in [Create Routing Combinations](routing-combinations.md)
+- Explore other routing strategies in [Routing overview](index.md)
+- Combine strategies in [Create routing combinations](routing-combinations.md)
