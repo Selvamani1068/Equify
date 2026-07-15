@@ -257,13 +257,13 @@ Ensure that you have the following information from your SMS provider:
 
     Verify the following:
 
-    - Service Provider Details
-    - Request API Configuration
-    - Authentication Settings
-    - Request Mapping
-    - Success Response Mapping
-    - Error Response Mapping
-    - DLR Response Mapping
+    - Service provider details
+    - Request API configuration
+    - Authentication settings
+    - Request mapping
+    - Success response mapping
+    - Error response mapping
+    - DLR response mapping
 
     ### Complete Registration
 

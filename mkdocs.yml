@@ -104,21 +104,12 @@ nav:
           - SP Management:
                 - View Service Provider: whatsapp/control-centre/view-sp-details.md
                 - Update Service Provider: whatsapp/control-centre/service-provider-management.md
-          - Error Control Center:
-              - Configure Retry Management: whatsapp/control-centre/error-retry-management.md
-              - Configure Error Management: whatsapp/control-centre/error_manage.md
-      - Routing Setup:
-          - Overview: whatsapp/routing-setup/index.md
-          - Configure Routing Strategy:
-                 - Round Robin: whatsapp/routing-setup/round-robin.md
-                 - Percentage Allocation: whatsapp/routing-setup/percentage-allocation.md
-                 - Functional Routing: whatsapp/routing-setup/functional-routing.md
-                 - Header Routing: whatsapp/routing-setup/header-routing.md
-                 - Template Routing: whatsapp/routing-setup/template-routing.md
-                 - Service Type Routing: whatsapp/routing-setup/service-type-routing.md
-                 - Geographic Routing: whatsapp/routing-setup/geographic-routing.md
-          - Create Routing Combinations: whatsapp/routing-setup/routing-combinations.md
-          - Edit Routing Combinations: whatsapp/routing-setup/edit_routing_combination.md
+          - Copy Callback URLs: whatsapp/control-centre/copy-callback-url.md
+      - Template Management:
+          - Overview: whatsapp/template-management/index.md
+          - Add Templates: whatsapp/template-management/add-template.md
+          - Edit Templates: whatsapp/template-management/edit-template.md
+          - Delete Templates: whatsapp/template-management/delete-template.md
       - Analytics:
           - Overview: whatsapp/analytics/index.md
           - Report & Log: whatsapp/analytics/report-and-log.md

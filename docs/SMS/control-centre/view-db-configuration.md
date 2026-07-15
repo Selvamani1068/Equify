@@ -21,7 +21,7 @@ User can view the created database configuration details using **DB Management**
 | **Status** | Toggle switch showing whether the connection is currently active (ON) or inactive (OFF). |
 | **Actions** | A menu (⋮) offering options to edit or view the specific DB connection. |
 
-2. Click the **Actions** menu (⋮) of the database configuration that you want to update.
+2. Click the **Actions** menu (⋮) of the database configuration that you want to view.
 3. Select **View details** from the **ACTIONS** menu.  
 
     ![update DB](../../assets/images/view_db.png)
