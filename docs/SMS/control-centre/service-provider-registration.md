@@ -272,8 +272,6 @@ Ensure that you have the following information from your SMS provider:
 
 ---
 
-## Result
-
 The service provider is registered successfully and becomes available in:
 
   - **SP Management**

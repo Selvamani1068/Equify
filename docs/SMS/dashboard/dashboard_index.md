@@ -52,8 +52,9 @@ Users can switch between views to analyze different operational areas.
     
     Shows total, delivered, and failed messages.
 
-  ![SMS Volume Cards](../../assets/images/sms_volume1.png)
+    ![SMS Volume Cards](../../assets/images/sms_volume1.png){ width="400" }
 
+    
     This view helps users:
 
     - Monitor overall messaging activity
@@ -67,7 +68,7 @@ Users can switch between views to analyze different operational areas.
 
     This information helps organizations understand communication usage patterns and identify departments generating significant messaging traffic.
 
-    ## SMS Volume by Service Provider
+    ### SMS Volume by Service Provider
 
     The **SMS Volume by Service Provider** section displays message distribution across configured service providers.
 
@@ -78,7 +79,7 @@ Users can switch between views to analyze different operational areas.
     * Monitor traffic distribution
     * Evaluate provider performance
 
-    ## SMS Volume by Service Type
+    ### SMS Volume by Service Type
 
     The **SMS Volume by Service Type** section categorizes SMS traffic based on message type.
 
@@ -91,13 +92,13 @@ Users can switch between views to analyze different operational areas.
 
     This view helps users understand how messaging traffic is distributed across different business communication categories.
 
-    ## Last Updated Information
+    ### Last Updated Information
 
     Each dashboard widget displays a **Last Updated** timestamp indicating when the displayed data was most recently refreshed.
 
     This information helps users determine the freshness of dashboard data when monitoring platform activity.
 
-    ## Refresh Dashboard Data
+    ### Refresh Dashboard Data
 
     The **Refresh** option retrieves the latest available dashboard information.
 
