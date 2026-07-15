@@ -234,6 +234,8 @@ Users can switch between views to analyze different operational areas.
 
     Hover over each instance name to view heap usage details, including current heap consumption and configured limits.
 
+    ---
+
     ### Database
 
     Shows the operational status and performance metrics of database systems.
@@ -246,6 +248,8 @@ Users can switch between views to analyze different operational areas.
 
     Hover over each instance name to view error details.
 
+    ---
+
     ### I/O Database
 
     Shows I/O-level activity and interaction counts for database components.
@@ -256,6 +260,8 @@ Users can switch between views to analyze different operational areas.
 
     Highlights the operational status of each component based on defined thresholds.
 
+    ---
+
     ### Redis
 
     Shows the operational status and resource utilization of Redis instances.
@@ -265,6 +271,8 @@ Users can switch between views to analyze different operational areas.
     ![Redis](../../assets/images/app4.png){ width="800" }
 
     Highlights whether each Redis instance is active and operating within acceptable limits.
+
+    ---
 
     ### Webserver
 
@@ -277,6 +285,8 @@ Users can switch between views to analyze different operational areas.
     Highlights services that are inactive or have exceeded defined thresholds.
 
     Hover over each instance name to view error details.
+
+    ---
 
     ### Applications
 
