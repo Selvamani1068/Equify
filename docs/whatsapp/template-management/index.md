@@ -10,13 +10,13 @@ Users can use the **Template Management** feature to add approved templates, man
 
 ---
 
-### Opening Template Management
+## Opening Template Management
 
 Select **Template Management** in the left navigation panel. It expands to display the available template-related functions.
 
 ---
 
-### Template management components
+## Template management components
 
 | Section | Description |
 |---|---|
@@ -26,7 +26,7 @@ Select **Template Management** in the left navigation panel. It expands to displ
 
 ---
 
-### Template categories
+## Template categories
 
 Meta classifies WhatsApp template messages into the following categories:
 
@@ -40,7 +40,7 @@ When a template is registered, Equify captures the assigned category and associa
 
 ---
 
-### Template validation and tracking
+## Template validation and tracking
 
 Equify uses registered WhatsApp templates to validate message requests and classify communication traffic.
 

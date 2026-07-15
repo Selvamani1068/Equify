@@ -108,8 +108,8 @@ nav:
       - Template Management:
           - Overview: whatsapp/template-management/index.md
           - Add Templates: whatsapp/template-management/add-template.md
-          - Edit Templates: whatsapp/template-management/edit-template.md
-          - Delete Templates: whatsapp/template-management/delete-template.md
+          - Edit Templates: whatsapp/template-management/edit_template.md
+          - Delete Templates: whatsapp/template-management/delete_template.md
       - Analytics:
           - Overview: whatsapp/analytics/index.md
           - Report & Log: whatsapp/analytics/report-and-log.md

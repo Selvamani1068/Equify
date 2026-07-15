@@ -46,77 +46,266 @@ Users can switch between views to analyze different operational areas.
 
     **SMS Volume** view has the following sections:
 
-    ### Overall SMS Volume
+    ### Overall SMS volume
 
-    The **Overall SMS Volume** section displays SMS traffic processed by the platform during the selected reporting period.
-    
-    Shows total, delivered, and failed messages.
+    Shows total, delivered, and failed messages for the current day.
 
-    ![SMS Volume Cards](../../assets/images/sms_volume1.png){ width="400" }
+    Shows message activity using a time-based chart and highlights the time at which peak traffic was recorded today.
 
-    
-    This view helps users:
+      ![SMS Volume Cards](../../assets/images/sms_volume1.png){ width="600" }
 
-    - Monitor overall messaging activity
-    - Identify traffic spikes or unusual volume changes
-    - Analyze communication trends over time
-    - Highlights peak traffic time.
+    Hover over the chart to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons.
 
-    ### SMS Volume by Department
+    ---
 
-    The **SMS Volume by Department** section displays how SMS traffic is distributed across departments configured within the platform.
+    ### SMS volume by department
 
-    This information helps organizations understand communication usage patterns and identify departments generating significant messaging traffic.
+    Shows the distribution of SMS messages across departments for the current day.
 
-    ### SMS Volume by Service Provider
+    Shows department-wise activity using a comparative bar chart and tabular view to represent relative usage and highlights the departments with the highest traffic volume for the current day.
 
-    The **SMS Volume by Service Provider** section displays message distribution across configured service providers.
+      ![SMS Volume Cards](../../assets/images/sms_volume2.png){ width="600" }
 
-    This information can be used to:
+    Hover over each bar to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons.
 
-    * Review provider utilization
-    * Verify routing behavior
-    * Monitor traffic distribution
-    * Evaluate provider performance
+    ---
 
-    ### SMS Volume by Service Type
+    ### SMS volume by service provider
 
-    The **SMS Volume by Service Type** section categorizes SMS traffic based on message type.
+    Shows the distribution of SMS messages across service providers for the current day.
 
-    Depending on the organization's configuration, service types may include:
+    Shows provider-wise activity using a horizontal bar chart to compare traffic allocation and highlights the service provider that handled the highest traffic volume for the current day.
 
-    * OTP messages
-    * Transactional messages
-    * Notification messages
-    * Promotional messages
+      ![SMS Volume Cards](../../assets/images/sms_volume3.png){ width="800" }
 
-    This view helps users understand how messaging traffic is distributed across different business communication categories.
+    Hover over each bar to view the total number of messages processed by the selected provider.
 
-    ### Last Updated Information
+    ---
 
-    Each dashboard widget displays a **Last Updated** timestamp indicating when the displayed data was most recently refreshed.
+    ### SMS volume by service type
 
-    This information helps users determine the freshness of dashboard data when monitoring platform activity.
+    Shows the distribution of SMS messages by service type for the current day.
 
-    ### Refresh Dashboard Data
+    Shows categorized activity using a stacked bar chart to understand how messaging traffic is distributed across different business communication categories.
 
-    The **Refresh** option retrieves the latest available dashboard information.
+      ![SMS Volume Cards](../../assets/images/sms_volume4.png){ width="800" }
 
-    Users can use this option when monitoring active communication events or investigating operational issues that require current data.
+    Hover over each segment to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons for each service type.
+
 
 === "Service Provider"
 
-    To be added dsds
+    **Service Provider** view has the following sections:
+
+    ### Service provider status
+
+    Shows the status of all configured service providers for the current day.
+
+    Shows provider availability using a status list and highlights whether each provider is active or inactive.
+
+      ![Service Provider Status](../../assets/images/service_provider1.png){ width="500" }
+
+    Helps users quickly identify inactive providers and monitor provider availability across the platform.
+
+    ---
+
+    ### Service provider traffic
+
+    Shows the distribution of SMS traffic across service providers for the current day.
+
+    Shows traffic share using a donut chart to represent relative contribution and highlights the service provider with the highest traffic share.
+
+    ![Service Provider Traffic](../../assets/images/sp_overview2.png){ width="500" }
+
+    Hover over each segment to view the percentage and total traffic handled by the selected provider.
+
+    ---
+
+    ### Total API calls today
+
+    Shows the total number of API calls processed by the platform for the current day.
+
+    Shows API activity using a time-based chart and highlights the time at which peak API traffic was recorded today.
+
+    ![Total API Calls](../../assets/images/sp_overview3.png){ width="500" }
+
+    Hover over the chart to view the number of API calls processed at a specific time.
+
+    ---
+
+    ### Delivery reports received
+
+    Shows the number of message sent and delivery reports received from service providers for the current day.
+
+    Shows provider-wise delivery reports using a comparative bar chart to represent message acknowledgements.
+
+    ![Delivery Reports](../../assets/images/sp_overview4.png){ width="500" }
+
+    Hover over each bar to view the total number of message sent, delivery reports received, and delivery rate for the selected provider.
+
+    ---
+
+    ### Ongoing TPS by service provider
+
+    Shows the current transactions per second (TPS) handled by each service provider.
+
+    Shows real-time TPS activity and indicates live system throughput.
+
+    Displays real-time status and may show no data when there is no active traffic.
+
+    ---
+
+    ### Avg latency by service provider
+
+    Shows the average message processing latency for each service provider.
+
+    Shows latency metrics to help evaluate provider responsiveness and performance.
+
+    Displays real-time status and may show no data when latency data is not available.
+
+    ---
+
+    ### Successful deliveries today
+
+    The **Successful Deliveries Today** pane includes two tabs: **Delivery by Number** and **Delivery by Percentage**.
+
+    **Delivery by Number** shows the total number of successfully delivered messages for each service provider for the current day.
+
+    **Delivery by Percentage** shows the delivery success rate, expressed as a percentage, for each service provider for the current day.
+
+    Shows provider-wise delivery success using a horizontal bar chart and highlights the provider with the highest successful deliveries.
+
+    ![Successful Deliveries](../../assets/images/sp_overview5.png){ width="800" }
+
+    Hover over each bar to view the total number messages sent, the number of messages successfully delivered, and delivery rate for the selected provider.
+
+    ---
+
+    ### API calls by service provider today
+
+    Shows the distribution of API calls across service providers for the current day.
+
+    Shows categorized activity using a grouped bar chart to represent successful, retry, and failed API calls.
+
+    ![API Calls by Provider](../../assets/images/sp_overview6.png){ width="800" }
+
+    Hover over each bar to view the total number of API calls by status for the selected provider.
+
 
 === "System Health"
 
-    To be added
+    **System Health** view has the following sections:
+
+    ### Server statistics
+
+    Shows infrastructure-level performance metrics for all servers for the current day.
+
+    Shows server utilization using a tabular view that includes CPU usage, memory usage, thread count, disk utilization, and I/O activity, along with threshold status.
+
+    ![Server Statistics](../../assets/images/sy_server.png){ width="800" }
+
+    Helps users monitor server performance and identify resources that exceed defined thresholds.
+
+    ---
+
+    ### Network statistics
+
+    Shows network-level performance metrics for all servers for the current day.
+
+    Shows latency and component-level information using a tabular view, along with timestamp and threshold status.
+
+    ![Network Statistics](../../assets/images/sy_network.png){ width="800" }
+
+    Helps users monitor network performance and identify latency or connectivity issues across the platform.
 
 === "Applications"
 
-    To be added
+    **Applications** view has the following sections:
+
+    ### Kafka
+
+    Shows the operational status and resource utilization of Kafka components.
+
+    Shows component-level activity using a tabular view, including CPU usage, memory usage, thread count, active connections, and heap memory consumption.
+
+    ![Kafka](../../assets/images/app1.png){ width="800" }
+
+    Highlights the health status of each Kafka instance and indicates whether it is operating within defined thresholds.
+
+    Hover over each instance name to view heap usage details, including current heap consumption and configured limits.
+
+    ---
+
+    ### Database
+
+    Shows the operational status and performance metrics of database systems.
+
+    Shows database activity using a tabular view, including CPU usage, memory usage, active connections, and threshold status.
+
+    ![Database](../../assets/images/app2.png){ width="800" }
+
+    Highlights databases that exceed defined thresholds and indicates whether each database is active or inactive.
+
+    Hover over each instance name to view error details.
+
+    ---
+
+    ### I/O Database
+
+    Shows I/O-level activity and interaction counts for database components.
+
+    Shows component-level I/O activity using a tabular view, including operation count, associated component, and execution time.
+
+    ![I/O Database](../../assets/images/app3.png){ width="800" }
+
+    Highlights the operational status of each component based on defined thresholds.
+
+    ---
+
+    ### Redis
+
+    Shows the operational status and resource utilization of Redis instances.
+
+    Shows instance-level activity using a tabular view, including CPU usage, memory usage, and threshold status.
+
+    ![Redis](../../assets/images/app4.png){ width="800" }
+
+    Highlights whether each Redis instance is active and operating within acceptable limits.
+
+    ---
+
+    ### Webserver
+
+    Shows the operational status of web server services.
+
+    Shows service-level activity using a tabular view, including host name, response status code, execution time, and threshold status.
+
+    ![Webserver](../../assets/images/app5.png){ width="800" }
+
+    Highlights services that are inactive or have exceeded defined thresholds.
+
+    Hover over each instance name to view error details.
+
+    ---
+
+    ### Applications
+
+    Shows the operational status and performance metrics of application services.
+
+    Shows application-level activity using a tabular view, including CPU usage, memory usage, thread count, and heap memory consumption.
+
+    ![Applications](../../assets/images/app6.png){ width="800" }
+
+    Highlights the status of each application service and indicates whether it is active or inactive.
+
+    Hover over each instance name to view error details.
 
 
+!!! tip "Refresh and export data"
+
+    - Select **Refresh** to retrieve the latest dashboard data.
+    - Select **More options (⋮)** on a pane, then choose **Refresh** to update that pane.
+    - Select **More options (⋮)** on a pane, then choose **Export** to download the data in CSV format.
 
 
 

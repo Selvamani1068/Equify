@@ -2,7 +2,7 @@
 
 ---
 
-The **Report & Log** page provides access to reporting and log search capabilities. Use this page to generate message delivery reports, analyze messaging activity, and investigate message processing logs.
+The **Report & Log** page provides access to reporting and log search capabilities for WhatsApp communications. Use this page to generate delivery reports, analyze messaging activity, and investigate message processing details.
 
 ---
 
@@ -11,68 +11,76 @@ The **Report & Log** page provides access to reporting and log search capabiliti
 Ensure that:
 
 - The required reporting data is available for the selected date range.
-- You know the search criteria required for the report or log query.
+- You know the search criteria needed for report generation or log analysis.
 
 ---
 
 ## Generate a report
 
-This procedure describes the steps to generate and download message reports based on selected filters.
+This procedure describes how to generate and download WhatsApp message reports using available filters.
 
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Reports** tab.
 
-    ![Functional Routing](../../assets/images/analytics2.png)
+    ![WhatsApp Report](../../assets/images/wa_report.png){ width="800" }
 
 3. Configure one or more filters:
 
     | Field | Description |
     |---------|-------------|
-    | **Service Provider** | Select the service provider. |
-    | **Header** | Select the sender header. |
-    | **Department** | Select the department. |
-    | **Template IDs** | Enter one or more template IDs. |
-    | **Date Range** | Select the reporting period. |
+    | **SERVICE PROVIDER** | Select the service provider used for message delivery. |
+    | **SENDER** | Select the sender associated with the messages. |
+    | **TEMPLATE IDs** | Enter one or more WhatsApp template IDs. |
+    | **DATE RANGE** | Select the reporting period. |
 
 4. Click **Search**.
 
     The system displays report data that matches the selected criteria.
 
-5. Download the report if required.
+5. Review the report metrics:
+
+    - **Total Submitted**
+    - **Sent**
+    - **Delivered**
+    - **Read**
+    - **Delivery Failed**
+    - **Pending**
+    - **Delivery %**
+    - **Read %**
+
+6. Click **Download** to export the report if required.
+
 
 !!! Note
     The **Date Range** field is mandatory for report generation.
 
 !!! Tip
-    Apply additional filters to reduce the volume of returned data and improve report accuracy.
+    Apply multiple filters to narrow down results and improve report relevance.
 
 ---
 
 ## Search logs
 
-This procedure describes the steps to search message transaction logs for troubleshooting and auditing purposes.
+This procedure describes how to search WhatsApp message logs for troubleshooting and auditing.
 
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Logs** tab.
 
-    ![Functional Routing](../../assets/images/analytics3.png)
+     ![Logs](../../assets/images/wa_logs.png){ width="800" }
 
-3. Select a value from **Search Type**.
-4. Enter the corresponding value in the **Value** field.
-5. (Optional) Enter a pattern in **MESSAGE PATTERN**.
-6. Select a **Date Range**.
-7. Click **Search**.
+3. Select a value from **SEARCH TYPE**.
+4. Enter the corresponding value in the **VALUE** field.
+5. Select a **DATE RANGE**.
+6. Click **Search**.
 
-The system displays log entries that match the specified search criteria.
+   The system displays log entries that match the specified criteria.
 
-!!! Note
-    Both **Search Type** and **Value** are required.
 
 !!! Note
-    Log data is available for the previous two months only.
+    Both **SEARCH TYPE** and **VALUE** are required.
 
-!!! Tip
-    Use **MESSAGE PATTERN** when searching for messages that contain specific content or patterns.
+!!! Note
+    Log data is available for a limited retention period based on system configuration.
 
 
 ---
@@ -81,3 +89,28 @@ The system displays log entries that match the specified search criteria.
 
 - [Analytics overview](index.md)
 - [Error control center](../control-centre/error-retry-management.md)
+
+
+
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
