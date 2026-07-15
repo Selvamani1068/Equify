@@ -91,6 +91,40 @@ nav:
           - System Audit: SMS/administration/system-audit.md
   - WhatsApp:
       - Overview: whatsapp/index.md
+      - Architecture: whatsapp/whatsapp_architecture.md
+      - Getting Started: whatsapp/getting_started.md
+      - Dashboard: whatsapp/dashboard/dashboard_index.md
+      - Control Centre:
+          - Overview: whatsapp/control-centre/index.md
+          - DB Configuration: whatsapp/control-centre/database-setup.md
+          - DB Management:
+                - View DB Configuration: whatsapp/control-centre/view-db-configuration.md
+                - Update DB Configuration: whatsapp/control-centre/update-db-configuration.md
+          - Service Provider Registration: whatsapp/control-centre/service-provider-registration.md
+          - SP Management:
+                - View Service Provider: whatsapp/control-centre/view-sp-details.md
+                - Update Service Provider: whatsapp/control-centre/service-provider-management.md
+          - Error Control Center:
+              - Configure Retry Management: whatsapp/control-centre/error-retry-management.md
+              - Configure Error Management: whatsapp/control-centre/error_manage.md
+      - Routing Setup:
+          - Overview: whatsapp/routing-setup/index.md
+          - Configure Routing Strategy:
+                 - Round Robin: whatsapp/routing-setup/round-robin.md
+                 - Percentage Allocation: whatsapp/routing-setup/percentage-allocation.md
+                 - Functional Routing: whatsapp/routing-setup/functional-routing.md
+                 - Header Routing: whatsapp/routing-setup/header-routing.md
+                 - Template Routing: whatsapp/routing-setup/template-routing.md
+                 - Service Type Routing: whatsapp/routing-setup/service-type-routing.md
+                 - Geographic Routing: whatsapp/routing-setup/geographic-routing.md
+          - Create Routing Combinations: whatsapp/routing-setup/routing-combinations.md
+          - Edit Routing Combinations: whatsapp/routing-setup/edit_routing_combination.md
+      - Analytics:
+          - Overview: whatsapp/analytics/index.md
+          - Report & Log: whatsapp/analytics/report-and-log.md
+      - Administration:
+          - Overview: whatsapp/administration/index.md
+          - System Audit: whatsapp/administration/system-audit.md
   - Release Notes: release_notes.md
   - FAQ: faq.md
 
