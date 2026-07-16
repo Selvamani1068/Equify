@@ -14,7 +14,7 @@ At a high level, the Equify WhatsApp architecture consists of three logical doma
 
 ## Equify platform architecture
 
-  ![SMS Architecture](../../assets/images/architecture.svg)
+  ![SMS Architecture](../../assets/images/whatsapp_arch.svg)
 
 ---
 
@@ -35,6 +35,8 @@ The client environment may include:
 - Marketing automation systems
 - Output databases that receive message delivery status information
 
+Authentication is handled via SSO using OIDC with an external Identity Provider.
+
 Enterprise applications invoke Equify APIs to initiate WhatsApp communications. Delivery status information can be written back to configured output databases for downstream processing and reporting.
 
 ### Equify platform
@@ -45,15 +47,13 @@ The Equify Platform is responsible for communication orchestration and contains 
 - DLR Processing Engine
 - Analytics Engine
 
-Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
+These engines collectively manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
 
 ### Service providers
 
 Service Providers are external messaging providers responsible for delivering communications to end recipients.
 
-Equify integrates with multiple providers through a unified framework and abstracts provider-specific implementations from enterprise applications.
-
-This architecture enables centralized provider management, template administration, message delivery, and status tracking.
+Equify integrates with multiple providers through a unified framework and abstracts provider-specific implementations from enterprise applications. This enables centralized provider management, template administration, message delivery, and status tracking.
 
 ---
 
@@ -61,22 +61,16 @@ This architecture enables centralized provider management, template administrati
 
 The Message Processing Engine is responsible for receiving, validating, processing, and dispatching messages.
 
-The engine includes a set of services responsible for message ingestion, template validation, message processing, and delivery.
-
-### Integration layer
-
-The Integration Layer serves as the entry point into the platform.
-
-All WhatsApp communication requests enter Equify through secure API integrations.
-
-Unlike SMS implementations, WhatsApp does not support database-driven message ingestion.
-
 ### Message API service
 
-The Message API Service provides a secure HTTPS interface that allows enterprise applications to submit message requests to Equify.
+The Message API Service acts as the entry point into the platform.
 
-Incoming requests are validated and transformed into a standardized internal format before entering the processing pipeline.
+- Exposes secure HTTPS APIs for message submission
+- Validates incoming requests
+- Transforms requests into a standardized internal format
+- Publishes structured messages to Kafka in encrypted form
 
+All communication into the platform is API-driven.
 
 ### Operations and maintenance service
 
@@ -101,6 +95,7 @@ The service:
 - Validates template categories
 - Performs business-rule enforcement
 - Prepares messages for delivery processing
+- Routes messages to provider-specific Kafka topics based on configuration
 
 Before a message is dispatched, the Middleware Service validates that the submitted template identifier exists and is registered for the target service provider. Requests containing unregistered templates are rejected before delivery processing begins.
 
@@ -126,23 +121,31 @@ Template registration enables Equify to classify message traffic by category and
 
 Template information is made available to runtime services for validation and processing.
 
-### Delivery management layer
-
-The Delivery Management Layer is responsible for preparing and dispatching messages to WhatsApp service providers.
-
 ### Dispatcher service
 
 The Dispatcher Service consumes validated communication requests and transforms them into provider-specific formats.
 
 The service invokes the provider's HTTPS APIs and submits the message for delivery.
 
+### Redis cache
+
+Redis is used as a high-performance in-memory data store for runtime processing.
+
+It stores:
+
+- Configuration data (synced from MySQL)
+- Template and provider metadata
+- Message correlation data (Message ID & Provider ID mapping)
+
+This enables fast lookup for DLR processing and message tracking.
+
 ---
 
-## Status processing layer
+## DLR processing layer
 
-The Status Processing Layer manages message lifecycle updates received from WhatsApp service providers.
+The DLR Processing Layer manages message lifecycle updates received from WhatsApp service providers.
 
-### Status API service
+### DLR API service
 
 Service providers send message status updates back to Equify through dedicated HTTPS API endpoints.
 
@@ -150,9 +153,9 @@ These reports contain status information that indicates whether messages were de
 
 Received status payloads are validated and published to Kafka for processing.
 
-### Status processor service
+### DLR processor service
 
-The Status Processor consumes status events from Kafka.
+The DLR Processor consumes status events from Kafka.
 
 The service:
 
@@ -236,17 +239,18 @@ These dashboards help operations teams monitor communication activity, investiga
 
 The following sequence summarizes the complete communication lifecycle:
 
-1. A business application generates a WhatsApp communication request.
-2. Equify receives the request through the Message API Service.
-3. The request is validated and published to Kafka.
-4. The Middleware Service validates that the submitted template is registered for the selected provider.
+1. A business application generates a WhatsApp communication request via API.
+2. The Message API Service validates and transforms the request.
+3. The request is encrypted and published to Kafka.
+4. The Middleware Service validates business rules and routes the message to a provider-specific topic.
 5. The template category (Authentication, Utility, or Marketing) is identified and associated with the message for reporting and billing purposes.
-6. The provider delivers the message through the WhatsApp Business Platform.
-7. Service providers return delivery reports and acknowledgements.
-8. The Status Processing Engine correlates delivery reports with the original message and updates delivery status information.
+6. The Dispatcher Service consumes the message, transforms it, and sends it to the provider via HTTPS.
+7. The service provider delivers the message to the recipient.
+8. The provider sends delivery reports (DLR) back to Equify via HTTPS callbacks.
 9. Final delivery results are written to the configured output destination.
-10. Audit events and operational metrics are processed by the Analytics Engine.
-11. Analytics services generate operational reports, category-based usage reports, and billing insights using message and template category information.
+10. Audit logs and system metrics are published to Kafka.
+11. The Analytics Engine processes events and stores them in ClickHouse.
+12. Dashboards and reports provide operational and analytical insights.
 
 ---
 

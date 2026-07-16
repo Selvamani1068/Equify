@@ -2503,7 +2503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../template-management/edit-template.md" class="md-nav__link">
+      <a href="../../template-management/edit_template/" class="md-nav__link">
         
   
   
@@ -2531,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../template-management/delete-template.md" class="md-nav__link">
+      <a href="../../template-management/delete_template/" class="md-nav__link">
         
   
   
@@ -3031,22 +3031,22 @@
 
 <h1 id="report-log">Report &amp; log<a class="headerlink" href="#report-log" title="Permanent link">¶</a></h1>
 <hr>
-<p>The <strong>Report &amp; Log</strong> page provides access to reporting and log search capabilities. Use this page to generate message delivery reports, analyze messaging activity, and investigate message processing logs.</p>
+<p>The <strong>Report &amp; Log</strong> page provides access to reporting and log search capabilities for WhatsApp communications. Use this page to generate delivery reports, analyze messaging activity, and investigate message processing details.</p>
 <hr>
 <h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">¶</a></h2>
 <p>Ensure that:</p>
 <ul>
 <li>The required reporting data is available for the selected date range.</li>
-<li>You know the search criteria required for the report or log query.</li>
+<li>You know the search criteria needed for report generation or log analysis.</li>
 </ul>
 <hr>
 <h2 id="generate-a-report">Generate a report<a class="headerlink" href="#generate-a-report" title="Permanent link">¶</a></h2>
-<p>This procedure describes the steps to generate and download message reports based on selected filters.</p>
+<p>This procedure describes how to generate and download WhatsApp message reports using available filters.</p>
 <ol>
 <li>Navigate to <strong>Analytics</strong> &gt; <strong>Report &amp; Log</strong>.</li>
 <li>
 <p>Select the <strong>Reports</strong> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/analytics2.png" data-desc-position="bottom"><img alt="Functional Routing" src="../../../assets/images/analytics2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/wa_report.png" data-desc-position="bottom"><img alt="WhatsApp Report" src="../../assets/images/wa_report.png" width="800"></a></p>
 </li>
 <li>
 <p>Configure one or more filters:</p>
@@ -3059,23 +3059,19 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Service Provider</strong></td>
-<td>Select the service provider.</td>
+<td><strong>SERVICE PROVIDER</strong></td>
+<td>Select the service provider used for message delivery.</td>
 </tr>
 <tr>
-<td><strong>Header</strong></td>
-<td>Select the sender header.</td>
+<td><strong>SENDER</strong></td>
+<td>Select the sender associated with the messages.</td>
 </tr>
 <tr>
-<td><strong>Department</strong></td>
-<td>Select the department.</td>
+<td><strong>TEMPLATE IDs</strong></td>
+<td>Enter one or more WhatsApp template IDs.</td>
 </tr>
 <tr>
-<td><strong>Template IDs</strong></td>
-<td>Enter one or more template IDs.</td>
-</tr>
-<tr>
-<td><strong>Date Range</strong></td>
+<td><strong>DATE RANGE</strong></td>
 <td>Select the reporting period.</td>
 </tr>
 </tbody>
@@ -3086,7 +3082,20 @@
 <p>The system displays report data that matches the selected criteria.</p>
 </li>
 <li>
-<p>Download the report if required.</p>
+<p>Review the report metrics:</p>
+<ul>
+<li><strong>Total Submitted</strong></li>
+<li><strong>Sent</strong></li>
+<li><strong>Delivered</strong></li>
+<li><strong>Read</strong></li>
+<li><strong>Delivery Failed</strong></li>
+<li><strong>Pending</strong></li>
+<li><strong>Delivery %</strong></li>
+<li><strong>Read %</strong></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Download</strong> to export the report if required.</p>
 </li>
 </ol>
 <div class="admonition note">
@@ -3095,37 +3104,32 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Apply additional filters to reduce the volume of returned data and improve report accuracy.</p>
+<p>Apply multiple filters to narrow down results and improve report relevance.</p>
 </div>
 <hr>
 <h2 id="search-logs">Search logs<a class="headerlink" href="#search-logs" title="Permanent link">¶</a></h2>
-<p>This procedure describes the steps to search message transaction logs for troubleshooting and auditing purposes.</p>
+<p>This procedure describes how to search WhatsApp message logs for troubleshooting and auditing.</p>
 <ol>
 <li>Navigate to <strong>Analytics</strong> &gt; <strong>Report &amp; Log</strong>.</li>
 <li>
 <p>Select the <strong>Logs</strong> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/analytics3.png" data-desc-position="bottom"><img alt="Functional Routing" src="../../../assets/images/analytics3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/images/wa_logs.png" data-desc-position="bottom"><img alt="Logs" src="../../assets/images/wa_logs.png" width="800"></a></p>
 </li>
 <li>
-<p>Select a value from <strong>Search Type</strong>.</p>
+<p>Select a value from <strong>SEARCH TYPE</strong>.</p>
 </li>
-<li>Enter the corresponding value in the <strong>Value</strong> field.</li>
-<li>(Optional) Enter a pattern in <strong>MESSAGE PATTERN</strong>.</li>
-<li>Select a <strong>Date Range</strong>.</li>
+<li>Enter the corresponding value in the <strong>VALUE</strong> field.</li>
+<li>Select a <strong>DATE RANGE</strong>.</li>
 <li>Click <strong>Search</strong>.</li>
 </ol>
-<p>The system displays log entries that match the specified search criteria.</p>
+<p>The system displays log entries that match the specified criteria.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Both <strong>Search Type</strong> and <strong>Value</strong> are required.</p>
+<p>Both <strong>SEARCH TYPE</strong> and <strong>VALUE</strong> are required.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Log data is available for the previous two months only.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use <strong>MESSAGE PATTERN</strong> when searching for messages that contain specific content or patterns.</p>
+<p>Log data is available for a limited retention period based on system configuration.</p>
 </div>
 <hr>
 <h2 id="related-articles">Related articles<a class="headerlink" href="#related-articles" title="Permanent link">¶</a></h2>
@@ -3133,6 +3137,28 @@
 <li><a href="../">Analytics overview</a></li>
 <li><a href="../control-centre/error-retry-management.md">Error control center</a></li>
 </ul>
+<div class="home-support-banner">
+  <div class="support-left">
+    <h2 class="support-title">Need some help?</h2>
+    <p class="support-desc">
+      Communication at scale isn’t always simple. Get instant help from our
+      <a href="/support/">support team</a>, or browse the
+      <a href="/faq/#faq">FAQ</a> for quick answers.
+    </p>
+    <div class="support-legal">
+      <a href="/terms/">Terms of service</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <span>© 2026 Equify. All rights reserved.</span>
+    </div>
+  </div>
+  <div class="support-right">
+    <div class="support-icon-cluster">
+      <div class="support-icon-bubble support-icon-bubble--1">🎧</div>
+      <div class="support-icon-bubble support-icon-bubble--2">💬</div>
+      <div class="support-icon-bubble support-icon-bubble--3">🛡️</div>
+    </div>
+  </div>
+</div>
 
 
 
