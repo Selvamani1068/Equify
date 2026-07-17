@@ -67,7 +67,7 @@ This approach helps ensure provider compliance while maintaining accurate operat
     <p class="support-desc">
       Communication at scale isn’t always simple. Get instant help from our
       <a href="https://equence.com/contact.html">support team</a>, or browse the
-      <a href="../faq/#faq">FAQ</a> for quick answers.
+      <a href="../../faq/#faq">FAQ</a> for quick answers.
     </p>
     <div class="support-legal">
       <a href="https://equence.com/terms.html">Terms of service</a>
