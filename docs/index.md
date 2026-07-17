@@ -96,11 +96,11 @@ Find everything you need to build, manage, and scale your SMS experience.
 </div>
 
 <div class="card-actions">
-<a href="/sms/analytics/#analytics" class="card-btn">
+<a href="sms/analytics/#analytics" class="card-btn">
 <strong>View Analytics →</strong>
 </a>
 
-<a href="/sms/administration/#admin" class="card-btn">
+<a href="sms/administration/#admin" class="card-btn">
 <strong>Administration →</strong>
 </a>
 
@@ -118,7 +118,7 @@ Find everything you need to build, manage, and scale your SMS experience.
 Monitor messaging activity, delivery performance, failures, retries, and platform health.
 </p>
 
-<a href="/sms/dashboard/dashboard_index/#dashboard" class="explore-link">
+<a href="sms/dashboard/dashboard_index/#dashboard" class="explore-link">
 Open Dashboard →
 </a>
 </div>
@@ -170,11 +170,11 @@ Find everything you need to build, manage, and scale your SMS experience.
 
 
 <div class="card-actions">
-<a href="/whatsapp/analytics/#analytics" class="card-btn">
+<a href="whatsapp/analytics/#analytics" class="card-btn">
 <strong>View Analytics →</strong>
 </a>
 
-<a href="/whatsapp/administration/#admin" class="card-btn">
+<a href="whatsapp/administration/#admin" class="card-btn">
 <strong>Administration →</strong>
 </a>
 
@@ -192,7 +192,7 @@ Find everything you need to build, manage, and scale your SMS experience.
 Monitor messaging activity, delivery performance, failures, retries, and platform health.
 </p>
 
-<a href="/whatsapp/dashboard/dashboard_index/#dashboard" class="explore-link">
+<a href="whatsapp/dashboard/dashboard_index/#dashboard" class="explore-link">
 Open Dashboard →
 </a>
 </div>
