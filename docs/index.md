@@ -32,7 +32,7 @@ communications at scale.
 
 <div class="release-info">
 Version 5.2.1 • Released 30 June 2026 •
-<a href="/release_notes/">Release Notes</a>
+<a href="release_notes/">Release Notes</a>
 </div>
 
 </div>
@@ -238,7 +238,7 @@ Manage Templates →
     <p class="support-desc">
       Communication at scale isn’t always simple. Get instant help from our
       <a href="/support/">support team</a>, or browse the
-      <a href="/faq/#faq">FAQ</a> for quick answers.
+      <a href="faq/#faq">FAQ</a> for quick answers.
     </p>
     <div class="support-legal">
       <a href="/terms/">Terms of service</a>
