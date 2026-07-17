@@ -1,8 +1,5 @@
-# Release Notes {#release-notes}
+# 📦 Release Notes {#release-notes}
 
----
-
-# 📦 Release Notes  
 **Product Name:** [Your Product Name]  
 **Release Version:** [vX.X.X]  
 **Release Date:** [DD Month YYYY]
