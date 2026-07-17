@@ -58,8 +58,8 @@ This approach helps ensure provider compliance while maintaining accurate operat
 ## What to do next
 
 - Register a template in [Add template](add-template.md)
-- Manage templates in [Template management](template-management.md)
-- View template details in [View template details](view-template-details.md)
+- Edit templates in [Edit template](edit_template.md)
+- Delete templates in [Delete template](delete_template.md)
 
 <div class="home-support-banner">
   <div class="support-left">

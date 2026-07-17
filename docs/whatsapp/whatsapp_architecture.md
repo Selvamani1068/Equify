@@ -256,9 +256,9 @@ The following sequence summarizes the complete communication lifecycle:
 
 ## What to do next
 
-- Set up the system using [Getting started](../SMS/getting_started.md)
+- Set up the system using [Getting started](../whatsapp/getting_started.md)
 - Configure components in [Control centre](control-centre/index.md)
-- Add template in [Routing setup](routing-setup/index.md)
+- Add template in [Add template](template-management/add-template.md)
 
 <div class="home-support-banner">
   <div class="support-left">

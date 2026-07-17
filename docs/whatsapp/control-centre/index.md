@@ -25,9 +25,9 @@ Select **Control Centre** in the left navigation panel. It expands with two grou
 
 ## What to do next
 
-- Configure database in [DB Configuration](database-setup.md)
-- Register providers in [Service Provider Registration](service-provider-registration.md)
-- Add approved WhatsApp templates in [Add Template](../add-template/index.md)
+- Configure database in [DB configuration](database-setup.md)
+- Register providers in [Service provider registration](service-provider-registration.md)
+- Add approved WhatsApp templates in [Add template](../template-management/add-template.md)
 
 
 <div class="home-support-banner">

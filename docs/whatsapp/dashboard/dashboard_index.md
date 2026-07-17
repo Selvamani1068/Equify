@@ -314,7 +314,7 @@ Users can switch between views to analyze different operational areas.
 ## What to do next
 
 - Configure system components in [Control centre](../control-centre/index.md)
-- Set up routing logic in [Routing setup](../routing-setup/index.md)
+- Manage templates in [Template management](../template-management/add-template.md)
 - Analyze system data in [Analytics](../analytics/index.md)
 
 

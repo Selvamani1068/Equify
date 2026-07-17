@@ -65,12 +65,12 @@ During registration, Equify captures the template category associated with the a
     - Utility
     - Marketing
 
-For detailed instructions, refer to *[Routing overview](routing-setup/index.md)*.
+For detailed instructions, refer to *[Add template](template-management/add-template.md)*.
 
 After template creation, you can:
 
-- Manage templates → *[Template management](template-management/template-management.md)*
-- View template details → *[View template details](template-management/view-template-details.md)*
+- Edit templates → *[Edit Template](template-management/edit_template.md)*
+- Delete templates → *[Delete Template](template-management/delete_template.md)*
 
 !!! note
     Every WhatsApp message submitted through Equify must reference a template that has been registered for the selected service provider. During message processing, Equify validates the template-to-provider mapping before forwarding the request to the provider.
@@ -85,7 +85,7 @@ Validate your configuration by sending a test WhatsApp message.
 1. Submit a WhatsApp message request using the Message API.
 2. Specify a template that is registered for the selected service provider.
 3. Submit the request.
-4. Verify message delivery status in Reports and Logs. *[Reports and logs](analytics/report-and-log.md) *.   
+4. Verify message delivery status in *[Reports and logs](analytics/report-and-log.md) *.   
 
 ---
 
@@ -108,7 +108,7 @@ For auditing, refer to *[System audit](administration/system-audit.md)*.
 
 - [DB configuration](control-centre/database-setup.md)  
 - [Service provider registration](control-centre/service-provider-registration.md)  
-- [Routing setup](routing-setup/index.md)  
+- [Template management](template-management/index.md)  
 - [Reports and logs](analytics/report-and-log.md)  
 
 

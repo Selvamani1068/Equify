@@ -88,7 +88,6 @@ This procedure describes how to search WhatsApp message logs for troubleshooting
 ## Related articles
 
 - [Analytics overview](index.md)
-- [Error control center](../control-centre/error-retry-management.md)
 
 
 

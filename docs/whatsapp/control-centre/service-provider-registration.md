@@ -299,7 +299,7 @@ The service provider is registered successfully and becomes available in:
 ## What to do next
 
 - Manage providers in [Service provider management](service-provider-management.md)
-- Add templates in [Add Template](../add-template/index.md)
+- Add templates in [Add Template](../template-management/add-template.md)
 
 
 <div class="home-support-banner">

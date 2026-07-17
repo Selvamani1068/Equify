@@ -61,9 +61,9 @@ This workflow enables organizations to manage WhatsApp communications efficientl
 
 ## What to do next
 
-- Understand system design in [Architecture](WhatsApp/whatsapp_architecture.md)
-- Set up the system using [Getting started](WhatsApp/getting_started.md)
-- Monitor activity in [Dashboard](WhatsApp/dashboard/dashboard_index.md)
+- Understand system design in [Architecture](whatsapp_architecture.md)
+- Set up the system using [Getting started](getting_started.md)
+- Monitor activity in [Dashboard](dashboard/dashboard_index.md)
 
 <div class="home-support-banner">
   <div class="support-left">
