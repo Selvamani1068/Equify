@@ -1,6 +1,6 @@
 # Release Notes {#release-notes}
 
-**Product Name:** [Your Product Name]  
+**Product Name:** Equify  
 **Release Version:** [vX.X.X]  
 **Release Date:** [DD Month YYYY]
 
@@ -68,7 +68,7 @@ For more details, refer to:
 
 ---
 
-**Thank you for using [Your Product Name]!**
+**Thank you for using Equify!**
 
 ---
 
