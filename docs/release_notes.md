@@ -1,4 +1,4 @@
-# 📦 Release Notes {#release-notes}
+# Release Notes {#release-notes}
 
 **Product Name:** [Your Product Name]  
 **Release Version:** [vX.X.X]  
@@ -6,12 +6,12 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 This release introduces new features, enhancements, and bug fixes to improve performance, usability, and overall experience.
 
 ---
 
-## ✨ What’s New
+## What’s New
 ### [Feature Name 1]
 - Brief description of the feature  
 - Key benefits to the user  
@@ -23,45 +23,45 @@ This release introduces new features, enhancements, and bug fixes to improve per
 
 ---
 
-## 🔧 Enhancements
+## Enhancements
 - Improved [module/component name] performance  
 - Updated UI for better usability in [section name]  
 - Optimized processing time for [specific workflow]  
 
 ---
 
-## 🐞 Bug Fixes
+## Bug Fixes
 - Fixed an issue where [describe issue briefly]  
 - Resolved error occurring during [specific action]  
 - Addressed UI misalignment in [page/section]  
 
 ---
 
-## ⚙️ Configuration Changes (if applicable)
+## Configuration Changes (if applicable)
 - Added new configuration for [feature/module]  
 - Updated default values for [setting name]  
 
 ---
 
-## ⚠️ Known Issues
+## Known Issues
 - [Issue description] – Workaround (if available)  
 - [Issue description] – Fix planned in next release  
 
 ---
 
-## 🔐 Security Updates (if applicable)
+## Security Updates (if applicable)
 - Implemented enhancements to improve data protection  
 - Addressed identified vulnerabilities  
 
 ---
 
-## 📌 Deprecations (if applicable)
+## Deprecations (if applicable)
 - [Feature/API Name] will be deprecated from [date]  
 - Recommended alternative: [new feature/API]  
 
 ---
 
-## 📖 Documentation
+## Documentation
 For more details, refer to:  
 - User Guide: [Link]  
 - API Documentation: [Link]  
