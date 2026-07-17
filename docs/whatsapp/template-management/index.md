@@ -1,4 +1,4 @@
-# Template Management Overview {#template_management}
+# Template management overview {#template_management}
 
 ---
 
@@ -10,7 +10,7 @@ Users can use the **Template Management** feature to add approved templates, man
 
 ---
 
-## Opening Template Management
+## Opening template management
 
 Select **Template Management** in the left navigation panel. It expands to display the available template-related functions.
 
