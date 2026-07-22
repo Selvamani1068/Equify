@@ -6,33 +6,21 @@ The **System Audit** page provides a centralized view of user activities and sys
 
 ---
 
-## Open system audit
+## Search audit records
 
 1. In the left navigation pane, select **Administration**.
 2. Select **System Audit**.
 
-    ![Functional Routing](../../assets/images/admin1.png)
+    ![Functional Routing](../../assets/images/wtadmin1.png)
 
-The **System Audit** page opens and displays audit records that match the selected filters.
+3. Configure one or more filters:
 
----
+    | Filter | Description |
+    |----------|-------------|
+    | **Username** | Search audit records for a specific user. |
+    | **Date Range** | Specify the start and end dates for the audit search. |
+    | **Event Type** | Filter records by event category, such as **CREATE**, **UPDATE**, or **DELETE**. |
 
-## Search audit records
-
-This procedure describes the steps to narrow the audit records displayed on the page.
-
-#### Filter options
-
-| Filter | Description |
-|----------|-------------|
-| **Username** | Search audit records for a specific user. |
-| **Date Range** | Specify the start and end dates for the audit search. |
-| **Event Type** | Filter records by event category, such as **CREATE**, **UPDATE**, or **DELETE**. |
-
-
-1. Enter a username in the **Username** field, if required.
-2. Select a **Date Range**.
-3. Select an **Event Type**.
 4. Select **Search**.
 
 The system displays audit records that match the specified criteria.

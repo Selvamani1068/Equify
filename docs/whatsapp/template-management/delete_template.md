@@ -15,6 +15,8 @@ Use this procedure to remove an existing WhatsApp template from the system. Dele
 
 4. In the **Actions** column, click the **Delete** icon.
 
+     ![Delete Template](../../assets/images/wtdelete_template.png)
+
     The **Delete Template** dialog box is displayed.
 
 5. Click **Delete**.

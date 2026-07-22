@@ -22,7 +22,7 @@ This procedure describes how to generate and download WhatsApp message reports u
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Reports** tab.
 
-    ![WhatsApp Report](../../assets/images/wa_report.png){ width="800" }
+    ![WhatsApp Report](../../assets/images/wt_report.png){ width="800" }
 
 3. Configure one or more filters:
 
@@ -66,7 +66,7 @@ This procedure describes how to search WhatsApp message logs for troubleshooting
 1. Navigate to **Analytics** > **Report & Log**.
 2. Select the **Logs** tab.
 
-     ![Logs](../../assets/images/wa_logs.png){ width="800" }
+     ![Logs](../../assets/images/wt_logs.png){ width="800" }
 
 3. Select a value from **SEARCH TYPE**.
 4. Enter the corresponding value in the **VALUE** field.

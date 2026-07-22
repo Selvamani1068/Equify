@@ -267,6 +267,9 @@ Ensure that you have the following information from your WhatsApp service provid
         MO configuration allows Equify to process inbound WhatsApp messages received from end users.
 
         1. Select the **MO** tab.
+                
+            ![Register SP33](../../assets/images/wt2sp_reg_33.png)
+
         2. Paste a sample inbound message payload.
         3. Click **Submit**.
         4. In the **MO Mapping Configuration** section, map system parameters to your MO response keys.
@@ -277,6 +280,9 @@ Ensure that you have the following information from your WhatsApp service provid
         CTA configuration allows Equify to process customer interactions with WhatsApp call-to-action buttons.
 
         1. Select the **CTA** tab.
+                        
+            ![Register SP33](../../assets/images/wt3sp_reg_33.png)
+
         2. Paste a sample CTA callback payload.
         3. Click **Submit**.
         4. In the **CTA Mapping Configuration** section, map system parameters to your CTA response keys.

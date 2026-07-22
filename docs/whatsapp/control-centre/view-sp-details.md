@@ -23,7 +23,7 @@ User can view the registered service provider details using **SP Management** fe
 
 2. Click the **Actions** menu (⋮) of the SP registration that you want to view details.
 
-    ![update DB](../../assets/images/sp_view.png)
+    ![update DB](../../assets/images/wtsp_view.png)
 
 The **Service Provider Details** screens opens and displays the complete configuration information for the selected service provider.
 

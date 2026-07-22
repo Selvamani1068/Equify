@@ -12,7 +12,7 @@ User can update the registered service provider using **SP Management** feature.
 2. Click the **Actions** menu (⋮) of the SP registration that you want to update.
 3. Select **Edit provider** from the **ACTIONS** menu.  
 
-    ![update DB](../../assets/images/sp_update.png)
+    ![update DB](../../assets/images/wtsp_update.png)
 
 4. Update the steps **Configure Request API**, **Success, Error and DLR / Read / MO / CTA Response**, and **Review & submit** as required. For more information about the available fields, refer to *[SP registration](service-provider-registration.md)*.
 5. Click **Submit**.

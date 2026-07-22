@@ -1,4 +1,4 @@
-# Copy Callback URLs
+# Copy callback URLs
 
 ---
 
@@ -16,7 +16,7 @@ This guide describes the procedure for viewing and copying the callback URLs.
 
 2. Click the **Actions** menu (⋮) for the service provider registration whose callback URLs you want to copy.
 
-    ![update DB](../../assets/images/sp_view.png)
+    ![update DB](../../assets/images/wt1sp_view.png)
 
 3. Select **Copy Callback URLs** from the **ACTIONS** menu.
 

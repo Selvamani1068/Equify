@@ -15,13 +15,16 @@ Use this procedure to update an existing WhatsApp template configuration. Only t
 
 4. In the **Actions** column, click the **Edit** icon.
 
-    The **Edit Template** screen is displayed.
+     ![Add Template](../../assets/images/wtedit_template.png)
 
+    The **Edit Template** screen is displayed.
 
 5. In **Service Type**, select the required category:
     - **Authentication**
     - **Utility**
     - **Marketing**
+
+     ![Edit Template](../../assets/images/wt1edit_template1.png){ width="300" }
 
 6. In **Template Description**, update the description as required.
 

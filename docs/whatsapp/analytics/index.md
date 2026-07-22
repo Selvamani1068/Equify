@@ -12,10 +12,10 @@ Analytics enables you to analyze historical WhatsApp communication data and retr
 
 1. In the left navigation pane, select **Analytics**.
 2. Expand the **Analytics** menu to view the available sections:
-   - **Billing**
-   - **Report & Log**
+    - **Billing**
+    - **Report & Log**
 
-    ![Analytics Navigation](../../assets/images/analytics1.png)
+    ![Analytics Navigation](../../assets/images/wtanalytics1.png)
 
 ---
 

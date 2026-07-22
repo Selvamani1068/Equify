@@ -21,9 +21,9 @@ Use this procedure to register a provider-approved WhatsApp template in Equify. 
 2. Select the service provider from the **Service Provider** dropdown.
 3. Click **Add Template**.
 
-    The **Add New Template** screen is displayed.
+     ![Add Template](../../assets/images/wtadd_template.png)
 
-     ![Add Template](../../assets/images/add_template.png){ width="500" }
+    The **Add New Template** screen is displayed.
 
 4. In **Service Type**, select the appropriate template category:
  
@@ -32,6 +32,8 @@ Use this procedure to register a provider-approved WhatsApp template in Equify. 
     - **Authentication** – Used for user verification and authentication messages.  
     - **Utility** – Used for transactional and service-related notifications.  
     - **Marketing** – Used for promotional and engagement messages.
+
+     ![Add Template](../../assets/images/wtadd_template1.png){ width="440" }
 
 5. In **Template ID**, enter the provider-approved template identifier.
 
