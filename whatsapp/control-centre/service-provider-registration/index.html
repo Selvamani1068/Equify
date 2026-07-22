@@ -2339,23 +2339,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configure Request API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-api-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure API request
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3111,23 +3094,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configure Request API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-api-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure API request
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3262,7 +3228,7 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_1.png" data-desc-position="bottom"><img alt="Register SP1" src="../../../assets/images/sp_reg_1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtsp_reg_1.png" data-desc-position="bottom"><img alt="Register SP1" src="../../../assets/images/wtsp_reg_1.png"></a></p>
 <h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">¶</a></h3>
 <ol>
 <li>Enter the <strong>Service Provider Name</strong>.</li>
@@ -3276,15 +3242,15 @@
 <p>In this step, configure the API endpoint that Equify uses to submit messages to the service provider.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Set up at least one API endpoint with its parameters, headers, and authentication to continue.</p>
+<p>Set up at least one API endpoint with its parameters, headers, URL, and authentication to continue.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_rg_21.png" data-desc-position="bottom"><img alt="Register SP21" src="../../../assets/images/sp_rg_21.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtsp_rg_21.png" data-desc-position="bottom"><img alt="Register SP21" src="../../../assets/images/wtsp_rg_21.png"></a></p>
 <p><strong>Create an API Configuration</strong></p>
 <ol>
 <li>Click <strong>Create</strong> or <strong>Add your first API configuration</strong>.</li>
 <li>
 <p>The <strong>Create New API Configuration</strong> screen opens.
- <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_22.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/sp_reg_22.png"></a></p>
+ <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtcreatenewapi.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/wtcreatenewapi.png"></a></p>
 </li>
 <li>
 <p>Select the HTTP method from the <strong>HTTP Method</strong> dropdown.</p>
@@ -3370,24 +3336,34 @@
 <p class="admonition-title">Note</p>
 <p>Add multiple API configuration as required.</p>
 </div>
-<p>After creating the API configuration, the <strong>Configure API Request</strong> window opens.</p>
+<p>After creating API configuration, the <strong>Configure API Request</strong> section appear.</p>
 </li>
-</ol>
-<hr>
-<h3 id="configure-api-request">Configure API request<a class="headerlink" href="#configure-api-request" title="Permanent link">¶</a></h3>
+<li>
+<p>Click <strong>Configure API request</strong>.</p>
+</li>
+<li>
+<p>Perform the following steps to configure API request:</p>
 <p>Request mapping defines how Equify message parameters are translated into the provider-specific API request format.</p>
 <ol>
 <li>
-<p>In the Body tab:</p>
+<p>Configure the <strong>Body</strong> tab:</p>
 <ol>
-<li>Enter a sample JSON request structure provided by the WhatsApp service provider.</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_22.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/sp_reg_22.png"></a></p>
-<ol>
-<li>Verify that the JSON preview is generated successfully.</li>
+<li>
+<p>Enter a sample JSON request structure provided by the WhatsApp service provider.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtwsp_reg_22.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/wtwsp_reg_22.png" width="600"></a></p>
+</li>
+<li>
+<p>Verify that the JSON preview is generated successfully.</p>
+</li>
 <li>Click <strong>Add Mapping</strong>.</li>
-<li>Select a <strong>System Parameter</strong>.</li>
-<li>Select the corresponding <strong>Client Parameter</strong>.</li>
+<li>
+<p>Select a <strong>System Parameter</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtw1sp_reg_22.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/wtw1sp_reg_22.png" width="600"></a></p>
+</li>
+<li>
+<p>Select the corresponding <strong>Client Parameter</strong>.</p>
+</li>
+<li>Click the green tick to save the row or click the red cross to delete it.</li>
 <li>
 <p>Repeat the process until all required parameters are mapped.</p>
 <div class="admonition warning">
@@ -3398,27 +3374,58 @@
 </ol>
 </li>
 <li>
-<p>Select the Header tab.</p>
+<p>Configure the <strong>Header</strong> tab:</p>
 <ol>
-<li>Click <strong>Add Mapping</strong>.</li>
-<li>Select a <strong>System Header</strong>.</li>
+<li>Select the <strong>Header</strong> tab.</li>
+<li>
+<p>Click <strong>Add Mapping</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtconfigheader.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/wtconfigheader.png" width="600"></a></p>
+</li>
+<li>
+<p>Select a <strong>System Header</strong>.</p>
+</li>
 <li>Select the corresponding <strong>Client Parameter</strong>.</li>
-<li>Repeat the process until all required parameters are mapped.</li>
+<li>Click the green tick to save the row or click the red cross to delete it.</li>
+<li>
+<p>Repeat the process until all required parameters are mapped.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All mandatory parameters must be mapped before the configuration can be saved.</p>
+</div>
+</li>
 </ol>
 </li>
 <li>
-<p>Select the URL tab.</p>
+<p>Configure the URL tab:</p>
 <ol>
-<li>Click <strong>Add Mapping</strong>.</li>
-<li>Select a <strong>System URL Param</strong>.</li>
+<li>Select the <strong>URL</strong> tab.</li>
+<li>
+<p>Click <strong>Add Mapping</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtconfigurl.png" data-desc-position="bottom"><img alt="Register SP22" src="../../../assets/images/wtconfigurl.png" width="600"></a></p>
+</li>
+<li>
+<p>Select a <strong>System URL Param</strong>.</p>
+</li>
 <li>Select the corresponding <strong>Client Parameter</strong>.</li>
-<li>Repeat the process until all required parameters are mapped.</li>
+<li>Click the green tick to save the row or click the red cross to delete it.</li>
+<li>
+<p>Repeat the process until all required parameters are mapped.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All mandatory parameters must be mapped before the configuration can be saved.</p>
+</div>
+</li>
 </ol>
 </li>
 <li>
 <p>Click <strong>Save changes</strong>.</p>
 <p>The request API configuration is saved successfully.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>You can create additional API configurations by clicking <strong>Create</strong> in the upper-right corner of the screen.</p>
+</div>
 </li>
 <li>
 <p>Click <strong>Save and continue</strong>.</p>
@@ -3430,13 +3437,15 @@
 <h2 id="success-error-and-dlr-read-mo-cta-response">Success, Error and DLR / Read / MO / CTA Response<a class="headerlink" href="#success-error-and-dlr-read-mo-cta-response" title="Permanent link">¶</a></h2>
 <p>In this step, configure how Equify interprets responses received from the service provider.</p>
 <p>Response mapping enables Equify to correctly process message submissions, delivery receipts, read receipts, inbound messages, and call-to-action events.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_31.png" data-desc-position="bottom"><img alt="Register SP31" src="../../../assets/images/sp_reg_31.png"></a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:6"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><input id="__tabbed_4_4" name="__tabbed_4" type="radio"><input id="__tabbed_4_5" name="__tabbed_4" type="radio"><input id="__tabbed_4_6" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Success</label><label for="__tabbed_4_2">Error</label><label for="__tabbed_4_3">DLR</label><label for="__tabbed_4_4">Read</label><label for="__tabbed_4_5">MO (Mobile Originated)</label><label for="__tabbed_4_6">CTA</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
 <li>In the <strong>Success</strong> tab, paste a sample successful API response received from the provider.</li>
-<li>Click <strong>Submit</strong>.</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtsp_reg_31.png" data-desc-position="bottom"><img alt="Register SP31" src="../../../assets/images/wtsp_reg_31.png"></a></p>
+</li>
 <li>
 <p>In the <strong>Success Response</strong> section:</p>
 <ol>
@@ -3445,7 +3454,7 @@
 </ol>
 </li>
 <li>
-<p>Click <strong>Save and Continue</strong>.</p>
+<p>Click <strong>Save and continue</strong>.</p>
 </li>
 </ol>
 </div>
@@ -3453,35 +3462,21 @@
 <ol>
 <li>
 <p>Select the <strong>Error</strong> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_32.png" data-desc-position="bottom"><img alt="Register SP32" src="../../../assets/images/sp_reg_32.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtsp_reg_32.png" data-desc-position="bottom"><img alt="Register SP32" src="../../../assets/images/wtsp_reg_32.png"></a></p>
 </li>
 <li>
 <p>Paste a sample error response returned by the provider.</p>
 </li>
 <li>Click <strong>Submit</strong>.</li>
 <li>
-<p>In the Error Response section, configure the following fields::</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Error Code</strong></td>
-<td>Select the response field that contains the provider error code.</td>
-</tr>
-<tr>
-<td><strong>Error Message</strong></td>
-<td>Select the response field that contains the provider error description.</td>
-</tr>
-</tbody>
-</table>
+<p>In the Error Response section, configure the following fields:</p>
+<ul>
+<li><strong>Error Code</strong>: Select the response field that contains the provider error code.</li>
+<li><strong>Error Message</strong>: Select the response field that contains the provider error description.</li>
+</ul>
 </li>
 <li>
-<p>Click <strong>Save and Continue</strong>.</p>
+<p>Click <strong>Save and continue</strong>.</p>
 </li>
 </ol>
 </div>
@@ -3490,26 +3485,31 @@
 <ol>
 <li>
 <p>Select the <strong>DLR</strong> tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/sp_reg_33.png" data-desc-position="bottom"><img alt="Register SP33" src="../../../assets/images/sp_reg_33.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wtsp_reg_33.png" data-desc-position="bottom"><img alt="Register SP33" src="../../../assets/images/wtsp_reg_33.png"></a></p>
 </li>
 <li>
 <p>Paste a sample delivery callback payload received from the provider.</p>
 </li>
 <li>Click <strong>Submit</strong>.</li>
 <li>In the <strong>DLR Mapping Configuration</strong> section, map the required response fields.</li>
-<li>In the <strong>Status Event Mapping</strong> section, map provider delivery status values to Equify status values.</li>
+<li>In the <strong>Status Event Mappings</strong> section, map provider delivery status values to Equify status values.</li>
 <li>Click <strong>Save and continue</strong>.</li>
 </ol>
 </div>
 <div class="tabbed-block">
 <p>Read receipt mapping allows Equify to track when WhatsApp users read messages.</p>
 <ol>
-<li>Select the <strong>Read</strong> tab.</li>
-<li>Paste a sample read-event payload.</li>
+<li>
+<p>Select the <strong>Read</strong> tab.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../assets/images/wt1sp_reg_33.png" data-desc-position="bottom"><img alt="Register SP33" src="../../../assets/images/wt1sp_reg_33.png"></a></p>
+</li>
+<li>
+<p>Paste a sample read-event payload.</p>
+</li>
 <li>Click <strong>Submit</strong>.</li>
 <li>In the <strong>Status Event Mapping</strong> section, map provider delivery status values to Equify status values.</li>
 <li>In the <strong>Read Mapping Configuration</strong> section, configure the status mapping value for the <strong>Read</strong> event.</li>
-<li>Click <strong>Save and Continue</strong>.</li>
+<li>Click <strong>Save and continue</strong>.</li>
 </ol>
 </div>
 <div class="tabbed-block">
@@ -3519,7 +3519,7 @@
 <li>Paste a sample inbound message payload.</li>
 <li>Click <strong>Submit</strong>.</li>
 <li>In the <strong>MO Mapping Configuration</strong> section, map system parameters to your MO response keys.</li>
-<li>Click <strong>Save and Continue</strong>.</li>
+<li>Click <strong>Save and continue</strong>.</li>
 </ol>
 </div>
 <div class="tabbed-block">
