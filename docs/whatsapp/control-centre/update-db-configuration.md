@@ -12,7 +12,7 @@ User can update the existing database configuration using **DB Management** feat
 2. Click the **Actions** menu (⋮) of the database configuration that you want to update.
 3. Select **Edit configuration** from the **ACTIONS** menu.  
 
-    ![update DB](../../assets/images/update_db.png)
+    ![update DB](../../assets/images/wtupdate_db.png)
 
 4. Update the fields as required. For more information about the available fields, refer to *[DB configuration](database-setup.md)*
 5. Click **Update Configuration**.

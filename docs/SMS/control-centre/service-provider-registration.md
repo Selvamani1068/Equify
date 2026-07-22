@@ -70,7 +70,7 @@ Ensure that you have the following information from your SMS provider:
 
       1. Click **Create** or **Add your first API configuration**.
       2. The **Create New API Configuration** screen opens.
-     ![Register SP22](../../assets/images/sp_reg_22.png)
+     ![Register SP22](../../assets/images/smsconfigurereqapi.png)
 
       3. Select the HTTP method from the **HTTP Method** dropdown.
 
@@ -138,50 +138,54 @@ Ensure that you have the following information from your SMS provider:
         !!! Note
             Add multiple API configuration as required.
 
-        After creating the API configuration, the **Configure API Request** window opens.
+        After creating API configuration, the **Configure API Request** section appear.
 
-    ### Configure API request
+      10. Perform the following steps to configure API request:
 
-      1. Paste the JSON request body provided by the service provider into the request body field.
+          Request mapping defines how Equify message parameters are translated into the provider-specific API request format.
 
-          ```json
-          {
-            "to": "",
-            "from": "",
-            "text": ""
-          }
-          ```
-         ![Register SP22](../../assets/images/sp_reg_22.png)
+          1. Configure **Body** tab:
 
-      2. Verify that the JSON preview is generated successfully.
+              1. Paste the JSON request body provided by the service provider into the request body field.
 
-    ### Configure Parameter Mapping
+                ![Register SP22](../../assets/images/sp_reg_22.png){ width="600" }
 
-      1. Click **Add Mapping**.
-      2. Select a **System Parameter**.
-      3. Select the corresponding **Client Parameter**.
-      4. Repeat the process until all required parameters are mapped.
+              2. Verify that the JSON preview is generated successfully.
+              3. Click **Add Mapping**.
+              4. Select a **System Parameter**.
+              5. Select the corresponding **Client Parameter**.
+              6. Click the green tick to save the row or click the red cross to delete it.
+              7. Repeat the process until all required parameters are mapped.
 
-        Common mandatory parameters:
+                Common mandatory parameters:
 
-        - from
-        - to
-        - text
+                - from
+                - to
+                - text
 
-        !!! warning
-            All mandatory parameters must be mapped before the configuration can be saved.
+                ![Register SP22](../../assets/images/apimappingconfig.png){ width="600" }
 
-    ### Configure Headers
+                !!! warning
+                    All mandatory parameters must be mapped before the configuration can be saved.
 
-    1. Select the **Header** tab.
-    2. Add the required request headers.
-    3. Click **Save changes**.
+          2. Configure **Header** tab:
+              1. Select the **Header** tab.
+              2. Click **Add Mapping**.
+              3. Select a **System Header**.
+              4. Select the corresponding **Client Header**.
+              5. Click the green tick to save the row or click the red cross to delete it.
+              6. Repeat the process until all required parameters are mapped.
+              
+                  ![Register SP22](../../assets/images/smsheadermappingconfig.png){ width="500" }
 
-        The request API configuration is saved successfully.
-      
-        You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
+          3. Click **Save changes**.
 
-    4. Click **Save and continue**.
+              The request API configuration is saved successfully.
+            
+        !!! Note
+            You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
+
+      13. Click **Save and continue**.
 
       The request API configuration is saved successfully.
 

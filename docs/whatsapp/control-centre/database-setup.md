@@ -46,7 +46,7 @@ Before you begin, ensure you have the following:
     - **Username**: Database user account.
     - **Password**: Password for the database user account.
 
-    ![DB Configuration](../../assets/images/db-configuration-overview.png)
+    ![DB Configuration](../../assets/images/wtdb-configuration-overview.png)
 
 4. Select **Configure DB Columns**.
 
@@ -54,7 +54,7 @@ Before you begin, ensure you have the following:
 
 6. Select **Add Mapping**.
 
-    ![Database Column Mapping](../../assets/images/db-column-mapping.png)
+    ![Database Column Mapping](../../assets/images/wtdb-column-mapping.png)
 
 7. For each required parameter:
    
@@ -81,7 +81,7 @@ Before you begin, ensure you have the following:
     !!! note
 
         If the test fails, review the connection details and database credentials before testing again.
-    ![Connection Status](../../assets/images/db-connection-success.png){ width="300" }
+    ![Connection Status](../../assets/images/wtdb-connection-success.png){ width:"1000" }
 
 13. Select **Save Configuration**.
 

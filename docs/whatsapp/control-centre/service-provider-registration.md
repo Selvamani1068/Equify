@@ -52,7 +52,7 @@ Ensure that you have the following information from your WhatsApp service provid
     | **Channel** | Displays the current workspace channel. This value is automatically populated. |
     | **Code** | Displays the unique provider code. This value is automatically generated.      |
 
-     ![Register SP1](../../assets/images/sp_reg_1.png)
+     ![Register SP1](../../assets/images/wtsp_reg_1.png)
 
     ### Procedure
 
@@ -69,15 +69,15 @@ Ensure that you have the following information from your WhatsApp service provid
     In this step, configure the API endpoint that Equify uses to submit messages to the service provider.
 
     !!! Note
-        Set up at least one API endpoint with its parameters, headers, and authentication to continue.
+        Set up at least one API endpoint with its parameters, headers, URL, and authentication to continue.
 
-     ![Register SP21](../../assets/images/sp_rg_21.png)
+     ![Register SP21](../../assets/images/wtsp_rg_21.png)
 
     **Create an API Configuration**
 
       1. Click **Create** or **Add your first API configuration**.
       2. The **Create New API Configuration** screen opens.
-     ![Register SP22](../../assets/images/sp_reg_22.png)
+     ![Register SP22](../../assets/images/wtcreatenewapi.png)
 
       3. Select the HTTP method from the **HTTP Method** dropdown.
 
@@ -129,49 +129,68 @@ Ensure that you have the following information from your WhatsApp service provid
         !!! Note
             Add multiple API configuration as required.
 
-        After creating the API configuration, the **Configure API Request** window opens.
+        After creating API configuration, the **Configure API Request** section appear.
 
-    ---
+      12. Click **Configure API request**.
+      13. Perform the following steps to configure API request:
 
-    ### Configure API request
+          Request mapping defines how Equify message parameters are translated into the provider-specific API request format.
 
-    Request mapping defines how Equify message parameters are translated into the provider-specific API request format.
+          1. Configure the **Body** tab:
 
-      1. In the Body tab:
+            1. Enter a sample JSON request structure provided by the WhatsApp service provider.
 
-        1. Enter a sample JSON request structure provided by the WhatsApp service provider.
+                ![Register SP22](../../assets/images/wtwsp_reg_22.png){ width="600" }
 
-          ![Register SP22](../../assets/images/sp_reg_22.png)
+            2. Verify that the JSON preview is generated successfully.
+            3. Click **Add Mapping**.
+            4. Select a **System Parameter**.
 
-        2. Verify that the JSON preview is generated successfully.
-        3. Click **Add Mapping**.
-        4. Select a **System Parameter**.
-        5. Select the corresponding **Client Parameter**.
-        6. Repeat the process until all required parameters are mapped.
+                ![Register SP22](../../assets/images/wtw1sp_reg_22.png){ width="600" }
 
-            !!! warning
-                All mandatory parameters must be mapped before the configuration can be saved.
+            5. Select the corresponding **Client Parameter**.
+            6. Click the green tick to save the row or click the red cross to delete it.
+            7. Repeat the process until all required parameters are mapped.
 
-
-      2. Select the Header tab.
-        1. Click **Add Mapping**.
-        2. Select a **System Header**.
-        3. Select the corresponding **Client Parameter**.
-        4. Repeat the process until all required parameters are mapped.
+                !!! warning
+                    All mandatory parameters must be mapped before the configuration can be saved.
 
 
-      3. Select the URL tab.
+          2. Configure the **Header** tab:
+            1. Select the **Header** tab.
+            2. Click **Add Mapping**.
+            
+                ![Register SP22](../../assets/images/wtconfigheader.png){ width="600" }
 
-        1. Click **Add Mapping**.
-        2. Select a **System URL Param**.
-        3. Select the corresponding **Client Parameter**.
-        4. Repeat the process until all required parameters are mapped.
+            3. Select a **System Header**.
+            4. Select the corresponding **Client Parameter**.
+            5. Click the green tick to save the row or click the red cross to delete it.
+            6. Repeat the process until all required parameters are mapped.
 
-      4. Click **Save changes**.
+                !!! warning
+                    All mandatory parameters must be mapped before the configuration can be saved.
 
-        The request API configuration is saved successfully.
-      
-        You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
+
+          3. Configure the URL tab:
+            1. Select the **URL** tab.
+            2. Click **Add Mapping**.
+            
+                ![Register SP22](../../assets/images/wtconfigurl.png){ width="600" }
+
+            3. Select a **System URL Param**.
+            4. Select the corresponding **Client Parameter**.
+            5. Click the green tick to save the row or click the red cross to delete it.
+            6. Repeat the process until all required parameters are mapped.
+
+                !!! warning
+                    All mandatory parameters must be mapped before the configuration can be saved.
+
+          4. Click **Save changes**.
+
+            The request API configuration is saved successfully.
+          
+        !!! Note
+              You can create additional API configurations by clicking **Create** in the upper-right corner of the screen.
 
       5. Click **Save and continue**.
 
@@ -186,35 +205,34 @@ Ensure that you have the following information from your WhatsApp service provid
 
     Response mapping enables Equify to correctly process message submissions, delivery receipts, read receipts, inbound messages, and call-to-action events.
 
-     ![Register SP31](../../assets/images/sp_reg_31.png)
-
     === "Success"
 
         1. In the **Success** tab, paste a sample successful API response received from the provider.
         2. Click **Submit**.
+        
+             ![Register SP31](../../assets/images/wtsp_reg_31.png)
+
         4. In the **Success Response** section:
 
             1. **Success Message**: Enter the success indicator returned by the provider.
             2. **Response ID**: Select the parameter that contains the provider message identifier.
 
-        5. Click **Save and Continue**.
+        5. Click **Save and continue**.
 
     === "Error"
 
         1. Select the **Error** tab.
 
-            ![Register SP32](../../assets/images/sp_reg_32.png)
+            ![Register SP32](../../assets/images/wtsp_reg_32.png)
 
         2. Paste a sample error response returned by the provider.
         2. Click **Submit**.
-        3. In the Error Response section, configure the following fields::
+        3. In the Error Response section, configure the following fields:
 
-            | Field | Description |
-            |---------|-------------|
-            | **Error Code** | Select the response field that contains the provider error code. |
-            | **Error Message** | Select the response field that contains the provider error description. |
+            - **Error Code**: Select the response field that contains the provider error code.
+            - **Error Message**: Select the response field that contains the provider error description.
 
-        4. Click **Save and Continue**.
+        4. Click **Save and continue**.
 
     === "DLR"
 
@@ -222,12 +240,12 @@ Ensure that you have the following information from your WhatsApp service provid
 
         1. Select the **DLR** tab.
 
-            ![Register SP33](../../assets/images/sp_reg_33.png)
+            ![Register SP33](../../assets/images/wtsp_reg_33.png)
 
         2. Paste a sample delivery callback payload received from the provider.
         3. Click **Submit**.
         4. In the **DLR Mapping Configuration** section, map the required response fields.
-        5. In the **Status Event Mapping** section, map provider delivery status values to Equify status values.
+        5. In the **Status Event Mappings** section, map provider delivery status values to Equify status values.
         6. Click **Save and continue**.
 
     === "Read"
@@ -235,11 +253,14 @@ Ensure that you have the following information from your WhatsApp service provid
         Read receipt mapping allows Equify to track when WhatsApp users read messages.
 
         1. Select the **Read** tab.
+        
+            ![Register SP33](../../assets/images/wt1sp_reg_33.png)
+
         2. Paste a sample read-event payload.
         3. Click **Submit**.
         4. In the **Status Event Mapping** section, map provider delivery status values to Equify status values.
         5. In the **Read Mapping Configuration** section, configure the status mapping value for the **Read** event.
-        6. Click **Save and Continue**.
+        6. Click **Save and continue**.
 
     === "MO (Mobile Originated)"
 
@@ -249,7 +270,7 @@ Ensure that you have the following information from your WhatsApp service provid
         2. Paste a sample inbound message payload.
         3. Click **Submit**.
         4. In the **MO Mapping Configuration** section, map system parameters to your MO response keys.
-        5. Click **Save and Continue**.
+        5. Click **Save and continue**.
 
     === "CTA"
 

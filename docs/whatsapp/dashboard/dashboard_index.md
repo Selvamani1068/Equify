@@ -2,7 +2,7 @@
 
 ---
 
-The Dashboard is the landing page of the Equify SMS platform. It provides a centralized view of messaging activity, provider performance, system health, and application status. It helps users monitor real-time operations and identify issues quickly.
+The Dashboard is the landing page of the Equify WhatsApp platform. It provides a centralized view of WhatsApp messaging activity, provider performance, system health, and application status. It helps users monitor real-time operations and identify issues quickly.
 
 Dashboard allows users to quickly identify trends, monitor ongoing operations, and investigate issues without navigating through multiple areas of the application.
 
@@ -10,23 +10,23 @@ Dashboard allows users to quickly identify trends, monitor ongoing operations, a
 
 ## Dashboard Components
 
-The dashboard is organized into several sections that provide visibility into different aspects of SMS operations.
+The dashboard is organized into several sections that provide visibility into different aspects of WhatsApp operations.
 
 ### Summary Metrics
 
-The summary cards displayed at the top of the page provide an immediate view of key operational metrics for the current day.
+The summary cards displayed at the top of the page provide an immediate view of key WhatsApp metrics for the current day.
 
-  ![Dashboard Cards](../../assets/images/dashboard_cards.png)
+  ![Dashboard Cards](../../assets/images/wt_dashboard_cards.png)
 
 The metrics include:
 
-* **Total SMS Sent Today** – Displays the total number of SMS messages sent on the current day.
+* **Total Sent Today** – Total number of WhatsApp messages sent today.
 * **Delivery Rate** – Percentage of successfully delivered messages.
 * **Failure Rate** – Percentage of messages that failed to deliver.
-* **Today's Avg Latency** – Displays the average time taken for message delivery.
-* **Today's Highest TPS** – Displays the highest Transactions Per Second (TPS) recorded during the day.
+* **Total DLR** – Total delivery reports received from providers.
+* **Used Template Category** – Indicates the template category (for example, Authentication) with the highest usage.
 
-These metrics allow users to quickly determine whether SMS operations are performing as expected.
+These metrics allow users to quickly determine whether WhatsApp operations are performing as expected.
 
 ---
 
@@ -34,7 +34,7 @@ These metrics allow users to quickly determine whether SMS operations are perfor
 
 The dashboard provides multiple monitoring views that focus on different aspects of platform operations.
 
-- **SMS Volume**: Displays SMS traffic and delivery statistics across the platform.
+- **WhatsApp Volume**: Displays WhatsApp traffic and delivery statistics across the platform.
 - **Service Providers**: Displays provider utilization and delivery performance information. 
 - **System Health**: Displays the operational status of platform infrastructure and services.
 - **Applications**: Displays activity and health information for integrated applications.
@@ -42,55 +42,55 @@ The dashboard provides multiple monitoring views that focus on different aspects
 
 Users can switch between views to analyze different operational areas.
 
-=== "SMS Volume"
+=== "WhatsApp volume"
 
-    **SMS Volume** view has the following sections:
+    **WhatsApp volume** view has the following sections:
 
-    ### Overall SMS volume
+    ### Overall whatsApp volume
 
-    Shows total, delivered, and failed messages for the current day.
+    Shows total, delivered, failed, and read messages for the current day.
 
     Shows message activity using a time-based chart and highlights the time at which peak traffic was recorded today.
 
-      ![SMS Volume Cards](../../assets/images/sms_volume1.png){ width="600" }
+      ![WhatsApp Volume Cards](../../assets/images/wt_sms_volume1.png){ width="500" }
 
-    Hover over the chart to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons.
-
-    ---
-
-    ### SMS volume by department
-
-    Shows the distribution of SMS messages across departments for the current day.
-
-    Shows department-wise activity using a comparative bar chart and tabular view to represent relative usage and highlights the departments with the highest traffic volume for the current day.
-
-      ![SMS Volume Cards](../../assets/images/sms_volume2.png){ width="600" }
-
-    Hover over each bar to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons.
+    Hover over the chart to view the total number of messages sent, the number of messages delivered, the number of messages read, and the number of messages failed to deliver.
 
     ---
 
-    ### SMS volume by service provider
+    ### WhatsApp template stats
 
-    Shows the distribution of SMS messages across service providers for the current day.
+    Displays usage statistics for WhatsApp templates for the current day.
+
+    Shows template-wise message distribution using a comparative bar chart to represent relative usage and highlights the template with the highest traffic volume for the current day.
+
+      ![WhatsApp Volume Cards](../../assets/images/wt_sms_volume2.png){ width="500" }
+
+    Hover over each bar to view the total number of messages sent, the number of messages delivered, the number of messages read, and the number of messages failed to deliver.
+
+    ---
+
+    ### WhatsApp volume by service provider
+
+    Shows the distribution of WhatsApp messages across service providers for the current day.
 
     Shows provider-wise activity using a horizontal bar chart to compare traffic allocation and highlights the service provider that handled the highest traffic volume for the current day.
 
-      ![SMS Volume Cards](../../assets/images/sms_volume3.png){ width="800" }
+      ![WhatsApp Volume Cards](../../assets/images/wt_sms_volume3.png){ width="750" }
 
     Hover over each bar to view the total number of messages processed by the selected provider.
 
     ---
 
-    ### SMS volume by service type
+    ### WhatsApp volume by service type
 
-    Shows the distribution of SMS messages by service type for the current day.
+    Shows the distribution of WhatsApp messages by service type for the current day.
 
     Shows categorized activity using a stacked bar chart to understand how messaging traffic is distributed across different business communication categories.
 
-      ![SMS Volume Cards](../../assets/images/sms_volume4.png){ width="800" }
+      ![WhatsApp Volume Cards](../../assets/images/wt_sms_volume4.png){ width="750" }
 
-    Hover over each segment to view the total number of messages sent, the number of messages delivered, and the number of messages that failed, along with failure reasons for each service type.
+    Hover over each segment to view the total number of messages sent, the number of messages delivered, and the number of messages failed to deliver for each service type.
 
 
 === "Service Provider"
@@ -103,7 +103,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows provider availability using a status list and highlights whether each provider is active or inactive.
 
-      ![Service Provider Status](../../assets/images/service_provider1.png){ width="500" }
+      ![Service Provider Status](../../assets/images/wt_service_provider1.png){ width="500" }
 
     Helps users quickly identify inactive providers and monitor provider availability across the platform.
 
@@ -111,11 +111,11 @@ Users can switch between views to analyze different operational areas.
 
     ### Service provider traffic
 
-    Shows the distribution of SMS traffic across service providers for the current day.
+    Shows the distribution of WhatsApp traffic across service providers for the current day.
 
     Shows traffic share using a donut chart to represent relative contribution and highlights the service provider with the highest traffic share.
 
-    ![Service Provider Traffic](../../assets/images/sp_overview2.png){ width="500" }
+    ![Service Provider Traffic](../../assets/images/wt_sp_overview2.png){ width="500" }
 
     Hover over each segment to view the percentage and total traffic handled by the selected provider.
 
@@ -127,7 +127,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows API activity using a time-based chart and highlights the time at which peak API traffic was recorded today.
 
-    ![Total API Calls](../../assets/images/sp_overview3.png){ width="500" }
+    ![Total API Calls](../../assets/images/wt_sp_overview3.png){ width="500" }
 
     Hover over the chart to view the number of API calls processed at a specific time.
 
@@ -139,30 +139,11 @@ Users can switch between views to analyze different operational areas.
 
     Shows provider-wise delivery reports using a comparative bar chart to represent message acknowledgements.
 
-    ![Delivery Reports](../../assets/images/sp_overview4.png){ width="500" }
+    ![Delivery Reports](../../assets/images/wt_sp_overview4.png){ width="500" }
 
     Hover over each bar to view the total number of message sent, delivery reports received, and delivery rate for the selected provider.
 
-    ---
-
-    ### Ongoing TPS by service provider
-
-    Shows the current transactions per second (TPS) handled by each service provider.
-
-    Shows real-time TPS activity and indicates live system throughput.
-
-    Displays real-time status and may show no data when there is no active traffic.
-
-    ---
-
-    ### Avg latency by service provider
-
-    Shows the average message processing latency for each service provider.
-
-    Shows latency metrics to help evaluate provider responsiveness and performance.
-
-    Displays real-time status and may show no data when latency data is not available.
-
+  
     ---
 
     ### Successful deliveries today
@@ -175,7 +156,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows provider-wise delivery success using a horizontal bar chart and highlights the provider with the highest successful deliveries.
 
-    ![Successful Deliveries](../../assets/images/sp_overview5.png){ width="800" }
+    ![Successful Deliveries](../../assets/images/wt_sp_overview5.png){ width="800" }
 
     Hover over each bar to view the total number messages sent, the number of messages successfully delivered, and delivery rate for the selected provider.
 
@@ -185,9 +166,9 @@ Users can switch between views to analyze different operational areas.
 
     Shows the distribution of API calls across service providers for the current day.
 
-    Shows categorized activity using a grouped bar chart to represent successful, retry, and failed API calls.
+    Shows categorized activity using a grouped bar chart to represent successful, and failed API calls.
 
-    ![API Calls by Provider](../../assets/images/sp_overview6.png){ width="800" }
+    ![API Calls by Provider](../../assets/images/wt_sp_overview6.png){ width="800" }
 
     Hover over each bar to view the total number of API calls by status for the selected provider.
 
@@ -202,7 +183,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows server utilization using a tabular view that includes CPU usage, memory usage, thread count, disk utilization, and I/O activity, along with threshold status.
 
-    ![Server Statistics](../../assets/images/sy_server.png){ width="800" }
+    ![Server Statistics](../../assets/images/wt_sy_server.png){ width="800" }
 
     Helps users monitor server performance and identify resources that exceed defined thresholds.
 
@@ -214,7 +195,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows latency and component-level information using a tabular view, along with timestamp and threshold status.
 
-    ![Network Statistics](../../assets/images/sy_network.png){ width="800" }
+    ![Network Statistics](../../assets/images/wt_sy_network.png){ width="800" }
 
     Helps users monitor network performance and identify latency or connectivity issues across the platform.
 
@@ -228,7 +209,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows component-level activity using a tabular view, including CPU usage, memory usage, thread count, active connections, and heap memory consumption.
 
-    ![Kafka](../../assets/images/app1.png){ width="800" }
+    ![Kafka](../../assets/images/wt_app1.png){ width="800" }
 
     Highlights the health status of each Kafka instance and indicates whether it is operating within defined thresholds.
 
@@ -242,7 +223,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows database activity using a tabular view, including CPU usage, memory usage, active connections, and threshold status.
 
-    ![Database](../../assets/images/app2.png){ width="800" }
+    ![Database](../../assets/images/wt_app2.png){ width="800" }
 
     Highlights databases that exceed defined thresholds and indicates whether each database is active or inactive.
 
@@ -256,7 +237,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows component-level I/O activity using a tabular view, including operation count, associated component, and execution time.
 
-    ![I/O Database](../../assets/images/app3.png){ width="800" }
+    ![I/O Database](../../assets/images/wt_app3.png){ width="800" }
 
     Highlights the operational status of each component based on defined thresholds.
 
@@ -268,7 +249,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows instance-level activity using a tabular view, including CPU usage, memory usage, and threshold status.
 
-    ![Redis](../../assets/images/app4.png){ width="800" }
+    ![Redis](../../assets/images/wt_app4.png){ width="800" }
 
     Highlights whether each Redis instance is active and operating within acceptable limits.
 
@@ -280,7 +261,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows service-level activity using a tabular view, including host name, response status code, execution time, and threshold status.
 
-    ![Webserver](../../assets/images/app5.png){ width="800" }
+    ![Webserver](../../assets/images/wt_app5.png){ width="800" }
 
     Highlights services that are inactive or have exceeded defined thresholds.
 
@@ -294,7 +275,7 @@ Users can switch between views to analyze different operational areas.
 
     Shows application-level activity using a tabular view, including CPU usage, memory usage, thread count, and heap memory consumption.
 
-    ![Applications](../../assets/images/app6.png){ width="800" }
+    ![Applications](../../assets/images/wt_app6.png){ width="800" }
 
     Highlights the status of each application service and indicates whether it is active or inactive.
 

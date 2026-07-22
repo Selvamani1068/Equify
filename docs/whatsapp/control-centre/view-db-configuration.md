@@ -24,7 +24,7 @@ User can view the created database configuration details using **DB Management**
 2. Click the **Actions** menu (⋮) of the database configuration that you want to view.
 3. Select **View details** from the **ACTIONS** menu.  
 
-    ![update DB](../../assets/images/view_db.png)
+    ![update DB](../../assets/images/wtview_db.png)
 
 The database configuration details screens opens and displays the complete configuration information for the selected database connection.
 
