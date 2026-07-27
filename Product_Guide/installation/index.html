@@ -281,17 +281,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../release_notes/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../Release_Notes/release_notes/" class="md-tabs__link">
+          
+  
   
   Release Notes
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -503,6 +504,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -545,6 +548,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -553,10 +558,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#prepare-the-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Prepare the environment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify installation
       
     </span>
   </a>
@@ -2866,9 +2915,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../release_notes/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2882,7 +2945,51 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Release_Notes/release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R5.5, August 01, 2026
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2931,6 +3038,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2939,10 +3048,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#prepare-the-environment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Prepare the environment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-the-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify installation
       
     </span>
   </a>
@@ -2977,9 +3130,53 @@
 
 
 
-  <h1>Installation</h1>
-
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
+<hr>
+<p>Perform the following steps to install Equify.</p>
+<hr>
+<h3 id="prepare-the-environment">Prepare the environment<a class="headerlink" href="#prepare-the-environment" title="Permanent link">¶</a></h3>
+<ol>
+<li>Verify that all system requirements are met.</li>
+<li>Ensure that the following services are installed and running:<ul>
+<li>Kafka</li>
+<li>Redis</li>
+<li>MySQL</li>
+<li>ClickHouse</li>
+<li>Vault</li>
+<li>Nginx</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="deploy-the-application">Deploy the application<a class="headerlink" href="#deploy-the-application" title="Permanent link">¶</a></h3>
+<ol>
+<li>Upload the Equify application packages (JAR files) to the target servers using FTP.</li>
+<li>Place the application files in the appropriate directories.</li>
+<li>Configure environment variables and application properties.</li>
+</ol>
+<hr>
+<h3 id="configure-components">Configure components<a class="headerlink" href="#configure-components" title="Permanent link">¶</a></h3>
+<ol>
+<li>Configure database connections.</li>
+<li>Configure Kafka brokers and topics.</li>
+<li>Configure Redis and Vault integration.</li>
+<li>Configure Nginx as a reverse proxy.</li>
+</ol>
+<hr>
+<h3 id="start-services">Start services<a class="headerlink" href="#start-services" title="Permanent link">¶</a></h3>
+<ol>
+<li>Start backend services.</li>
+<li>Start database connectors and API services.</li>
+<li>Start webhook and DLR processing services.</li>
+<li>Start the UI services.</li>
+</ol>
+<hr>
+<h3 id="verify-installation">Verify installation<a class="headerlink" href="#verify-installation" title="Permanent link">¶</a></h3>
+<ol>
+<li>Verify that all services are running.</li>
+<li>Check logs for errors.</li>
+<li>Verify that application endpoints are accessible.</li>
+</ol>
 <hr>
 <h2 id="what-to-do-next">What to do next<a class="headerlink" href="#what-to-do-next" title="Permanent link">¶</a></h2>
 <ul>

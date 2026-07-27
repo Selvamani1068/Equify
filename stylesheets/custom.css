@@ -321,7 +321,7 @@ body,
 .md-typeset table:not([class]) th:first-child,
 .md-typeset table:not([class]) td:first-child {
     width: 220px;
-    white-space: nowrap;
+
     font-weight: 600;
 }
 
