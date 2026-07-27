@@ -68,14 +68,10 @@ For more details, refer to:
 
 ---
 
-**Thank you for using Equify!**
-
----
-
 ## Related articles
 
 - [Product Guide](../Product_Guide/overview1.md)
-- [FAQ](faq.md)
+- [FAQ](../faq.md)
 
 <div class="home-support-banner">
   <div class="support-left">
