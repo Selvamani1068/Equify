@@ -281,17 +281,18 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../release_notes/" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item">
+        <a href="../../Release_Notes/release_notes/" class="md-tabs__link">
+          
+  
   
   Release Notes
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -3091,9 +3092,23 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../release_notes/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -3107,7 +3122,51 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Release_Notes/release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R5.5, August 01, 2026
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3448,66 +3507,6 @@
 <hr>
 <h2 id="server-vm-requirements">Server / VM requirements<a class="headerlink" href="#server-vm-requirements" title="Permanent link">¶</a></h2>
 <p>Provision servers or virtual machines based on the following specifications:</p>
-<table style="width:100%; table-layout:fixed; border-collapse:collapse;">
-  <colgroup>
-    <col style="width:10%">
-    <col style="width:5%">
-    <col style="width:10%">
-    <col style="width:10%">
-    <col style="width:10%">
-    <col style="width:15%">
-    <col style="width:40%">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Purpose</th>
-      <th>Qty</th>
-      <th>CPU</th>
-      <th>Memory</th>
-      <th>Disk Type</th>
-      <th>Disk Size (RAID 10)</th>
-      <th>OS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Message Queue and Delivery Report Management</td>
-      <td>4</td>
-      <td>32 Core</td>
-      <td>64 GB</td>
-      <td>SSD</td>
-      <td>1 TB</td>
-      <td>Linux / Windows Server 2025 x64</td>
-    </tr>
-    <tr>
-      <td>Middleware and Supporting Applications</td>
-      <td>2</td>
-      <td>32 Core</td>
-      <td>128 GB</td>
-      <td>SSD</td>
-      <td>1 TB</td>
-      <td>Linux / Windows Server 2025 x64</td>
-    </tr>
-    <tr>
-      <td>In/Out DB and Transaction Logger DB</td>
-      <td>2</td>
-      <td>32 Core</td>
-      <td>64 GB</td>
-      <td>SSD</td>
-      <td>2 TB</td>
-      <td>Linux / Windows Server 2025 x64</td>
-    </tr>
-    <tr>
-      <td>Monitoring and Analytics</td>
-      <td>2</td>
-      <td>32 Core</td>
-      <td>32 GB</td>
-      <td>SSD</td>
-      <td>1 TB</td>
-      <td>Linux / Windows Server 2025 x64</td>
-    </tr>
-  </tbody>
-</table>
 <table>
 <thead>
 <tr>

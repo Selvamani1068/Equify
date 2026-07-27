@@ -32,7 +32,7 @@ communications at scale.
 
 <div class="release-info">
 Version 5.2.1 • Released 30 June 2026 •
-<a href="Release_Notes/#release-notes">Release Notes</a>
+<a href="Release_Notes/release_notes/#release-notes">Release Notes</a>
 </div>
 
 </div>
