@@ -1,15 +1,55 @@
-## Installation {#installation}
+# Installation {#installation}
 
+---
 
+Perform the following steps to install Equify.
 
+---
 
+### Prepare the environment
 
+1. Verify that all system requirements are met.
+2. Ensure that the following services are installed and running:
+    - Kafka
+    - Redis
+    - MySQL
+    - ClickHouse
+    - Vault
+    - Nginx
 
+---
 
+### Deploy the application
 
+1. Upload the Equify application packages (JAR files) to the target servers using FTP.
+2. Place the application files in the appropriate directories.
+3. Configure environment variables and application properties.
 
+---
 
+### Configure components
 
+1. Configure database connections.
+2. Configure Kafka brokers and topics.
+3. Configure Redis and Vault integration.
+4. Configure Nginx as a reverse proxy.
+
+---
+
+### Start services
+
+1. Start backend services.
+2. Start database connectors and API services.
+3. Start webhook and DLR processing services.
+4. Start the UI services.
+
+---
+
+### Verify installation
+
+1. Verify that all services are running.
+2. Check logs for errors.
+3. Verify that application endpoints are accessible.
 
 ---
 

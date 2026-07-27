@@ -1,9 +1,35 @@
+# Getting started
 
+---
 
+After installation, sign in and access the application.
 
+---
 
+## Sign in
+1. Open the Equify application URL.
+2. Select Sign in.
 
+3. Authenticate using the configured SSO identity provider.
 
+After authentication, the system grants access based on your role.
+
+---
+
+## Access modules
+
+After you sign in, access the available modules:
+
+- SMS
+- WhatsApp
+
+---
+
+## Verify access
+
+1. Confirm that the dashboard loads.
+2. Verify that you can access the SMS and WhatsApp modules.
+3. Ensure that required permissions are assigned.
 
 ---
 

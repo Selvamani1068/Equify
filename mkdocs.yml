@@ -116,7 +116,8 @@ nav:
       - Administration:
           - Overview: whatsapp/administration/index.md
           - System Audit: whatsapp/administration/system-audit.md
-  - Release Notes: release_notes.md
+  - Release Notes:
+      - R5.5, August 01, 2026: Release_Notes/release_notes.md
   - FAQ: faq.md
 
 plugins:

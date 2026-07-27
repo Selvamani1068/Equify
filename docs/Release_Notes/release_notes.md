@@ -74,7 +74,7 @@ For more details, refer to:
 
 ## Related articles
 
-- [Product Guide](Product_Guide/overview1.md)
+- [Product Guide](../Product_Guide/overview1.md)
 - [FAQ](faq.md)
 
 <div class="home-support-banner">
