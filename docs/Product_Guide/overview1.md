@@ -14,32 +14,27 @@ Applications and databases integrate with Equify through API-based and database-
 
 ## Key benefits
 
-- Centralized communication management
-- Reduced integration complexity
-- Improved delivery visibility
-- Scalable architecture for high-volume messaging
-- Independent control over communication workflows
+Centralized communication — Manage all messaging workflows from a single platform.
+
+Reduced complexity — Simplify integrations with multiple providers.
+
+Improved visibility — Monitor message delivery with detailed insights.
+
+Scalable architecture — Handle high-volume messaging efficiently.
+
+Workflow control — Maintain independent control over communication processes.
 
 ---
 
 ## Supported channels
 
-Equify currently supports:
-
-- SMS
-- WhatsApp
-
-The platform is designed to support additional channels as business needs evolve.
+Equify currently supports **SMS** and **WhatsApp**, enabling multi-channel communication from a unified platform. Additional channels can be integrated as business requirements evolve.
 
 ---
 
 ## Common use cases
 
-- One-time passwords (OTPs)
-- Transaction notifications
-- Operational alerts
-- Customer engagement campaigns
-- System-generated updates
+Equify supports critical messaging scenarios including one-time passwords (OTPs), transaction notifications, operational alerts, and marketing campaigns.
 
 ---
 
@@ -48,6 +43,7 @@ The platform is designed to support additional channels as business needs evolve
 1. Applications or databases send communication requests to Equify.
 2. Equify validates and processes the request.
 3. Messages are prepared for delivery.
+4. Equify applies processing and routing policies to incoming requests (SMS only).
 4. Messages are sent through the configured provider/channel.
 5. Delivery status is received and processed.
 6. Results are stored and made available for tracking and reporting.
