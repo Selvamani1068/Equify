@@ -10,12 +10,6 @@ Users can use the **Template Management** feature to add approved templates, man
 
 ---
 
-## Opening template management
-
-Select **Template Management** in the left navigation panel. It expands to display the available template-related functions.
-
----
-
 ## Template management components
 
 | Section | Description |

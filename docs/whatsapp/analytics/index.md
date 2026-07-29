@@ -6,16 +6,6 @@
 
 Analytics enables you to analyze historical WhatsApp communication data and retrieve records for operational monitoring, auditing, and troubleshooting.
 
----
-
-## Open analytics
-
-1. In the left navigation pane, select **Analytics**.
-2. Expand the **Analytics** menu to view the available sections:
-    - **Billing**
-    - **Report & Log**
-
-    ![Analytics Navigation](../../assets/images/wtanalytics1.png)
 
 ---
 
@@ -33,7 +23,8 @@ Analytics enables you to analyze historical WhatsApp communication data and retr
 The **Billing** section provides access to billing and usage information associated with WhatsApp messaging and platform consumption.
 
 !!! Note
-    Billing functionality will be available in a future release.
+    Billing functionality will be added based on customer requirements and will be customized accordingly.
+
 
 ---
 

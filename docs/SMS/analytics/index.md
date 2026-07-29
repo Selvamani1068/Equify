@@ -8,17 +8,6 @@ Analytics helps you review past activity and retrieve detailed records for audit
 
 ---
 
-## Open analytics
-
-1. In the left navigation pane, select **Analytics**.
-2. Expand the **Analytics** menu to view the available sections:
-    - **Billing**
-    - **Report & Log**
-
-    ![Functional Routing](../../assets/images/analytics1.png)
-
----
-
 ## Analytics sections
 
 | Section | Description |
@@ -31,7 +20,8 @@ Analytics helps you review past activity and retrieve detailed records for audit
 The **Billing** section provides access to billing and usage information associated with SMS traffic and platform consumption.
 
 !!! Note
-    Billing functionality will be added in a future release after the feature has been fully evaluated.
+      Billing functionality will be added based on customer requirements and will be customized accordingly.
+
 
 ---
 

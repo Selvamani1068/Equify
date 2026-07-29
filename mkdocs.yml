@@ -13,6 +13,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+extra_javascript:
+  - javascript/external-links.js
+
 theme:
   name: material
   features:

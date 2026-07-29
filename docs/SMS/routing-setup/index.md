@@ -15,17 +15,6 @@ Routing Setup enables you to:
 
 ---
 
-## Open routing setup
-
-1. In the left navigation pane, select **Routing Setup**.
-2. Expand the menu to view the available routing sections.
-
-The following options are available:
-
-- Traffic Management
-- Intelligent Routing (coming soon)
-
----
 
 ## Traffic management
 

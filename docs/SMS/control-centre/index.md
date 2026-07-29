@@ -8,12 +8,6 @@ User can use the **Control Centre** to configure databases, register service pro
 
 ---
 
-### Opening the control centre
-
-Select **Control Centre** in the left navigation panel. It expands with two groups of sub-pages.
-
----
-
 ### Control centre components
 
 | Section | Description |
