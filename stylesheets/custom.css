@@ -1591,6 +1591,14 @@ body,
 /* =====================================================
    HORIZONTAL TABS — TWILIO-STYLE PREREQUISITES BLOCK
    ===================================================== */
+.tags span {
+  display: inline-block;
+  background: #f5f5f5;
+  padding: 4px 10px;
+  margin: 4px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
 
 .md-typeset .tabbed-set {
     border: 1px solid #e5e7eb;
