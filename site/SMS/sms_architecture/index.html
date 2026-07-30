@@ -3707,13 +3707,10 @@
 <li>Output databases that receive final delivery status information</li>
 </ul>
 <h3 id="equify-platform">Equify platform<a class="headerlink" href="#equify-platform" title="Permanent link">¶</a></h3>
-<p>The Equify Platform is responsible for communication orchestration and contains three major processing engines:</p>
-<ul>
-<li>Message Processing Engine</li>
-<li>DLR Processing Engine</li>
-<li>Analytics Engine</li>
-</ul>
-<p>Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.</p>
+<p>The Equify Platform is responsible for communication orchestration and consists of three major processing engines.</p>
+<p><strong>Message Processing Engine</strong> handles message processing and routing.  </p>
+<p><strong>DLR Processing Engine</strong> manages delivery report processing.  </p>
+<p><strong>Analytics Engine</strong> supports monitoring, analytics, and operational governance.</p>
 <h3 id="service-providers">Service providers<a class="headerlink" href="#service-providers" title="Permanent link">¶</a></h3>
 <p>Service Providers are external messaging providers responsible for delivering communications to end recipients.</p>
 <p>Equify can communicate with multiple providers simultaneously and determines the appropriate provider based on configured routing policies and operational requirements.</p>
@@ -3751,14 +3748,15 @@
 <h3 id="routing-architecture">Routing architecture<a class="headerlink" href="#routing-architecture" title="Permanent link">¶</a></h3>
 <p>Routing controls how SMS traffic is distributed across the messaging providers configured in the platform.</p>
 <p>The platform supports multiple routing strategies that determine how traffic is distributed across service providers.</p>
-<p>Supported routing strategies include:</p>
-<ul>
-<li>Round Robin Routing</li>
-<li>Percentage-Based Routing</li>
-<li>Department-Based Routing</li>
-<li>Header-Based Routing</li>
-<li>Circle-Based Routing (Geographic Routing)</li>
-</ul>
+<p>Supported routing strategies:</p>
+<div class="tags">
+  <span>Round Robin Routing</span>
+  <span>Percentage-Based Routing</span>
+  <span>Department-Based Routing</span>
+  <span>Header-Based Routing</span>
+  <span>Circle-Based Routing (Geographic Routing)</span>
+</div>
+
 <p>Routing behavior is determined by the routing strategy configured by platform administrators.</p>
 <p>Organizations can select the routing approach that best aligns with operational, business, and regulatory requirements.</p>
 <hr>
@@ -3772,64 +3770,40 @@
 <p>Received DLR payloads are validated and published to Kafka for processing.</p>
 <h3 id="dlr-processor-service">DLR processor service<a class="headerlink" href="#dlr-processor-service" title="Permanent link">¶</a></h3>
 <p>The DLR Processor consumes delivery report events from Kafka.</p>
-<p>The service:</p>
-<ul>
-<li>Retrieves the corresponding message identifier from Redis.</li>
-<li>Correlates the provider response with the original message.</li>
-<li>Consolidates delivery information.</li>
-<li>Updates the configured output destination.</li>
-</ul>
-<p>Depending on configuration, delivery status information can be:</p>
-<ul>
-<li>Updated in the client input database</li>
-<li>Inserted into an output database</li>
-<li>Written to CSV files for downstream processing</li>
-</ul>
+<p>It retrieves the corresponding message identifier from Redis and correlates the provider response with the original message. Delivery information is consolidated and the configured output destination is updated accordingly.</p>
+<p>Based on configuration, delivery status information is updated in the client input database, inserted into an output database, or written to CSV files for downstream processing.</p>
 <hr>
 <h2 id="analytics-and-operations-layer">Analytics and operations layer<a class="headerlink" href="#analytics-and-operations-layer" title="Permanent link">¶</a></h2>
 <p>The Analytics and Operations Layer provides visibility into communication activity, platform performance, and infrastructure health.</p>
 <p>It transforms messaging events, delivery information, audit logs, and operational metrics into dashboards, reports, alerts, and monitoring insights that support day-to-day operations and platform administration.</p>
 <h3 id="clickhouse-analytics-store">ClickHouse analytics store<a class="headerlink" href="#clickhouse-analytics-store" title="Permanent link">¶</a></h3>
 <p>Messaging events, delivery information, audit logs, and operational metrics are processed through the analytics pipeline and stored in ClickHouse for reporting and analysis.</p>
-<p>The platform stores:</p>
-<ul>
-<li>Messaging activity</li>
-<li>Delivery statistics</li>
-<li>Retry information</li>
-<li>Audit logs</li>
-<li>System health metrics</li>
-<li>Application performance metrics</li>
-</ul>
+<p>The platform stores: Messaging activity, Delivery statistics, Retry information, Audit logs, System health metrics, Application performance metrics.</p>
 <h3 id="redis-cache">Redis cache<a class="headerlink" href="#redis-cache" title="Permanent link">¶</a></h3>
 <p>Redis is used as the platform's in-memory data store for runtime processing.</p>
 <p>Frequently accessed configuration data, routing information, and message correlation data are maintained in Redis to support low-latency processing across platform services.</p>
 <h3 id="system-metrics-collection">System metrics collection<a class="headerlink" href="#system-metrics-collection" title="Permanent link">¶</a></h3>
-<p>Background monitoring scripts execute periodically across all servers and collect metrics related to:</p>
-<ul>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Network health</li>
-<li>Kafka status</li>
-<li>Redis status</li>
-<li>Database status</li>
-<li>Application availability</li>
-</ul>
-<p>The collected data is published to Kafka and processed by ClickHouse for reporting purposes.</p>
+<p>Background monitoring scripts run periodically across all servers to collect system-level metrics covering compute, infrastructure, and application health.</p>
+<p><strong>Compute metrics</strong> - Include CPU utilization and memory utilization to track resource usage.</p>
+<p><strong>Infrastructure metrics</strong> - Include network health, Kafka status, Redis status, and database status to ensure platform stability.</p>
+<p><strong>Application metrics</strong> - Include application availability to monitor service uptime and responsiveness.</p>
+<p>Collected data is published to Kafka and processed by ClickHouse for reporting purposes.</p>
 <h3 id="analytics-processing">Analytics processing<a class="headerlink" href="#analytics-processing" title="Permanent link">¶</a></h3>
 <p>Communication events, delivery information, audit records, and system metrics are processed through the analytics engine and prepared for reporting and operational analysis.</p>
 <h3 id="dashboard-and-reporting-services">Dashboard and reporting services<a class="headerlink" href="#dashboard-and-reporting-services" title="Permanent link">¶</a></h3>
 <p>In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.</p>
-<p>Reporting capabilities help organizations analyze:</p>
-<ul>
-<li>Message volumes</li>
-<li>Delivery trends</li>
-<li>Provider performance</li>
-<li>Failure patterns</li>
-<li>Operational activity</li>
-<li>Audit information</li>
-<li>Infrastructure utilization</li>
-<li>Service availability and platform health</li>
-</ul>
+<p>Reporting capabilities help organizations analyze:  </p>
+<div class="tags">
+  <span>Message volumes</span>
+  <span>Delivery trends</span>
+  <span>Provider performance</span>
+  <span>Failure patterns</span>
+  <span>Operational activity</span>
+  <span>Audit information</span>
+  <span>Infrastructure utilization</span>
+  <span>Service availability</span>
+</div>
+
 <p>These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.</p>
 <hr>
 <h2 id="end-to-end-communication-flow">End-to-end communication flow<a class="headerlink" href="#end-to-end-communication-flow" title="Permanent link">¶</a></h2>
