@@ -65,10 +65,7 @@ The Message Processing Engine is responsible for receiving, validating, processi
 
 The Message API Service acts as the entry point into the platform.
 
-- Exposes secure HTTPS APIs for message submission
-- Validates incoming requests
-- Transforms requests into a standardized internal format
-- Publishes structured messages to Kafka in encrypted form
+It exposes secure HTTPS APIs for message submission, validates incoming requests, transforms them into a standardized internal format, and publishes structured messages to Kafka in encrypted form.
 
 All communication into the platform is API-driven.
 

@@ -22,15 +22,32 @@ By centralizing communication operations, Equify enables organizations to improv
 
 Equify provides the following capabilities to support large-scale communication operations:
 
-- **Dashboard and monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
-- **Communication processing** – Receive and process communication requests from enterprise applications and connected data sources.
-- **Multi-provider management** – Integrate and manage multiple telecom service providers through a unified interface.
-- **Routing management** – Configure routing policies based on message type, department, template, header values, or traffic distribution requirements.
-- **Delivery tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
-- **Retry and failover** – Improve delivery reliability through automated retry and alternate provider routing.
-- **Analytics and reporting** – Analyze communication performance through operational reports and dashboards.
-- **Audit and governance** – Maintain visibility into configuration changes and administrative activities.
-- **Centralized administration** – Manage platform settings, provider configurations, routing rules, and user access from a single location.
+**Dashboard and monitoring** 
+ - Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.  
+ 
+**Communication processing** 
+ - Receive and process communication requests from enterprise applications and connected data sources.  
+
+**Multi-provider management** 
+– Integrate and manage multiple telecom service providers through a unified interface.  
+
+**Routing management** 
+– Configure routing policies based on message type, department, template, header values, or traffic distribution requirements.  
+
+**Delivery tracking** 
+– Track message status and delivery outcomes throughout the communication lifecycle. 
+
+**Retry and failover** 
+– Improve delivery reliability through automated retry and alternate provider routing.  
+
+**Analytics and reporting** 
+– Analyze communication performance through operational reports and dashboards.  
+
+**Audit and governance** 
+– Maintain visibility into configuration changes and administrative activities.  
+
+**Centralized administration** 
+– Manage platform settings, provider configurations, routing rules, and user access from a single location.  
 
 ---
 

@@ -2,7 +2,7 @@
 
 This guide helps you set up and validate SMS messaging in Equify. By the end of this guide, you will:
 
-- Configure system prerequisites  
+- Configure system prerequisites 
 - Register a service provider  
 - Set up routing  
 - Send and validate an SMS  

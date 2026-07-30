@@ -26,15 +26,23 @@ By centralizing WhatsApp communication operations, Equify helps organizations st
 
 Equify provides the following capabilities to support large-scale WhatsApp communication operations:
 
-- **Dashboard and monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
-- **Communication processing** – Receive and process WhatsApp communication requests submitted through Equify APIs.
-- **Multi-provider management** – Integrate and manage multiple WhatsApp service providers through a unified interface.
-- **Template management** – Register and manage provider-approved WhatsApp templates and capture associated message categories for communication tracking and reporting.
-- **Category-based classification** – Track and classify WhatsApp communications as Authentication, Utility, or Marketing messages for operational reporting, analytics, and billing.
-- **Message delivery tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
-- **Analytics and reporting** – Analyze communication performance through operational reports and dashboards.
-- **Audit and governance** – Maintain visibility into configuration changes, template updates, and administrative activities.
-- **Centralized administration** – Manage platform settings, provider configurations, templates, and user access from a single location.
+**Dashboard and monitoring** – Monitor messaging activity, delivery performance, and platform health from a centralized dashboard.
+
+**Communication processing** – Receive and process WhatsApp communication requests submitted through Equify APIs.
+
+**Multi-provider management** – Integrate and manage multiple WhatsApp service providers through a unified interface.
+
+**Template management** – Register and manage provider-approved WhatsApp templates and capture associated message categories for communication tracking and reporting.
+
+**Category-based classification** – Track and classify WhatsApp communications as Authentication, Utility, or Marketing messages for operational reporting, analytics, and billing.
+
+**Message delivery tracking** – Track message status and delivery outcomes throughout the communication lifecycle.
+
+**Analytics and reporting** – Analyze communication performance through operational reports and dashboards.
+
+**Audit and governance** – Maintain visibility into configuration changes, template updates, and administrative activities.
+
+**Centralized administration** – Manage platform settings, provider configurations, templates, and user access from a single location.
 
 ---
 

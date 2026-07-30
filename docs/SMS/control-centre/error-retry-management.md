@@ -8,10 +8,7 @@ User can use **Retry Management** to define fallback service providers that Equi
 
 ## Before you begin
 
-Ensure that:
-
-* The primary service provider is registered.
-* One or more fallback service providers are registered.
+Ensure that the primary service provider and one or more fallback service providers are registered.
 
 ---
 

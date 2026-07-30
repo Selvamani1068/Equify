@@ -39,13 +39,13 @@ The client environment may include:
 
 ### Equify platform
 
-The Equify Platform is responsible for communication orchestration and contains three major processing engines:
+The Equify Platform is responsible for communication orchestration and consists of three major processing engines.
 
-- Message Processing Engine
-- DLR Processing Engine
-- Analytics Engine
+**Message Processing Engine** handles message processing and routing.  
 
-Together, these engines manage message delivery, delivery report processing, monitoring, analytics, and operational governance.
+**DLR Processing Engine** manages delivery report processing.  
+
+**Analytics Engine** supports monitoring, analytics, and operational governance.
 
 ### Service providers
 
@@ -121,13 +121,15 @@ Routing controls how SMS traffic is distributed across the messaging providers c
 
 The platform supports multiple routing strategies that determine how traffic is distributed across service providers.
 
-Supported routing strategies include:
+Supported routing strategies:
 
-- Round Robin Routing
-- Percentage-Based Routing
-- Department-Based Routing
-- Header-Based Routing
-- Circle-Based Routing (Geographic Routing)
+<div class="tags">
+  <span>Round Robin Routing</span>
+  <span>Percentage-Based Routing</span>
+  <span>Department-Based Routing</span>
+  <span>Header-Based Routing</span>
+  <span>Circle-Based Routing (Geographic Routing)</span>
+</div>
 
 Routing behavior is determined by the routing strategy configured by platform administrators.
 
@@ -155,18 +157,9 @@ Received DLR payloads are validated and published to Kafka for processing.
 
 The DLR Processor consumes delivery report events from Kafka.
 
-The service:
+It retrieves the corresponding message identifier from Redis and correlates the provider response with the original message. Delivery information is consolidated and the configured output destination is updated accordingly.
 
-- Retrieves the corresponding message identifier from Redis.
-- Correlates the provider response with the original message.
-- Consolidates delivery information.
-- Updates the configured output destination.
-
-Depending on configuration, delivery status information can be:
-
-- Updated in the client input database
-- Inserted into an output database
-- Written to CSV files for downstream processing
+Based on configuration, delivery status information is updated in the client input database, inserted into an output database, or written to CSV files for downstream processing.
 
 ---
 
@@ -180,14 +173,7 @@ It transforms messaging events, delivery information, audit logs, and operationa
 
 Messaging events, delivery information, audit logs, and operational metrics are processed through the analytics pipeline and stored in ClickHouse for reporting and analysis.
 
-The platform stores:
-
-- Messaging activity
-- Delivery statistics
-- Retry information
-- Audit logs
-- System health metrics
-- Application performance metrics
+The platform stores: Messaging activity, Delivery statistics, Retry information, Audit logs, System health metrics, Application performance metrics.
 
 ### Redis cache
 
@@ -197,17 +183,15 @@ Frequently accessed configuration data, routing information, and message correla
 
 ### System metrics collection
 
-Background monitoring scripts execute periodically across all servers and collect metrics related to:
+Background monitoring scripts run periodically across all servers to collect system-level metrics covering compute, infrastructure, and application health.
 
-- CPU utilization
-- Memory utilization
-- Network health
-- Kafka status
-- Redis status
-- Database status
-- Application availability
+**Compute metrics** - Include CPU utilization and memory utilization to track resource usage.
 
-The collected data is published to Kafka and processed by ClickHouse for reporting purposes.
+**Infrastructure metrics** - Include network health, Kafka status, Redis status, and database status to ensure platform stability.
+
+**Application metrics** - Include application availability to monitor service uptime and responsiveness.
+
+Collected data is published to Kafka and processed by ClickHouse for reporting purposes.
 
 ### Analytics processing
 
@@ -217,16 +201,18 @@ Communication events, delivery information, audit records, and system metrics ar
 
 In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.
 
-Reporting capabilities help organizations analyze:
+Reporting capabilities help organizations analyze:  
 
-- Message volumes
-- Delivery trends
-- Provider performance
-- Failure patterns
-- Operational activity
-- Audit information
-- Infrastructure utilization
-- Service availability and platform health
+<div class="tags">
+  <span>Message volumes</span>
+  <span>Delivery trends</span>
+  <span>Provider performance</span>
+  <span>Failure patterns</span>
+  <span>Operational activity</span>
+  <span>Audit information</span>
+  <span>Infrastructure utilization</span>
+  <span>Service availability</span>
+</div>
 
 These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.
 
