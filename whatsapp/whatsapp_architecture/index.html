@@ -3643,17 +3643,9 @@
 <h3 id="kafka-cluster">Kafka cluster<a class="headerlink" href="#kafka-cluster" title="Permanent link">¶</a></h3>
 <p>Kafka is used to exchange message requests, delivery events, audit records, and operational metrics between platform services. This asynchronous architecture enables scalable and fault-tolerant message processing across the platform.</p>
 <h3 id="middleware-service">Middleware service<a class="headerlink" href="#middleware-service" title="Permanent link">¶</a></h3>
-<p>The Middleware Service performs business-rule validation and template validation.</p>
-<p>The service:</p>
-<ul>
-<li>Validates incoming requests</li>
-<li>Verifies that the submitted template is registered for the selected provider</li>
-<li>Validates template categories</li>
-<li>Performs business-rule enforcement</li>
-<li>Prepares messages for delivery processing</li>
-<li>Routes messages to provider-specific Kafka topics based on configuration</li>
-</ul>
-<p>Before a message is dispatched, the Middleware Service validates that the submitted template identifier exists and is registered for the target service provider. Requests containing unregistered templates are rejected before delivery processing begins.</p>
+<p>The Middleware Service performs business-rule validation and template validation. It validates incoming requests, verifies that the submitted template is registered for the selected provider, and ensures that template categories are correctly applied.</p>
+<p>The service enforces defined business rules, prepares messages for delivery processing, and routes messages to provider-specific Kafka topics based on configuration.</p>
+<p>Before a message is dispatched, it validates that the submitted template identifier exists and is registered for the target service provider, and rejects requests containing unregistered templates before delivery processing begins.</p>
 <h3 id="template-management-service">Template management service<a class="headerlink" href="#template-management-service" title="Permanent link">¶</a></h3>
 <p>The Template Management Service manages provider-approved WhatsApp templates used for communication delivery.</p>
 <p>When a template is added in Equify, the platform captures:</p>
@@ -3692,19 +3684,10 @@
 <p>These reports contain status information that indicates whether messages were delivered successfully, DLR, read, MO, CTA, or encountered processing error.</p>
 <p>Received status payloads are validated and published to Kafka for processing.</p>
 <h3 id="dlr-processor-service">DLR processor service<a class="headerlink" href="#dlr-processor-service" title="Permanent link">¶</a></h3>
-<p>The DLR Processor consumes status events from Kafka.</p>
-<p>The service:</p>
-<ul>
-<li>Retrieves the corresponding message identifier from Redis.</li>
-<li>Correlates the provider response with the original message request.</li>
-<li>Consolidates message lifecycle information.</li>
-<li>Updates the configured output destination.</li>
-</ul>
-<p>Depending on configuration, delivery status information can be:</p>
-<ul>
-<li>Updated in the client output database</li>
-<li>Written to CSV files for downstream processing</li>
-</ul>
+<p>The DLR Processor consumes delivery status events from Kafka.</p>
+<p>The service retrieves the corresponding message identifier from Redis and correlates the provider response with the original message request to ensure accurate tracking of delivery status.</p>
+<p>It consolidates message lifecycle information and updates the configured output destination based on system configuration.</p>
+<p>Depending on the configuration, delivery status information is either updated in the client output database or written to CSV files for downstream processing.</p>
 <hr>
 <h2 id="analytics-and-operations-layer">Analytics and operations layer<a class="headerlink" href="#analytics-and-operations-layer" title="Permanent link">¶</a></h2>
 <p>The Analytics and Operations Layer provides visibility into communication activity, platform performance, and infrastructure health.</p>
@@ -3726,32 +3709,13 @@
 <p>Redis is used as the platform's in-memory data store for runtime processing.</p>
 <p>Frequently accessed configuration data, template information, provider configurations, and message correlation data are maintained in Redis to support low-latency processing across platform services.</p>
 <h3 id="system-metrics-collection">System metrics collection<a class="headerlink" href="#system-metrics-collection" title="Permanent link">¶</a></h3>
-<p>Background monitoring scripts execute periodically across all servers and collect metrics related to:</p>
-<ul>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Network health</li>
-<li>Kafka status</li>
-<li>Redis status</li>
-<li>Database status</li>
-<li>Application availability</li>
-</ul>
+<p>Background monitoring scripts execute periodically across all servers to collect metrics related to CPU utilization, memory utilization, network health, Kafka status, Redis status, database status, and application availability.</p>
 <p>The collected data is published to Kafka and processed by ClickHouse for reporting purposes.</p>
 <h3 id="analytics-processing">Analytics processing<a class="headerlink" href="#analytics-processing" title="Permanent link">¶</a></h3>
 <p>Communication events, delivery information, audit records, and system metrics are processed through the analytics engine and prepared for reporting and operational analysis.</p>
 <h3 id="dashboard-and-reporting-services">Dashboard and reporting services<a class="headerlink" href="#dashboard-and-reporting-services" title="Permanent link">¶</a></h3>
 <p>In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.</p>
-<p>Reporting capabilities help organizations analyze:</p>
-<ul>
-<li>Message volumes</li>
-<li>Delivery trends</li>
-<li>Provider performance</li>
-<li>Failure Rate</li>
-<li>Operational activity</li>
-<li>Audit information</li>
-<li>Infrastructure utilization</li>
-<li>Service availability and platform health</li>
-</ul>
+<p>Reporting capabilities enable organizations to analyze message volumes, delivery trends, provider performance, failure rate, operational activity, audit information, infrastructure utilization, and overall service availability and platform health.</p>
 <p>These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.</p>
 <hr>
 <h2 id="end-to-end-communication-flow">End-to-end communication flow<a class="headerlink" href="#end-to-end-communication-flow" title="Permanent link">¶</a></h2>
