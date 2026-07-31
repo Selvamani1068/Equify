@@ -20,11 +20,15 @@ The summary cards displayed at the top of the page provide an immediate view of 
 
 The metrics include:
 
-* **Total Sent Today** – Total number of WhatsApp messages sent today.
-* **Delivery Rate** – Percentage of successfully delivered messages.
-* **Failure Rate** – Percentage of messages that failed to deliver.
-* **Total DLR** – Total delivery reports received from providers.
-* **Used Template Category** – Indicates the template category (for example, Authentication) with the highest usage.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Total Sent Today** – Total number of WhatsApp messages sent today.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Delivery Rate** – Percentage of successfully delivered messages.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Failure Rate** – Percentage of messages that failed to deliver.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Total DLR** – Total delivery reports received from providers.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Used Template Category** – Indicates the template category (for example, Authentication) with the highest usage.
 
 These metrics allow users to quickly determine whether WhatsApp operations are performing as expected.
 
@@ -34,10 +38,13 @@ These metrics allow users to quickly determine whether WhatsApp operations are p
 
 The dashboard provides multiple monitoring views that focus on different aspects of platform operations.
 
-- **WhatsApp Volume**: Displays WhatsApp traffic and delivery statistics across the platform.
-- **Service Providers**: Displays provider utilization and delivery performance information. 
-- **System Health**: Displays the operational status of platform infrastructure and services.
-- **Applications**: Displays activity and health information for integrated applications.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**WhatsApp Volume** - Displays WhatsApp traffic and delivery statistics across the platform.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Service Providers** - Displays provider utilization and delivery performance information.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**System Health** - Displays the operational status of platform infrastructure and services.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Applications** - Displays activity and health information for integrated applications.
 
 
 Users can switch between views to analyze different operational areas.

@@ -20,15 +20,15 @@ The summary cards displayed at the top of the page provide an immediate view of 
 
 The metrics include:
 
-**Total SMS Sent Today** – Displays the total number of SMS messages sent on the current day.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Total SMS Sent Today** – Displays the total number of SMS messages sent on the current day.  
 
-**Delivery Rate** – Percentage of successfully delivered messages.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Delivery Rate** – Percentage of successfully delivered messages.  
 
-**Failure Rate** – Percentage of messages that failed to deliver.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Failure Rate** – Percentage of messages that failed to deliver.  
 
-**Today's Avg Latency** – Displays the average time taken for message delivery.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Today's Avg Latency** – Displays the average time taken for message delivery.  
 
-**Today's Highest TPS** – Displays the highest Transactions Per Second (TPS) recorded during the day.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Today's Highest TPS** – Displays the highest Transactions Per Second (TPS) recorded during the day.  
 
 These metrics allow users to quickly determine whether SMS operations are performing as expected.
 
@@ -38,13 +38,13 @@ These metrics allow users to quickly determine whether SMS operations are perfor
 
 The dashboard provides multiple monitoring views that focus on different aspects of platform operations.
 
-**SMS Volume**: Displays SMS traffic and delivery statistics across the platform. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SMS Volume** - Displays SMS traffic and delivery statistics across the platform. 
 
-**Service Providers**: Displays provider utilization and delivery performance information.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Service Providers** - Displays provider utilization and delivery performance information.  
 
-**System Health**: Displays the operational status of platform infrastructure and services.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**System Health** - Displays the operational status of platform infrastructure and services.  
 
-**Applications**: Displays activity and health information for integrated applications.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Applications** - Displays activity and health information for integrated applications.  
 
 
 Users can switch between views to analyze different operational areas.

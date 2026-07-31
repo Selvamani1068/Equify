@@ -83,18 +83,11 @@ Kafka is used to exchange message requests, delivery events, audit records, and 
 
 ### Middleware service
 
-The Middleware Service performs business-rule validation and template validation.
+The Middleware Service performs business-rule validation and template validation. It validates incoming requests, verifies that the submitted template is registered for the selected provider, and ensures that template categories are correctly applied.
 
-The service:
+The service enforces defined business rules, prepares messages for delivery processing, and routes messages to provider-specific Kafka topics based on configuration.
 
-- Validates incoming requests
-- Verifies that the submitted template is registered for the selected provider
-- Validates template categories
-- Performs business-rule enforcement
-- Prepares messages for delivery processing
-- Routes messages to provider-specific Kafka topics based on configuration
-
-Before a message is dispatched, the Middleware Service validates that the submitted template identifier exists and is registered for the target service provider. Requests containing unregistered templates are rejected before delivery processing begins.
+Before a message is dispatched, it validates that the submitted template identifier exists and is registered for the target service provider, and rejects requests containing unregistered templates before delivery processing begins.
 
 ### Template management service
 
@@ -152,19 +145,13 @@ Received status payloads are validated and published to Kafka for processing.
 
 ### DLR processor service
 
-The DLR Processor consumes status events from Kafka.
+The DLR Processor consumes delivery status events from Kafka.
 
-The service:
+The service retrieves the corresponding message identifier from Redis and correlates the provider response with the original message request to ensure accurate tracking of delivery status.
 
-- Retrieves the corresponding message identifier from Redis.
-- Correlates the provider response with the original message request.
-- Consolidates message lifecycle information.
-- Updates the configured output destination.
+It consolidates message lifecycle information and updates the configured output destination based on system configuration.
 
-Depending on configuration, delivery status information can be:
-
-- Updated in the client output database
-- Written to CSV files for downstream processing
+Depending on the configuration, delivery status information is either updated in the client output database or written to CSV files for downstream processing.
 
 ---
 
@@ -197,15 +184,7 @@ Frequently accessed configuration data, template information, provider configura
 
 ### System metrics collection
 
-Background monitoring scripts execute periodically across all servers and collect metrics related to:
-
-- CPU utilization
-- Memory utilization
-- Network health
-- Kafka status
-- Redis status
-- Database status
-- Application availability
+Background monitoring scripts execute periodically across all servers to collect metrics related to CPU utilization, memory utilization, network health, Kafka status, Redis status, database status, and application availability.
 
 The collected data is published to Kafka and processed by ClickHouse for reporting purposes.
 
@@ -217,18 +196,9 @@ Communication events, delivery information, audit records, and system metrics ar
 
 In addition to communication metrics, Equify provides visibility into platform and infrastructure health. Operations teams can monitor resource utilization, service availability, messaging infrastructure status, and database health from a centralized monitoring interface.
 
-Reporting capabilities help organizations analyze:
-
-- Message volumes
-- Delivery trends
-- Provider performance
-- Failure Rate
-- Operational activity
-- Audit information
-- Infrastructure utilization
-- Service availability and platform health
-
-These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.
+ Reporting capabilities enable organizations to analyze message volumes, delivery trends, provider performance, failure rate, operational activity, audit information, infrastructure utilization, and overall service availability and platform health.
+ 
+ These dashboards help operations teams monitor communication activity, investigate delivery issues, and evaluate provider performance.
 
 ---
 
