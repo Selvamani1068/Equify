@@ -14,7 +14,7 @@ User settings allow you to view account information and customize the applicatio
 
 ### Access user settings
 
-1. In the **bottom-left corner** of the application, select the **Profile icon**.
+1. In the bottom-left corner of the application, select the **Profile** icon.
 2. Select **Profile**.
 
   ![User Profile](../../assets/images/user-profile.png)
@@ -67,7 +67,7 @@ Notifications provide real-time updates on system events and application activit
 
 ### Access notifications
 
-1. In the **bottom-left corner**, select the **Notifications icon**.
+1. In the bottom-left corner, select the **Notifications** icon.
 2. Review the alerts displayed in the panel.
 
 ![notification icon](../../assets/images/notification.png)
@@ -79,15 +79,14 @@ Notifications provide real-time updates on system events and application activit
 The notification panel provides:
 
 - Total notifications and unread count  
-- Severity levels (for example, **Error**, **Warning**)  
+- Severity levels (for example, error, warning)  
 - Message details, including source and timestamp  
 - Status of system components (for example, queues and processors)  
 
-Notifications are updated in real time to help monitor system health and activity.
-
----
 
 ![Notification details](../../assets/images/ndetails.png)
+
+Notifications are updated in real time to help monitor system health and activity.
 
 ---
 
@@ -99,21 +98,20 @@ Use the sign-out option to securely exit the application.
 
 ### Sign out
 
-1. Select the **Profile icon**.
+1. Select the **Profile** icon.
 2. Select **Sign Out**.
+
+
+![sign out](../../assets/images/signout.png)
 
 The system ends your session and redirects you to the login page.
 
 ---
 
-![sign out](../../assets/images/signout.png)
+!!!Notes
 
----
-
-## Notes
-
-- Review notifications regularly to monitor system health.  
-- User interface preferences are user-specific and do not affect other users.
+    - Review notifications regularly to monitor system health.  
+    - User interface preferences are user-specific and do not affect other users.
 
 <div class="home-support-banner">
   <div class="support-left">
