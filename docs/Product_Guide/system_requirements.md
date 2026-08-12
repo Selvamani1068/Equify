@@ -60,7 +60,7 @@ Install the following components:
 ## Frontend requirements 
 
 - Node.js 22.15.1 or later
-- Equify GUI 10.9.2 or later
+- Equify npm 10.9.2 or later
 
 ---
 

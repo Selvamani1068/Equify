@@ -56,6 +56,7 @@ nav:
     - System Requirements: Product_Guide/system_requirements.md
     - Installation: Product_Guide/installation.md
     - Getting Started: Product_Guide/getting_started.md
+    - User Settings and Notification: Product_Guide/user_settings_and_notification.md
   - SMS:
       - Overview: overview.md
       - Architecture: SMS/sms_architecture.md

@@ -10,7 +10,8 @@ At a high level, the Equify WhatsApp architecture consists of three logical doma
 |------------|-------------|
 | Client System | Submit WhatsApp communication requests through APIs and receives delivery status updates |
 | Equify Platform | Processes, delivers, tracks, and monitors WhatsApp communications |
-| Service Providers | Deliver messages to end recipients |
+| Service Providers | Deliver messages to end recipients and send delivery status updates (DLRs) back to the platform for tracking and reporting. |
+ |
 
 ## Equify platform architecture
 

@@ -45,7 +45,7 @@ Equify supports critical messaging scenarios including one-time passwords (OTPs)
 3. Messages are prepared for delivery.
 4. Equify applies processing and routing policies to incoming requests (SMS only).
 4. Messages are sent through the configured provider/channel.
-5. Delivery status is received and processed.
+5. Delivery status is received. If delivery fails, the message is retried through alternate providers based on configured retry rules (SMS only).
 6. Results are stored and made available for tracking and reporting.
 
 Equify ensures reliable message delivery while providing complete visibility into the communication lifecycle.
