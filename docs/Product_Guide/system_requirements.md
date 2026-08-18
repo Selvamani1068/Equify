@@ -72,7 +72,7 @@ Install the following components:
 - ClickHouse 25.10.2.65
 - Redis 8.0.3
 - Vault 1.20.2
-- Debezium plugin 3.2.0 (optional)
+- Debezium plugin 3.2.0
 
 ---
 
