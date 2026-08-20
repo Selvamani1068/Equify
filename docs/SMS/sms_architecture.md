@@ -11,7 +11,6 @@ At a high level, the Equify SMS architecture consists of three logical domains:
 | Client System | Generates communication requests through database and API and receives delivery status updates |
 | Equify Platform | Receives, processes, routes, delivers, and tracks SMS communications |
 | Service Providers | Deliver messages to end recipients and send delivery status updates (DLRs) back to the platform for tracking and reporting. |
- |
 
 ## Equify platform architecture
 
